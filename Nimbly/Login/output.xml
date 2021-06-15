@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20200819 10:47:11.015" generator="Robot 3.1.2 (Python 2.7.16 on darwin)">
+<suite source="/Users/machruk/PycharmProjects/Nimbly/Login/Login.robot" id="s1" name="Login">
+<test id="s1-t1" name="Open Browser">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${SERVER}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200819 10:47:11.264" level="INFO">Opening browser 'firefox' to base url 'https://pre-audit-release.web.app/'.</msg>
+<msg timestamp="20200819 10:47:11.265" level="INFO">Firefox driver log is always forced to to: /Users/machruk/PycharmProjects/Nimbly/Login/geckodriver-32.log</msg>
+<status status="PASS" endtime="20200819 10:47:37.413" starttime="20200819 10:47:11.264"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20200819 10:47:37.894" starttime="20200819 10:47:37.414"></status>
+</kw>
+<status status="PASS" endtime="20200819 10:47:37.894" critical="yes" starttime="20200819 10:47:11.263"></status>
+</test>
+<test id="s1-t2" name="Valid Login">
+<kw name="Valid Login" library="login">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://input[@placeholder='Email Address']</arg>
+<arg>${EMAIL}</arg>
+</arguments>
+<msg timestamp="20200819 10:47:37.899" level="INFO">Typing text 'machruk@hellonimbly.com' into text field 'xpath://input[@placeholder='Email Address']'.</msg>
+<status status="PASS" endtime="20200819 10:47:38.071" starttime="20200819 10:47:37.898"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://input[@placeholder='Password']</arg>
+<arg>${PASSWORD}</arg>
+</arguments>
+<msg timestamp="20200819 10:47:38.072" level="INFO">Typing text '123456' into text field 'xpath://input[@placeholder='Password']'.</msg>
+<status status="PASS" endtime="20200819 10:47:38.148" starttime="20200819 10:47:38.072"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://button[@data-testid='button-submit']</arg>
+</arguments>
+<msg timestamp="20200819 10:47:38.149" level="INFO">Clicking element 'xpath://button[@data-testid='button-submit']'.</msg>
+<status status="PASS" endtime="20200819 10:47:38.384" starttime="20200819 10:47:38.148"></status>
+</kw>
+<status status="PASS" endtime="20200819 10:47:38.384" starttime="20200819 10:47:37.897"></status>
+</kw>
+<status status="PASS" endtime="20200819 10:47:38.385" critical="yes" starttime="20200819 10:47:37.896"></status>
+</test>
+<status status="PASS" endtime="20200819 10:47:38.386" starttime="20200819 10:47:11.019"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="2">Critical Tests</stat>
+<stat fail="0" pass="2">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Login" pass="2">Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

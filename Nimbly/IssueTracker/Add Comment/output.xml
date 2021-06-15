@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20210121 20:29:14.463" generator="Robot 3.1.2 (Python 2.7.16 on darwin)">
+<suite source="/Users/machruk/PycharmProjects/Nimbly/Issue Tracker/Add Comment/Add Comment.robot" id="s1" name="Add Comment">
+<test id="s1-t1" name="Open Browser to Login Page">
+<kw name="Open Browser to Login Page">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${SERVER}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20210121 20:29:14.747" level="INFO">Opening browser 'firefox' to base url 'https://staging.hellonimbly.com/'.</msg>
+<msg timestamp="20210121 20:29:14.748" level="INFO">Firefox driver log is always forced to to: /Users/machruk/PycharmProjects/Nimbly/Issue Tracker/Add Comment/geckodriver-1.log</msg>
+<status status="PASS" endtime="20210121 20:29:28.477" starttime="20210121 20:29:14.746"></status>
+</kw>
+<kw name="Valid Login" library="login">
+<kw name="Input Email" library="login">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:input_username_login</arg>
+<arg>${EMAIL}</arg>
+</arguments>
+<msg timestamp="20210121 20:29:28.479" level="INFO">Typing text 'machruk@hellonimbly.com' into text field 'id:input_username_login'.</msg>
+<status status="PASS" endtime="20210121 20:29:28.621" starttime="20210121 20:29:28.479"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:29:28.621" starttime="20210121 20:29:28.478"></status>
+</kw>
+<kw name="Input Password" library="login">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:input_pwd_login</arg>
+<arg>${PASSWORD}</arg>
+</arguments>
+<msg timestamp="20210121 20:29:28.622" level="INFO">Typing text '123456' into text field 'id:input_pwd_login'.</msg>
+<status status="PASS" endtime="20210121 20:29:28.677" starttime="20210121 20:29:28.622"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:29:28.677" starttime="20210121 20:29:28.621"></status>
+</kw>
+<kw name="Click Login Button" library="login">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id:btn_login</arg>
+</arguments>
+<msg timestamp="20210121 20:29:28.678" level="INFO">Clicking element 'id:btn_login'.</msg>
+<status status="PASS" endtime="20210121 20:29:28.904" starttime="20210121 20:29:28.678"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:29:28.904" starttime="20210121 20:29:28.677"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:29:28.904" starttime="20210121 20:29:28.478"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:29:28.905" starttime="20210121 20:29:14.746"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:29:28.905" critical="yes" starttime="20210121 20:29:14.746"></status>
+</test>
+<test id="s1-t2" name="Go to Issue Tracker Page">
+<kw name="Go to Issue Tracker Page" library="res-issuetracker">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${link_issue_tracker}</arg>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" endtime="20210121 20:29:45.970" starttime="20210121 20:29:28.908"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${link_issue_tracker}</arg>
+</arguments>
+<msg timestamp="20210121 20:29:45.971" level="INFO">Clicking element 'id:menu_issue_tracker'.</msg>
+<status status="PASS" endtime="20210121 20:29:46.252" starttime="20210121 20:29:45.970"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:29:46.252" starttime="20210121 20:29:28.908"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:29:46.252" critical="yes" starttime="20210121 20:29:28.907"></status>
+</test>
+<test id="s1-t3" name="Verify Add Comment is Successfully">
+<kw name="Verify Add Comment is Successfully">
+<kw name="Click Issue Button">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${issue}</arg>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" endtime="20210121 20:29:59.692" starttime="20210121 20:29:46.254"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${issue}</arg>
+</arguments>
+<msg timestamp="20210121 20:29:59.692" level="INFO">Clicking element 'xpath://body/div[@id='root']/div[1]/div[1]/div[2]/div[3]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[10]/span[1]'.</msg>
+<status status="PASS" endtime="20210121 20:30:00.051" starttime="20210121 20:29:59.692"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:30:00.051" starttime="20210121 20:29:46.254"></status>
+</kw>
+<kw name="Input Comment">
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>3</arg>
+<arg>[NUMBERS]</arg>
+</arguments>
+<assign>
+<var>${RANDOM}</var>
+</assign>
+<msg timestamp="20210121 20:30:00.052" level="INFO">${RANDOM} = 571</msg>
+<status status="PASS" endtime="20210121 20:30:00.052" starttime="20210121 20:30:00.052"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${input_add_comment_issue}</arg>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" endtime="20210121 20:30:00.072" starttime="20210121 20:30:00.053"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${input_add_comment_issue}</arg>
+<arg>${add_comment_issue} ${RANDOM}</arg>
+</arguments>
+<msg timestamp="20210121 20:30:00.073" level="INFO">Typing text 'ini adalah penambahan komen yang dibuat dengan automation 571' into text field '//textarea[@placeholder='Add Coment']'.</msg>
+<status status="PASS" endtime="20210121 20:30:00.399" starttime="20210121 20:30:00.073"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:30:00.399" starttime="20210121 20:30:00.052"></status>
+</kw>
+<kw name="Click Post Button">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${button_post_comment}</arg>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" endtime="20210121 20:30:00.445" starttime="20210121 20:30:00.400"></status>
+</kw>
+<kw name="Mouse Over" library="Selenium2Library">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${button_post_comment}</arg>
+</arguments>
+<msg timestamp="20210121 20:30:00.446" level="INFO">Simulating Mouse Over on element 'xpath://button[contains(text(),'Post')]'.</msg>
+<status status="PASS" endtime="20210121 20:30:00.722" starttime="20210121 20:30:00.446"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${button_post_comment}</arg>
+</arguments>
+<msg timestamp="20210121 20:30:00.722" level="INFO">Clicking element 'xpath://button[contains(text(),'Post')]'.</msg>
+<status status="PASS" endtime="20210121 20:30:00.955" starttime="20210121 20:30:00.722"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:30:00.955" starttime="20210121 20:30:00.399"></status>
+</kw>
+<kw name="Verify Post Comment Successfully">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>xpath://p[contains(text(),'${add_comment_issue}')]</arg>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" endtime="20210121 20:30:00.973" starttime="20210121 20:30:00.955"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>xpath://p[contains(text(),'${add_comment_issue}')]</arg>
+</arguments>
+<msg timestamp="20210121 20:30:00.978" level="INFO">Current page contains element 'xpath://p[contains(text(),'ini adalah penambahan komen yang dibuat dengan automation')]'.</msg>
+<status status="PASS" endtime="20210121 20:30:00.979" starttime="20210121 20:30:00.973"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:30:00.979" starttime="20210121 20:30:00.955"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:30:00.979" starttime="20210121 20:29:46.254"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:30:00.979" critical="yes" starttime="20210121 20:29:46.253"></status>
+</test>
+<status status="PASS" endtime="20210121 20:30:00.980" starttime="20210121 20:29:14.466"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="3">Critical Tests</stat>
+<stat fail="0" pass="3">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Add Comment" pass="3">Add Comment</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

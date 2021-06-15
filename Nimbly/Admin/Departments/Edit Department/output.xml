@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20210217 11:53:46.427" generator="Robot 3.1.2 (Python 2.7.16 on darwin)">
+<suite source="/Users/machruk/PycharmProjects/Nimbly/Admin/Departments/Edit Department/Edit Department.robot" id="s1" name="Edit Department">
+<kw type="setup" name="Open Browser to Manage Menu" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${SERVER}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20210217 11:53:46.683" level="INFO">Opening browser 'firefox' to base url 'https://staging.hellonimbly.com/'.</msg>
+<msg timestamp="20210217 11:53:46.685" level="INFO">Firefox driver log is always forced to to: /Users/machruk/PycharmProjects/Nimbly/Admin/Departments/Edit Department/geckodriver-1.log</msg>
+<status status="PASS" endtime="20210217 11:53:54.724" starttime="20210217 11:53:46.683"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20210217 11:53:55.203" starttime="20210217 11:53:54.725"></status>
+</kw>
+<kw name="Valid Login" library="login">
+<kw name="Input Email" library="login">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:input_username_login</arg>
+<arg>${EMAIL}</arg>
+</arguments>
+<msg timestamp="20210217 11:53:55.206" level="INFO">Typing text 'machruk@hellonimbly.com' into text field 'id:input_username_login'.</msg>
+<status status="PASS" endtime="20210217 11:53:55.305" starttime="20210217 11:53:55.205"></status>
+</kw>
+<status status="PASS" endtime="20210217 11:53:55.305" starttime="20210217 11:53:55.205"></status>
+</kw>
+<kw name="Input Password" library="login">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:input_pwd_login</arg>
+<arg>${PASSWORD}</arg>
+</arguments>
+<msg timestamp="20210217 11:53:55.306" level="INFO">Typing text '123456' into text field 'id:input_pwd_login'.</msg>
+<status status="PASS" endtime="20210217 11:53:55.351" starttime="20210217 11:53:55.306"></status>
+</kw>
+<status status="PASS" endtime="20210217 11:53:55.351" starttime="20210217 11:53:55.305"></status>
+</kw>
+<kw name="Click Login Button" library="login">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id:btn_login</arg>
+</arguments>
+<msg timestamp="20210217 11:53:55.352" level="INFO">Clicking element 'id:btn_login'.</msg>
+<status status="PASS" endtime="20210217 11:53:55.574" starttime="20210217 11:53:55.352"></status>
+</kw>
+<status status="PASS" endtime="20210217 11:53:55.574" starttime="20210217 11:53:55.351"></status>
+</kw>
+<status status="PASS" endtime="20210217 11:53:55.574" starttime="20210217 11:53:55.204"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${link_admin}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210217 11:54:20.294" starttime="20210217 11:53:55.575"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${link_admin}</arg>
+</arguments>
+<msg timestamp="20210217 11:54:20.294" level="INFO">Clicking element 'id:menu_adm'.</msg>
+<status status="PASS" endtime="20210217 11:54:20.559" starttime="20210217 11:54:20.294"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${link_manage}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210217 11:54:20.577" starttime="20210217 11:54:20.559"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${link_manage}</arg>
+</arguments>
+<msg timestamp="20210217 11:54:20.578" level="INFO">Clicking element 'id:menu_adm_manage'.</msg>
+<status status="PASS" endtime="20210217 11:54:20.803" starttime="20210217 11:54:20.577"></status>
+</kw>
+<status status="PASS" endtime="20210217 11:54:20.803" starttime="20210217 11:53:46.683"></status>
+</kw>
+<test id="s1-t1" name="Go to Departments Page">
+<kw name="Go to Departments Page" library="res-admin-department">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${link_departments}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210217 11:54:20.823" starttime="20210217 11:54:20.806"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${link_departments}</arg>
+</arguments>
+<msg timestamp="20210217 11:54:20.823" level="INFO">Clicking element 'id:menu_dept'.</msg>
+<status status="PASS" endtime="20210217 11:54:21.086" starttime="20210217 11:54:20.823"></status>
+</kw>
+<status status="PASS" endtime="20210217 11:54:21.086" starttime="20210217 11:54:20.805"></status>
+</kw>
+<status status="PASS" endtime="20210217 11:54:21.087" critical="yes" starttime="20210217 11:54:20.803"></status>
+</test>
+<test id="s1-t2" name="Verify Edit Department Successfully">
+<kw name="Search Department to Edit">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${field_search_department}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210217 11:54:28.628" starttime="20210217 11:54:21.089"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${field_search_department}</arg>
+<arg>${dept_to_edit}</arg>
+</arguments>
+<msg timestamp="20210217 11:54:28.630" level="INFO">Typing text 'AutoQA' into text field 'id:input_search_dept'.</msg>
+<status status="PASS" endtime="20210217 11:54:28.699" starttime="20210217 11:54:28.629"></status>
+</kw>
+<status status="PASS" endtime="20210217 11:54:28.699" starttime="20210217 11:54:21.089"></status>
+</kw>
+<kw name="Search Result" library="res-admin-department">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${search_department_result}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210217 11:55:28.874" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20210217 11:55:28.874" starttime="20210217 11:55:28.723"></status>
+</kw>
+<msg timestamp="20210217 11:55:28.878" level="FAIL">Element with locator 'xpath://td[@class='col-name']//span[contains(text(),'AutoQA')]' not found.</msg>
+<status status="FAIL" endtime="20210217 11:55:28.878" starttime="20210217 11:54:28.700"></status>
+</kw>
+<status status="FAIL" endtime="20210217 11:55:28.878" starttime="20210217 11:54:28.700"></status>
+</kw>
+<status status="FAIL" endtime="20210217 11:55:28.878" critical="yes" starttime="20210217 11:54:21.088">Element with locator 'xpath://td[@class='col-name']//span[contains(text(),'AutoQA')]' not found.</status>
+</test>
+<status status="FAIL" endtime="20210217 11:55:28.879" starttime="20210217 11:53:46.430"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="1">Critical Tests</stat>
+<stat fail="1" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="Edit Department" pass="1">Edit Department</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

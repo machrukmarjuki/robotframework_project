@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20201217 14:28:22.057" generator="Robot 3.1.2 (Python 2.7.16 on darwin)">
+<suite source="/Users/machruk/PycharmProjects/Nimbly/Admin/Inventory/Inventory.robot" id="s1" name="Inventory">
+<kw type="setup" name="Open Browser to Manage Menu" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${SERVER}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20201217 14:28:22.272" level="INFO">Opening browser 'firefox' to base url 'https://staging.hellonimbly.com/'.</msg>
+<msg timestamp="20201217 14:28:22.273" level="INFO">Firefox driver log is always forced to to: /Users/machruk/PycharmProjects/Nimbly/Admin/Inventory/geckodriver-1.log</msg>
+<status status="PASS" endtime="20201217 14:28:34.656" starttime="20201217 14:28:22.272"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20201217 14:28:35.177" starttime="20201217 14:28:34.657"></status>
+</kw>
+<kw name="Valid Login" library="login">
+<kw name="Input Email" library="login">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:input_username_login</arg>
+<arg>${EMAIL}</arg>
+</arguments>
+<msg timestamp="20201217 14:28:35.179" level="INFO">Typing text 'machruk@hellonimbly.com' into text field 'id:input_username_login'.</msg>
+<status status="PASS" endtime="20201217 14:28:35.391" starttime="20201217 14:28:35.179"></status>
+</kw>
+<status status="PASS" endtime="20201217 14:28:35.391" starttime="20201217 14:28:35.179"></status>
+</kw>
+<kw name="Input Password" library="login">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:input_pwd_login</arg>
+<arg>${PASSWORD}</arg>
+</arguments>
+<msg timestamp="20201217 14:28:35.392" level="INFO">Typing text '123456' into text field 'id:input_pwd_login'.</msg>
+<status status="PASS" endtime="20201217 14:28:35.516" starttime="20201217 14:28:35.392"></status>
+</kw>
+<status status="PASS" endtime="20201217 14:28:35.516" starttime="20201217 14:28:35.391"></status>
+</kw>
+<kw name="Click Login Button" library="login">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id:btn_login</arg>
+</arguments>
+<msg timestamp="20201217 14:28:35.517" level="INFO">Clicking element 'id:btn_login'.</msg>
+<status status="PASS" endtime="20201217 14:28:35.761" starttime="20201217 14:28:35.517"></status>
+</kw>
+<status status="PASS" endtime="20201217 14:28:35.761" starttime="20201217 14:28:35.516"></status>
+</kw>
+<status status="PASS" endtime="20201217 14:28:35.761" starttime="20201217 14:28:35.178"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${link_admin}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20201217 14:28:53.239" starttime="20201217 14:28:35.761"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${link_admin}</arg>
+</arguments>
+<msg timestamp="20201217 14:28:53.240" level="INFO">Clicking element 'id:menu_adm'.</msg>
+<status status="PASS" endtime="20201217 14:28:53.509" starttime="20201217 14:28:53.239"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${link_manage}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20201217 14:28:53.530" starttime="20201217 14:28:53.509"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${link_manage}</arg>
+</arguments>
+<msg timestamp="20201217 14:28:53.531" level="INFO">Clicking element 'id:menu_adm_manage'.</msg>
+<status status="PASS" endtime="20201217 14:28:53.761" starttime="20201217 14:28:53.530"></status>
+</kw>
+<status status="PASS" endtime="20201217 14:28:53.761" starttime="20201217 14:28:22.272"></status>
+</kw>
+<test id="s1-t1" name="Go to Inventory Page">
+<kw name="Go to Inventory Page">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${link_inventory}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20201217 14:28:53.782" starttime="20201217 14:28:53.763"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${link_inventory}</arg>
+</arguments>
+<msg timestamp="20201217 14:28:53.782" level="INFO">Clicking element 'id:menu_inventory'.</msg>
+<status status="PASS" endtime="20201217 14:28:54.033" starttime="20201217 14:28:53.782"></status>
+</kw>
+<status status="PASS" endtime="20201217 14:28:54.033" starttime="20201217 14:28:53.762"></status>
+</kw>
+<status status="PASS" endtime="20201217 14:28:54.033" critical="yes" starttime="20201217 14:28:53.761"></status>
+</test>
+<test id="s1-t2" name="Verify &quot;Inventory&quot; page rendered correctly">
+<kw name="Verify &quot;Search&quot; field is available">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${input_search_sku}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20201217 14:29:05.524" starttime="20201217 14:28:54.035"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${input_search_sku}</arg>
+</arguments>
+<msg timestamp="20201217 14:29:05.532" level="INFO">Current page contains element 'id:input_search_sku'.</msg>
+<status status="PASS" endtime="20201217 14:29:05.533" starttime="20201217 14:29:05.525"></status>
+</kw>
+<status status="PASS" endtime="20201217 14:29:05.533" starttime="20201217 14:28:54.035"></status>
+</kw>
+<kw name="Verify &quot;Add SKU&quot; button is available">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${btn_add_sku}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20201217 14:29:05.561" starttime="20201217 14:29:05.534"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${btn_add_sku}</arg>
+</arguments>
+<msg timestamp="20201217 14:29:05.573" level="INFO">Current page contains element 'id:btn_add_sku'.</msg>
+<status status="PASS" endtime="20201217 14:29:05.573" starttime="20201217 14:29:05.562"></status>
+</kw>
+<status status="PASS" endtime="20201217 14:29:05.574" starttime="20201217 14:29:05.533"></status>
+</kw>
+<kw name="Verify &quot;Upload From Excel&quot; button is available">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${btn_bulk_upload_sku}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20201217 14:29:05.627" starttime="20201217 14:29:05.575"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${btn_bulk_upload_sku}</arg>
+</arguments>
+<msg timestamp="20201217 14:29:05.640" level="INFO">Current page contains element 'id:btn_bulk_upload_sku'.</msg>
+<status status="PASS" endtime="20201217 14:29:05.640" starttime="20201217 14:29:05.627"></status>
+</kw>
+<status status="PASS" endtime="20201217 14:29:05.641" starttime="20201217 14:29:05.574"></status>
+</kw>
+<status status="PASS" endtime="20201217 14:29:05.641" critical="yes" starttime="20201217 14:28:54.034"></status>
+</test>
+<test id="s1-t3" name="Verify &quot;SKU&quot; list is displayed correctly">
+<kw name="Verify columns labeled &quot;SKU Name&quot;, &quot;SKU No&quot;, &quot;Tags&quot;, and &quot;Assigned to site&quot; are available">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${label_sku_name}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20201217 14:29:05.673" starttime="20201217 14:29:05.646"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${label_sku_name}</arg>
+</arguments>
+<msg timestamp="20201217 14:29:05.681" level="INFO">Current page contains element 'id:btn_asc_sku_name'.</msg>
+<status status="PASS" endtime="20201217 14:29:05.681" starttime="20201217 14:29:05.673"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${label_sku_no}</arg>
+</arguments>
+<msg timestamp="20201217 14:29:05.688" level="INFO">Current page contains element 'id:btn_asc_sku_no'.</msg>
+<status status="PASS" endtime="20201217 14:29:05.688" starttime="20201217 14:29:05.682"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${label_tags}</arg>
+</arguments>
+<msg timestamp="20201217 14:29:05.694" level="INFO">Current page contains element 'id:btn_asc_sku_tags'.</msg>
+<status status="PASS" endtime="20201217 14:29:05.695" starttime="20201217 14:29:05.688"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${label_assign_site}</arg>
+</arguments>
+<msg timestamp="20201217 14:29:05.700" level="INFO">Current page contains element 'id:btn_asc_assign_site'.</msg>
+<status status="PASS" endtime="20201217 14:29:05.701" starttime="20201217 14:29:05.695"></status>
+</kw>
+<status status="PASS" endtime="20201217 14:29:05.701" starttime="20201217 14:29:05.645"></status>
+</kw>
+<kw name="Verify &quot;Edit&quot; SKU button is available">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${btn_edit_sku}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20201217 14:29:05.742" starttime="20201217 14:29:05.701"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${btn_edit_sku}</arg>
+</arguments>
+<msg timestamp="20201217 14:29:05.762" level="INFO">Current page contains element 'id:btn_edit_sku'.</msg>
+<status status="PASS" endtime="20201217 14:29:05.762" starttime="20201217 14:29:05.743"></status>
+</kw>
+<status status="PASS" endtime="20201217 14:29:05.762" starttime="20201217 14:29:05.701"></status>
+</kw>
+<kw name="Verify &quot;Delete&quot; SKU button is available">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${btn_del_sku}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20201217 14:29:05.810" starttime="20201217 14:29:05.763"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${btn_del_sku}</arg>
+</arguments>
+<msg timestamp="20201217 14:29:05.842" level="INFO">Current page contains element 'id:btn_del_sku'.</msg>
+<status status="PASS" endtime="20201217 14:29:05.842" starttime="20201217 14:29:05.810"></status>
+</kw>
+<status status="PASS" endtime="20201217 14:29:05.842" starttime="20201217 14:29:05.762"></status>
+</kw>
+<status status="PASS" endtime="20201217 14:29:05.842" critical="yes" starttime="20201217 14:29:05.643"></status>
+</test>
+<test id="s1-t4" name="Verify Upload SKU from Excel Successfully">
+<kw name="Click &quot;Upload From Excel&quot; Button">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${btn_bulk_upload_sku}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20201217 14:29:05.858" starttime="20201217 14:29:05.843"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_bulk_upload_sku}</arg>
+</arguments>
+<msg timestamp="20201217 14:29:05.858" level="INFO">Clicking element 'id:btn_bulk_upload_sku'.</msg>
+<status status="PASS" endtime="20201217 14:29:06.205" starttime="20201217 14:29:05.858"></status>
+</kw>
+<status status="PASS" endtime="20201217 14:29:06.205" starttime="20201217 14:29:05.843"></status>
+</kw>
+<kw name="Verify &quot;Upload From Excel&quot; Button can be clicked">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${link_dwnld_template}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20201217 14:29:06.223" starttime="20201217 14:29:06.206"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${link_dwnld_template}</arg>
+</arguments>
+<msg timestamp="20201217 14:29:06.229" level="INFO">Current page contains element 'id:link_dwnld_template'.</msg>
+<status status="PASS" endtime="20201217 14:29:06.229" starttime="20201217 14:29:06.223"></status>
+</kw>
+<status status="PASS" endtime="20201217 14:29:06.229" starttime="20201217 14:29:06.205"></status>
+</kw>
+<kw name="Verify &quot;Upload From Excel&quot; SKU popup is displayed correctly">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${link_dwnld_template}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20201217 14:29:06.247" starttime="20201217 14:29:06.230"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Want to add in bulk?</arg>
+</arguments>
+<msg timestamp="20201217 14:29:06.273" level="INFO">Current page contains text 'Want to add in bulk?'.</msg>
+<status status="PASS" endtime="20201217 14:29:06.273" starttime="20201217 14:29:06.247"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${btn_select_file}</arg>
+</arguments>
+<msg timestamp="20201217 14:29:06.285" level="INFO">Current page contains element 'id:btn_select_file'.</msg>
+<status status="PASS" endtime="20201217 14:29:06.285" starttime="20201217 14:29:06.274"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${btn_upload_sku}</arg>
+</arguments>
+<msg timestamp="20201217 14:29:06.294" level="INFO">Current page contains element 'id:btn_upload_sku'.</msg>
+<status status="PASS" endtime="20201217 14:29:06.295" starttime="20201217 14:29:06.286"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${btn_cancel_sku}</arg>
+</arguments>
+<msg timestamp="20201217 14:29:06.301" level="INFO">Current page contains element 'id:btn_cancel_sku'.</msg>
+<status status="PASS" endtime="20201217 14:29:06.301" starttime="20201217 14:29:06.295"></status>
+</kw>
+<status status="PASS" endtime="20201217 14:29:06.301" starttime="20201217 14:29:06.230"></status>
+</kw>
+<kw name="Select File Excel">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${btn_select_file}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20201217 14:29:06.326" starttime="20201217 14:29:06.302"></status>
+</kw>
+<kw name="Choose File" library="Selenium2Library">
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<arguments>
+<arg>${btn_select_file}</arg>
+<arg>${sku_file}</arg>
+</arguments>
+<msg timestamp="20201217 14:29:06.329" level="INFO">Sending /Users/machruk/Documents/File Upload/inventorysku.xlsx to browser.</msg>
+<status status="PASS" endtime="20201217 14:29:06.388" starttime="20201217 14:29:06.327"></status>
+</kw>
+<status status="PASS" endtime="20201217 14:29:06.389" starttime="20201217 14:29:06.302"></status>
+</kw>
+<kw name="Verify Select File Successfully">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${icon_del_file}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20201217 14:29:06.415" starttime="20201217 14:29:06.390"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${icon_del_file}</arg>
+</arguments>
+<msg timestamp="20201217 14:29:06.421" level="INFO">Current page contains element 'xpath://body/div[@id='root']/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[5]/div[2]/img[1]'.</msg>
+<status status="PASS" endtime="20201217 14:29:06.421" starttime="20201217 14:29:06.415"></status>
+</kw>
+<status status="PASS" endtime="20201217 14:29:06.421" starttime="20201217 14:29:06.389"></status>
+</kw>
+<kw name="Click &quot;Upload&quot;">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${btn_upload_sku}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20201217 14:29:06.438" starttime="20201217 14:29:06.422"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_upload_sku}</arg>
+</arguments>
+<msg timestamp="20201217 14:29:06.438" level="INFO">Clicking element 'id:btn_upload_sku'.</msg>
+<status status="PASS" endtime="20201217 14:29:06.651" starttime="20201217 14:29:06.438"></status>
+</kw>
+<status status="PASS" endtime="20201217 14:29:06.651" starttime="20201217 14:29:06.421"></status>
+</kw>
+<kw name="Upload From Excel Successfully">
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${success_upload_sku_toast}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20201217 14:29:07.783" starttime="20201217 14:29:06.652"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${success_upload_sku_toast}</arg>
+</arguments>
+<msg timestamp="20201217 14:29:07.816" level="INFO">Current page contains text 'Uploaded 2 SKU'.</msg>
+<status status="PASS" endtime="20201217 14:29:07.817" starttime="20201217 14:29:07.783"></status>
+</kw>
+<status status="PASS" endtime="20201217 14:29:07.817" starttime="20201217 14:29:06.652"></status>
+</kw>
+<status status="PASS" endtime="20201217 14:29:07.818" critical="yes" starttime="20201217 14:29:05.843"></status>
+</test>
+<status status="PASS" endtime="20201217 14:29:07.820" starttime="20201217 14:28:22.059"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="4">Critical Tests</stat>
+<stat fail="0" pass="4">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Inventory" pass="4">Inventory</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

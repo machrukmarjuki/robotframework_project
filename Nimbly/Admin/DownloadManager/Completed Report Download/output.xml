@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20210106 14:20:13.905" generator="Robot 3.1.2 (Python 2.7.16 on darwin)">
+<suite source="/Users/machruk/PycharmProjects/Nimbly/Admin/DownloadManager/Completed Report Download/Completed Report Download.robot" id="s1" name="Completed Report Download">
+<kw type="setup" name="Open Browser to Manage Menu" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${SERVER}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20210106 14:20:14.179" level="INFO">Opening browser 'firefox' to base url 'https://admin.hellonimbly.com/'.</msg>
+<msg timestamp="20210106 14:20:14.180" level="INFO">Firefox driver log is always forced to to: /Users/machruk/PycharmProjects/Nimbly/Admin/DownloadManager/Completed Report Download/geckodriver-6.log</msg>
+<status status="PASS" endtime="20210106 14:20:21.817" starttime="20210106 14:20:14.179"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20210106 14:20:22.299" starttime="20210106 14:20:21.818"></status>
+</kw>
+<kw name="Valid Login" library="login">
+<kw name="Input Email" library="login">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:input_username_login</arg>
+<arg>${EMAIL}</arg>
+</arguments>
+<msg timestamp="20210106 14:20:22.300" level="INFO">Typing text 'machruk@hellonimbly.com' into text field 'id:input_username_login'.</msg>
+<status status="PASS" endtime="20210106 14:20:22.414" starttime="20210106 14:20:22.300"></status>
+</kw>
+<status status="PASS" endtime="20210106 14:20:22.414" starttime="20210106 14:20:22.299"></status>
+</kw>
+<kw name="Input Password" library="login">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:input_pwd_login</arg>
+<arg>${PASSWORD}</arg>
+</arguments>
+<msg timestamp="20210106 14:20:22.415" level="INFO">Typing text '123456' into text field 'id:input_pwd_login'.</msg>
+<status status="PASS" endtime="20210106 14:20:22.458" starttime="20210106 14:20:22.415"></status>
+</kw>
+<status status="PASS" endtime="20210106 14:20:22.458" starttime="20210106 14:20:22.414"></status>
+</kw>
+<kw name="Click Login Button" library="login">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id:btn_login</arg>
+</arguments>
+<msg timestamp="20210106 14:20:22.459" level="INFO">Clicking element 'id:btn_login'.</msg>
+<status status="PASS" endtime="20210106 14:20:22.682" starttime="20210106 14:20:22.459"></status>
+</kw>
+<status status="PASS" endtime="20210106 14:20:22.682" starttime="20210106 14:20:22.458"></status>
+</kw>
+<status status="PASS" endtime="20210106 14:20:22.682" starttime="20210106 14:20:22.299"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${link_admin}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<msg timestamp="20210106 14:20:27.156" level="INFO">Suppressing StaleElementReferenceException from Selenium.</msg>
+<status status="PASS" endtime="20210106 14:20:27.379" starttime="20210106 14:20:22.682"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${link_admin}</arg>
+</arguments>
+<msg timestamp="20210106 14:20:27.379" level="INFO">Clicking element 'id:menu_adm'.</msg>
+<status status="PASS" endtime="20210106 14:20:27.638" starttime="20210106 14:20:27.379"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${link_manage}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210106 14:20:27.650" starttime="20210106 14:20:27.638"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${link_manage}</arg>
+</arguments>
+<msg timestamp="20210106 14:20:27.650" level="INFO">Clicking element 'id:menu_adm_manage'.</msg>
+<status status="PASS" endtime="20210106 14:20:27.872" starttime="20210106 14:20:27.650"></status>
+</kw>
+<status status="PASS" endtime="20210106 14:20:27.873" starttime="20210106 14:20:14.178"></status>
+</kw>
+<test id="s1-t1" name="Go to Download Manager">
+<kw name="Go to Download Manager" library="res-admin-downloadmngr">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${link_download_manager}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210106 14:20:27.892" starttime="20210106 14:20:27.875"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${link_download_manager}</arg>
+</arguments>
+<msg timestamp="20210106 14:20:27.893" level="INFO">Clicking element 'id:menu_download_mng'.</msg>
+<status status="PASS" endtime="20210106 14:20:28.145" starttime="20210106 14:20:27.892"></status>
+</kw>
+<status status="PASS" endtime="20210106 14:20:28.145" starttime="20210106 14:20:27.874"></status>
+</kw>
+<status status="PASS" endtime="20210106 14:20:28.146" critical="yes" starttime="20210106 14:20:27.873"></status>
+</test>
+<test id="s1-t2" name="Completed Report Download">
+<kw name="Filter by Completed Report" library="res-admin-downloadmngr">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${dropdown_report_download}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210106 14:20:35.587" starttime="20210106 14:20:28.148"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${dropdown_report_download}</arg>
+</arguments>
+<msg timestamp="20210106 14:20:35.587" level="INFO">Clicking element 'id:drpdwn_report'.</msg>
+<status status="PASS" endtime="20210106 14:20:35.838" starttime="20210106 14:20:35.587"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${select_completed_report_download}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210106 14:20:35.854" starttime="20210106 14:20:35.839"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${select_completed_report_download}</arg>
+</arguments>
+<msg timestamp="20210106 14:20:35.855" level="INFO">Clicking element 'xpath://div[@class=' css-26l3qy-menu']//div[1]//div[contains(text(),'Completed Report')]'.</msg>
+<status status="PASS" endtime="20210106 14:20:36.085" starttime="20210106 14:20:35.854"></status>
+</kw>
+<status status="PASS" endtime="20210106 14:20:36.086" starttime="20210106 14:20:28.148"></status>
+</kw>
+<kw name="Filter by Department" library="res-admin-downloadmngr">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${dropdown_departmen_download}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210106 14:20:36.104" starttime="20210106 14:20:36.087"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${dropdown_departmen_download}</arg>
+</arguments>
+<msg timestamp="20210106 14:20:36.104" level="INFO">Clicking element 'id:drpdwn_dept_report'.</msg>
+<status status="PASS" endtime="20210106 14:20:36.353" starttime="20210106 14:20:36.104"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${select_department_download}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210106 14:20:36.369" starttime="20210106 14:20:36.353"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${select_department_download}</arg>
+</arguments>
+<msg timestamp="20210106 14:20:36.370" level="INFO">Clicking element 'xpath://div[@class=' css-26l3qy-menu']//div[1]//div[contains(text(),'All Department')]'.</msg>
+<status status="PASS" endtime="20210106 14:20:36.596" starttime="20210106 14:20:36.369"></status>
+</kw>
+<status status="PASS" endtime="20210106 14:20:36.597" starttime="20210106 14:20:36.086"></status>
+</kw>
+<kw name="Select Star Date" library="res-admin-downloadmngr">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${dropdown_stardate_download}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210106 14:20:36.613" starttime="20210106 14:20:36.598"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${dropdown_stardate_download}</arg>
+</arguments>
+<msg timestamp="20210106 14:20:36.613" level="INFO">Clicking element 'id:drpdwn_start_date_report'.</msg>
+<status status="PASS" endtime="20210106 14:20:36.910" starttime="20210106 14:20:36.613"></status>
+</kw>
+<kw name="Select Prev Month" library="res-admin-downloadmngr">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${prev_month}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210106 14:20:36.927" starttime="20210106 14:20:36.912"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${prev_month}</arg>
+</arguments>
+<msg timestamp="20210106 14:20:36.927" level="INFO">Clicking element 'xpath://body/div[@id='root']/div[1]/div[1]/div[2]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/*[1]'.</msg>
+<status status="PASS" endtime="20210106 14:20:37.148" starttime="20210106 14:20:36.927"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${prev_month}</arg>
+</arguments>
+<msg timestamp="20210106 14:20:37.149" level="INFO">Clicking element 'xpath://body/div[@id='root']/div[1]/div[1]/div[2]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/*[1]'.</msg>
+<status status="PASS" endtime="20210106 14:20:37.381" starttime="20210106 14:20:37.149"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${prev_month}</arg>
+</arguments>
+<msg timestamp="20210106 14:20:37.382" level="INFO">Clicking element 'xpath://body/div[@id='root']/div[1]/div[1]/div[2]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/*[1]'.</msg>
+<status status="PASS" endtime="20210106 14:20:37.595" starttime="20210106 14:20:37.382"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${prev_month}</arg>
+</arguments>
+<msg timestamp="20210106 14:20:37.595" level="INFO">Clicking element 'xpath://body/div[@id='root']/div[1]/div[1]/div[2]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/*[1]'.</msg>
+<status status="PASS" endtime="20210106 14:20:37.812" starttime="20210106 14:20:37.595"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${prev_month}</arg>
+</arguments>
+<msg timestamp="20210106 14:20:37.813" level="INFO">Clicking element 'xpath://body/div[@id='root']/div[1]/div[1]/div[2]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/*[1]'.</msg>
+<status status="PASS" endtime="20210106 14:20:38.076" starttime="20210106 14:20:37.813"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${prev_month}</arg>
+</arguments>
+<msg timestamp="20210106 14:20:38.076" level="INFO">Clicking element 'xpath://body/div[@id='root']/div[1]/div[1]/div[2]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/*[1]'.</msg>
+<status status="PASS" endtime="20210106 14:20:38.320" starttime="20210106 14:20:38.076"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${prev_month}</arg>
+</arguments>
+<msg timestamp="20210106 14:20:38.321" level="INFO">Clicking element 'xpath://body/div[@id='root']/div[1]/div[1]/div[2]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/*[1]'.</msg>
+<status status="PASS" endtime="20210106 14:20:38.545" starttime="20210106 14:20:38.321"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${prev_month}</arg>
+</arguments>
+<msg timestamp="20210106 14:20:38.546" level="INFO">Clicking element 'xpath://body/div[@id='root']/div[1]/div[1]/div[2]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/*[1]'.</msg>
+<status status="PASS" endtime="20210106 14:20:38.793" starttime="20210106 14:20:38.545"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${prev_month}</arg>
+</arguments>
+<msg timestamp="20210106 14:20:38.794" level="INFO">Clicking element 'xpath://body/div[@id='root']/div[1]/div[1]/div[2]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/*[1]'.</msg>
+<status status="PASS" endtime="20210106 14:20:39.033" starttime="20210106 14:20:38.793"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${prev_month}</arg>
+</arguments>
+<msg timestamp="20210106 14:20:39.034" level="INFO">Clicking element 'xpath://body/div[@id='root']/div[1]/div[1]/div[2]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/*[1]'.</msg>
+<status status="PASS" endtime="20210106 14:20:39.271" starttime="20210106 14:20:39.034"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${prev_month}</arg>
+</arguments>
+<msg timestamp="20210106 14:20:39.272" level="INFO">Clicking element 'xpath://body/div[@id='root']/div[1]/div[1]/div[2]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/*[1]'.</msg>
+<status status="PASS" endtime="20210106 14:20:39.509" starttime="20210106 14:20:39.272"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${prev_month}</arg>
+</arguments>
+<msg timestamp="20210106 14:20:39.510" level="INFO">Clicking element 'xpath://body/div[@id='root']/div[1]/div[1]/div[2]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/*[1]'.</msg>
+<status status="PASS" endtime="20210106 14:20:39.728" starttime="20210106 14:20:39.510"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${prev_month}</arg>
+</arguments>
+<msg timestamp="20210106 14:20:39.729" level="INFO">Clicking element 'xpath://body/div[@id='root']/div[1]/div[1]/div[2]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/*[1]'.</msg>
+<status status="PASS" endtime="20210106 14:20:39.949" starttime="20210106 14:20:39.729"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${prev_month}</arg>
+</arguments>
+<msg timestamp="20210106 14:20:39.950" level="INFO">Clicking element 'xpath://body/div[@id='root']/div[1]/div[1]/div[2]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/*[1]'.</msg>
+<status status="PASS" endtime="20210106 14:20:40.171" starttime="20210106 14:20:39.949"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${prev_month}</arg>
+</arguments>
+<msg timestamp="20210106 14:20:40.172" level="INFO">Clicking element 'xpath://body/div[@id='root']/div[1]/div[1]/div[2]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/*[1]'.</msg>
+<status status="PASS" endtime="20210106 14:20:40.408" starttime="20210106 14:20:40.171"></status>
+</kw>
+<status status="PASS" endtime="20210106 14:20:40.408" starttime="20210106 14:20:36.911"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${select_stardate_download}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210106 14:20:40.428" starttime="20210106 14:20:40.409"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${select_stardate_download}</arg>
+</arguments>
+<msg timestamp="20210106 14:20:40.429" level="INFO">Clicking element 'xpath://body//div[@id='root']//div//div//div//div//div//div//div//div//div//div//div//div//div//div//div//div//div//div[2]//div[1]//table[1]//tbody[1]//tr[1]//td[contains(text(),'1')]'.</msg>
+<status status="PASS" endtime="20210106 14:20:40.724" starttime="20210106 14:20:40.428"></status>
+</kw>
+<status status="PASS" endtime="20210106 14:20:40.724" starttime="20210106 14:20:36.597"></status>
+</kw>
+<kw name="Select End Date" library="res-admin-downloadmngr">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${dropdown_enddate_download}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210106 14:20:40.741" starttime="20210106 14:20:40.725"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${dropdown_enddate_download}</arg>
+</arguments>
+<msg timestamp="20210106 14:20:40.742" level="INFO">Clicking element 'id:drpdwn_end_date_report'.</msg>
+<status status="PASS" endtime="20210106 14:20:40.954" starttime="20210106 14:20:40.742"></status>
+</kw>
+<kw name="Select Next Month" library="res-admin-downloadmngr">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${next_month}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210106 14:20:40.970" starttime="20210106 14:20:40.955"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${next_month}</arg>
+</arguments>
+<msg timestamp="20210106 14:20:40.971" level="INFO">Clicking element '//body/div[@id='root']/div[1]/div[1]/div[2]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/*[1]'.</msg>
+<status status="PASS" endtime="20210106 14:20:41.188" starttime="20210106 14:20:40.971"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${next_month}</arg>
+</arguments>
+<msg timestamp="20210106 14:20:41.189" level="INFO">Clicking element '//body/div[@id='root']/div[1]/div[1]/div[2]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/*[1]'.</msg>
+<status status="PASS" endtime="20210106 14:20:41.411" starttime="20210106 14:20:41.188"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${next_month}</arg>
+</arguments>
+<msg timestamp="20210106 14:20:41.412" level="INFO">Clicking element '//body/div[@id='root']/div[1]/div[1]/div[2]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/*[1]'.</msg>
+<status status="PASS" endtime="20210106 14:20:41.628" starttime="20210106 14:20:41.411"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${next_month}</arg>
+</arguments>
+<msg timestamp="20210106 14:20:41.629" level="INFO">Clicking element '//body/div[@id='root']/div[1]/div[1]/div[2]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/*[1]'.</msg>
+<status status="PASS" endtime="20210106 14:20:41.848" starttime="20210106 14:20:41.629"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${next_month}</arg>
+</arguments>
+<msg timestamp="20210106 14:20:41.849" level="INFO">Clicking element '//body/div[@id='root']/div[1]/div[1]/div[2]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/*[1]'.</msg>
+<status status="PASS" endtime="20210106 14:20:42.065" starttime="20210106 14:20:41.848"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${next_month}</arg>
+</arguments>
+<msg timestamp="20210106 14:20:42.065" level="INFO">Clicking element '//body/div[@id='root']/div[1]/div[1]/div[2]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/*[1]'.</msg>
+<status status="PASS" endtime="20210106 14:20:42.287" starttime="20210106 14:20:42.065"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${next_month}</arg>
+</arguments>
+<msg timestamp="20210106 14:20:42.288" level="INFO">Clicking element '//body/div[@id='root']/div[1]/div[1]/div[2]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/*[1]'.</msg>
+<status status="PASS" endtime="20210106 14:20:42.514" starttime="20210106 14:20:42.288"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${next_month}</arg>
+</arguments>
+<msg timestamp="20210106 14:20:42.515" level="INFO">Clicking element '//body/div[@id='root']/div[1]/div[1]/div[2]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/*[1]'.</msg>
+<status status="PASS" endtime="20210106 14:20:42.753" starttime="20210106 14:20:42.515"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${next_month}</arg>
+</arguments>
+<msg timestamp="20210106 14:20:42.754" level="INFO">Clicking element '//body/div[@id='root']/div[1]/div[1]/div[2]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/*[1]'.</msg>
+<status status="PASS" endtime="20210106 14:20:42.972" starttime="20210106 14:20:42.754"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${next_month}</arg>
+</arguments>
+<msg timestamp="20210106 14:20:42.972" level="INFO">Clicking element '//body/div[@id='root']/div[1]/div[1]/div[2]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/*[1]'.</msg>
+<status status="PASS" endtime="20210106 14:20:43.194" starttime="20210106 14:20:42.972"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${next_month}</arg>
+</arguments>
+<msg timestamp="20210106 14:20:43.195" level="INFO">Clicking element '//body/div[@id='root']/div[1]/div[1]/div[2]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/*[1]'.</msg>
+<status status="PASS" endtime="20210106 14:20:43.433" starttime="20210106 14:20:43.194"></status>
+</kw>
+<status status="PASS" endtime="20210106 14:20:43.433" starttime="20210106 14:20:40.955"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${select_enddate_download}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210106 14:20:43.453" starttime="20210106 14:20:43.434"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${select_enddate_download}</arg>
+</arguments>
+<msg timestamp="20210106 14:20:43.454" level="INFO">Clicking element 'xpath://body//div[@id='root']//div//div//div//div//div//div[3]//div[1]//table[1]//tbody[1]//tr[5]//td[contains(text(),'29')]'.</msg>
+<status status="PASS" endtime="20210106 14:20:43.688" starttime="20210106 14:20:43.454"></status>
+</kw>
+<status status="PASS" endtime="20210106 14:20:43.688" starttime="20210106 14:20:40.724"></status>
+</kw>
+<kw name="Click Search Button" library="res-admin-downloadmngr">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${button_search_download}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210106 14:20:43.707" starttime="20210106 14:20:43.690"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${button_search_download}</arg>
+</arguments>
+<msg timestamp="20210106 14:20:43.708" level="INFO">Clicking element 'id:btn_search_report'.</msg>
+<status status="PASS" endtime="20210106 14:20:43.937" starttime="20210106 14:20:43.707"></status>
+</kw>
+<status status="PASS" endtime="20210106 14:20:43.938" starttime="20210106 14:20:43.689"></status>
+</kw>
+<kw name="Verify Completed Report Founds" library="res-admin-downloadmngr">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${button_export_all_download}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210106 14:20:49.382" starttime="20210106 14:20:43.939"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${button_export_all_download}</arg>
+</arguments>
+<msg timestamp="20210106 14:20:49.386" level="INFO">Current page contains element 'id:btn-exp-all'.</msg>
+<status status="PASS" endtime="20210106 14:20:49.386" starttime="20210106 14:20:49.382"></status>
+</kw>
+<status status="PASS" endtime="20210106 14:20:49.386" starttime="20210106 14:20:43.938"></status>
+</kw>
+<kw name="Click Export All" library="res-admin-downloadmngr">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${button_export_all_download}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210106 14:20:49.401" starttime="20210106 14:20:49.387"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${button_export_all_download}</arg>
+</arguments>
+<msg timestamp="20210106 14:20:49.402" level="INFO">Clicking element 'id:btn-exp-all'.</msg>
+<status status="PASS" endtime="20210106 14:20:49.633" starttime="20210106 14:20:49.401"></status>
+</kw>
+<status status="PASS" endtime="20210106 14:20:49.633" starttime="20210106 14:20:49.387"></status>
+</kw>
+<kw name="Verify whether being directed to the &quot;missed reports&quot; tab" library="res-admin-downloadmngr">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${verify_tab_missed_report}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210106 14:20:51.357" starttime="20210106 14:20:49.635"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${verify_tab_missed_report}</arg>
+</arguments>
+<msg timestamp="20210106 14:20:51.362" level="INFO">Current page contains element 'xpath://div[contains(text(),'Missed Reports')]'.</msg>
+<status status="PASS" endtime="20210106 14:20:51.363" starttime="20210106 14:20:51.357"></status>
+</kw>
+<status status="PASS" endtime="20210106 14:20:51.363" starttime="20210106 14:20:49.634"></status>
+</kw>
+<kw name="Verify whether the &quot;missed reports&quot; is being exported" library="res-admin-downloadmngr">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${Verify_dept_table}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210106 14:20:51.818" starttime="20210106 14:20:51.363"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${Verify_dept_table}</arg>
+</arguments>
+<msg timestamp="20210106 14:20:51.826" level="INFO">Current page contains element 'xpath://body//div[@id='root']//div//div//div//div//div//div//div//div//div//div[1]//div[contains(text(),'All Department')]'.</msg>
+<status status="PASS" endtime="20210106 14:20:51.826" starttime="20210106 14:20:51.818"></status>
+</kw>
+<status status="PASS" endtime="20210106 14:20:51.826" starttime="20210106 14:20:51.363"></status>
+</kw>
+<kw name="Click Download Report" library="res-admin-downloadmngr">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${button_report_download}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210106 14:20:51.841" starttime="20210106 14:20:51.827"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${button_report_download}</arg>
+</arguments>
+<msg timestamp="20210106 14:20:51.841" level="INFO">Clicking element 'id:btn_dwnld_report'.</msg>
+<status status="PASS" endtime="20210106 14:20:52.059" starttime="20210106 14:20:51.841"></status>
+</kw>
+<status status="PASS" endtime="20210106 14:20:52.059" starttime="20210106 14:20:51.826"></status>
+</kw>
+<status status="PASS" endtime="20210106 14:20:52.059" critical="yes" starttime="20210106 14:20:28.147"></status>
+</test>
+<status status="PASS" endtime="20210106 14:20:52.060" starttime="20210106 14:20:13.906"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="2">Critical Tests</stat>
+<stat fail="0" pass="2">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Completed Report Download" pass="2">Completed Report Download</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

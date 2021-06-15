@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20210114 23:09:26.442" generator="Robot 3.1.2 (Python 2.7.16 on darwin)">
+<suite source="/Users/machruk/PycharmProjects/Nimbly/Admin/SalesTarget/Edit Sales Target/Edit Sales Target.robot" id="s1" name="Edit Sales Target">
+<kw type="setup" name="Open Browser to Admin Menu" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${SERVER}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20210114 23:09:26.746" level="INFO">Opening browser 'firefox' to base url 'https://staging.hellonimbly.com/'.</msg>
+<msg timestamp="20210114 23:09:26.747" level="INFO">Firefox driver log is always forced to to: /Users/machruk/PycharmProjects/Nimbly/Admin/SalesTarget/Edit Sales Target/geckodriver-2.log</msg>
+<status status="PASS" endtime="20210114 23:09:33.767" starttime="20210114 23:09:26.745"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20210114 23:09:34.248" starttime="20210114 23:09:33.767"></status>
+</kw>
+<kw name="Valid Login" library="login">
+<kw name="Input Email" library="login">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:input_username_login</arg>
+<arg>${EMAIL}</arg>
+</arguments>
+<msg timestamp="20210114 23:09:34.250" level="INFO">Typing text 'machruk@hellonimbly.com' into text field 'id:input_username_login'.</msg>
+<status status="PASS" endtime="20210114 23:09:34.414" starttime="20210114 23:09:34.250"></status>
+</kw>
+<status status="PASS" endtime="20210114 23:09:34.415" starttime="20210114 23:09:34.249"></status>
+</kw>
+<kw name="Input Password" library="login">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:input_pwd_login</arg>
+<arg>${PASSWORD}</arg>
+</arguments>
+<msg timestamp="20210114 23:09:34.415" level="INFO">Typing text '123456' into text field 'id:input_pwd_login'.</msg>
+<status status="PASS" endtime="20210114 23:09:34.468" starttime="20210114 23:09:34.415"></status>
+</kw>
+<status status="PASS" endtime="20210114 23:09:34.468" starttime="20210114 23:09:34.415"></status>
+</kw>
+<kw name="Click Login Button" library="login">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id:btn_login</arg>
+</arguments>
+<msg timestamp="20210114 23:09:34.469" level="INFO">Clicking element 'id:btn_login'.</msg>
+<status status="PASS" endtime="20210114 23:09:34.693" starttime="20210114 23:09:34.469"></status>
+</kw>
+<status status="PASS" endtime="20210114 23:09:34.693" starttime="20210114 23:09:34.468"></status>
+</kw>
+<status status="PASS" endtime="20210114 23:09:34.693" starttime="20210114 23:09:34.249"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${link_admin}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210114 23:09:55.015" starttime="20210114 23:09:34.693"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${link_admin}</arg>
+</arguments>
+<msg timestamp="20210114 23:09:55.015" level="INFO">Clicking element 'id:menu_adm'.</msg>
+<status status="PASS" endtime="20210114 23:09:55.276" starttime="20210114 23:09:55.015"></status>
+</kw>
+<status status="PASS" endtime="20210114 23:09:55.277" starttime="20210114 23:09:26.745"></status>
+</kw>
+<test id="s1-t1" name="Go to Sales Target Page">
+<kw name="Go to Sales Target Page" library="res-admin-salestarget">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${link_sales_target}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210114 23:09:55.300" starttime="20210114 23:09:55.278"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${link_sales_target}</arg>
+</arguments>
+<msg timestamp="20210114 23:09:55.301" level="INFO">Clicking element 'id:menu_adm_sales_target'.</msg>
+<status status="PASS" endtime="20210114 23:09:55.550" starttime="20210114 23:09:55.300"></status>
+</kw>
+<status status="PASS" endtime="20210114 23:09:55.551" starttime="20210114 23:09:55.278"></status>
+</kw>
+<status status="PASS" endtime="20210114 23:09:55.551" critical="yes" starttime="20210114 23:09:55.277"></status>
+</test>
+<test id="s1-t2" name="Verify Edit Target is successful">
+<kw name="Search Site" library="res-admin-salestarget">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${field_search}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210114 23:10:02.289" starttime="20210114 23:09:55.553"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${field_search}</arg>
+<arg>${input_search}</arg>
+</arguments>
+<msg timestamp="20210114 23:10:02.290" level="INFO">Typing text 'Special AutoSite' into text field 'id:input_search_sales'.</msg>
+<status status="PASS" endtime="20210114 23:10:02.347" starttime="20210114 23:10:02.289"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${search_result}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210114 23:10:18.734" starttime="20210114 23:10:02.348"></status>
+</kw>
+<kw name="Page Should Contain Textfield" library="Selenium2Library">
+<doc>Verifies text field ``locator`` is found from current page.</doc>
+<arguments>
+<arg>${input_search}</arg>
+</arguments>
+<msg timestamp="20210114 23:10:18.744" level="INFO">Current page contains text field 'Special AutoSite'.</msg>
+<status status="PASS" endtime="20210114 23:10:18.744" starttime="20210114 23:10:18.734"></status>
+</kw>
+<status status="PASS" endtime="20210114 23:10:18.744" starttime="20210114 23:09:55.552"></status>
+</kw>
+<kw name="Click Edit Sales Target Button" library="res-admin-salestarget">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${btn_edit_target}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210114 23:10:18.762" starttime="20210114 23:10:18.745"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_edit_target}</arg>
+</arguments>
+<msg timestamp="20210114 23:10:18.762" level="INFO">Clicking element 'id:btn_edit_target'.</msg>
+<status status="PASS" endtime="20210114 23:10:19.011" starttime="20210114 23:10:18.762"></status>
+</kw>
+<status status="PASS" endtime="20210114 23:10:19.011" starttime="20210114 23:10:18.744"></status>
+</kw>
+<kw name="Verify Dropdown Month is available" library="res-admin-salestarget">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${drpdwn_edit_month}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210114 23:10:19.031" starttime="20210114 23:10:19.012"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${drpdwn_edit_month}</arg>
+</arguments>
+<msg timestamp="20210114 23:10:19.036" level="INFO">Current page contains element 'id:drpdwn_edit_month'.</msg>
+<status status="PASS" endtime="20210114 23:10:19.036" starttime="20210114 23:10:19.031"></status>
+</kw>
+<status status="PASS" endtime="20210114 23:10:19.036" starttime="20210114 23:10:19.012"></status>
+</kw>
+<kw name="Verify Dropdown Year is available" library="res-admin-salestarget">
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${drpdwn_edit_year}</arg>
+</arguments>
+<msg timestamp="20210114 23:10:19.046" level="INFO">Current page contains element 'id:drpdwn_edit_year'.</msg>
+<status status="PASS" endtime="20210114 23:10:19.046" starttime="20210114 23:10:19.039"></status>
+</kw>
+<status status="PASS" endtime="20210114 23:10:19.046" starttime="20210114 23:10:19.039"></status>
+</kw>
+<kw name="Verify &quot;Amount&quot; field is available" library="res-admin-salestarget">
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${input_amount}</arg>
+</arguments>
+<msg timestamp="20210114 23:10:19.052" level="INFO">Current page contains element 'id:input_amount'.</msg>
+<status status="PASS" endtime="20210114 23:10:19.053" starttime="20210114 23:10:19.047"></status>
+</kw>
+<status status="PASS" endtime="20210114 23:10:19.053" starttime="20210114 23:10:19.047"></status>
+</kw>
+<kw name="Verify &quot;Save&quot; button is available" library="res-admin-salestarget">
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${btn_save_target}</arg>
+</arguments>
+<msg timestamp="20210114 23:10:19.058" level="INFO">Current page contains element 'id:btn_save_target'.</msg>
+<status status="PASS" endtime="20210114 23:10:19.058" starttime="20210114 23:10:19.053"></status>
+</kw>
+<status status="PASS" endtime="20210114 23:10:19.058" starttime="20210114 23:10:19.053"></status>
+</kw>
+<kw name="Verify &quot;Cancel&quot; button is available" library="res-admin-salestarget">
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${btn_cancel_target}</arg>
+</arguments>
+<msg timestamp="20210114 23:10:19.063" level="INFO">Current page contains element 'id:btn_cancel_target'.</msg>
+<status status="PASS" endtime="20210114 23:10:19.063" starttime="20210114 23:10:19.058"></status>
+</kw>
+<status status="PASS" endtime="20210114 23:10:19.063" starttime="20210114 23:10:19.058"></status>
+</kw>
+<kw name="Edit Month" library="res-admin-salestarget">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${drpdwn_edit_month}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210114 23:10:19.078" starttime="20210114 23:10:19.063"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${drpdwn_edit_month}</arg>
+</arguments>
+<msg timestamp="20210114 23:10:19.078" level="INFO">Clicking element 'id:drpdwn_edit_month'.</msg>
+<status status="PASS" endtime="20210114 23:10:19.317" starttime="20210114 23:10:19.078"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${select_edit_month}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210114 23:10:19.337" starttime="20210114 23:10:19.317"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${select_edit_month}</arg>
+</arguments>
+<msg timestamp="20210114 23:10:19.338" level="INFO">Clicking element 'xpath://div[@class=' css-26l3qy-menu']//div[1]//div[contains(text(),'October')]'.</msg>
+<status status="PASS" endtime="20210114 23:10:19.561" starttime="20210114 23:10:19.338"></status>
+</kw>
+<status status="PASS" endtime="20210114 23:10:19.561" starttime="20210114 23:10:19.063"></status>
+</kw>
+<kw name="Input Amount" library="res-admin-salestarget">
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>3</arg>
+<arg>[NUMBERS]</arg>
+</arguments>
+<assign>
+<var>${RANDOM}</var>
+</assign>
+<msg timestamp="20210114 23:10:19.563" level="INFO">${RANDOM} = 664</msg>
+<status status="PASS" endtime="20210114 23:10:19.563" starttime="20210114 23:10:19.562"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${input_amount}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210114 23:10:19.582" starttime="20210114 23:10:19.563"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${input_amount}</arg>
+<arg>${Random} ${amount}</arg>
+</arguments>
+<msg timestamp="20210114 23:10:19.583" level="INFO">Typing text '664 000000' into text field 'id:input_amount'.</msg>
+<status status="PASS" endtime="20210114 23:10:19.675" starttime="20210114 23:10:19.583"></status>
+</kw>
+<status status="PASS" endtime="20210114 23:10:19.675" starttime="20210114 23:10:19.561"></status>
+</kw>
+<kw name="Click Save Target Button" library="res-admin-salestarget">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${btn_save_target}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210114 23:10:19.692" starttime="20210114 23:10:19.675"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_save_target}</arg>
+</arguments>
+<msg timestamp="20210114 23:10:19.692" level="INFO">Clicking element 'id:btn_save_target'.</msg>
+<status status="PASS" endtime="20210114 23:10:19.924" starttime="20210114 23:10:19.692"></status>
+</kw>
+<status status="PASS" endtime="20210114 23:10:19.924" starttime="20210114 23:10:19.675"></status>
+</kw>
+<kw name="Verify Edit Target Successful" library="res-admin-salestarget">
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Success create SalesTarget</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210114 23:10:24.145" starttime="20210114 23:10:19.925"></status>
+</kw>
+<status status="PASS" endtime="20210114 23:10:24.145" starttime="20210114 23:10:19.924"></status>
+</kw>
+<status status="PASS" endtime="20210114 23:10:24.145" critical="yes" starttime="20210114 23:09:55.551"></status>
+</test>
+<status status="PASS" endtime="20210114 23:10:24.146" starttime="20210114 23:09:26.444"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="2">Critical Tests</stat>
+<stat fail="0" pass="2">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Edit Sales Target" pass="2">Edit Sales Target</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

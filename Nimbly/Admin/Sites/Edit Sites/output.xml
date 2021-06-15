@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20210104 12:01:42.656" generator="Robot 3.1.2 (Python 2.7.16 on darwin)">
+<suite source="/Users/machruk/PycharmProjects/Nimbly/Admin/Sites/Edit Sites/Edit SItes.robot" id="s1" name="Edit SItes">
+<kw type="setup" name="Open Browser to Manage Menu" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${SERVER}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20210104 12:01:42.945" level="INFO">Opening browser 'firefox' to base url 'https://admin.hellonimbly.com/'.</msg>
+<msg timestamp="20210104 12:01:42.951" level="INFO">Firefox driver log is always forced to to: /Users/machruk/PycharmProjects/Nimbly/Admin/Sites/Edit Sites/geckodriver-1.log</msg>
+<status status="PASS" endtime="20210104 12:01:50.649" starttime="20210104 12:01:42.945"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20210104 12:01:51.124" starttime="20210104 12:01:50.650"></status>
+</kw>
+<kw name="Valid Login" library="login">
+<kw name="Input Email" library="login">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:input_username_login</arg>
+<arg>${EMAIL}</arg>
+</arguments>
+<msg timestamp="20210104 12:01:51.126" level="INFO">Typing text 'machruk@hellonimbly.com' into text field 'id:input_username_login'.</msg>
+<status status="PASS" endtime="20210104 12:01:51.265" starttime="20210104 12:01:51.125"></status>
+</kw>
+<status status="PASS" endtime="20210104 12:01:51.266" starttime="20210104 12:01:51.125"></status>
+</kw>
+<kw name="Input Password" library="login">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:input_pwd_login</arg>
+<arg>${PASSWORD}</arg>
+</arguments>
+<msg timestamp="20210104 12:01:51.266" level="INFO">Typing text '123456' into text field 'id:input_pwd_login'.</msg>
+<status status="PASS" endtime="20210104 12:01:51.318" starttime="20210104 12:01:51.266"></status>
+</kw>
+<status status="PASS" endtime="20210104 12:01:51.319" starttime="20210104 12:01:51.266"></status>
+</kw>
+<kw name="Click Login Button" library="login">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id:btn_login</arg>
+</arguments>
+<msg timestamp="20210104 12:01:51.319" level="INFO">Clicking element 'id:btn_login'.</msg>
+<status status="PASS" endtime="20210104 12:01:51.560" starttime="20210104 12:01:51.319"></status>
+</kw>
+<status status="PASS" endtime="20210104 12:01:51.560" starttime="20210104 12:01:51.319"></status>
+</kw>
+<status status="PASS" endtime="20210104 12:01:51.560" starttime="20210104 12:01:51.124"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${link_admin}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<msg timestamp="20210104 12:01:56.129" level="INFO">Suppressing StaleElementReferenceException from Selenium.</msg>
+<status status="PASS" endtime="20210104 12:01:56.471" starttime="20210104 12:01:51.561"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${link_admin}</arg>
+</arguments>
+<msg timestamp="20210104 12:01:56.472" level="INFO">Clicking element 'id:menu_adm'.</msg>
+<status status="PASS" endtime="20210104 12:01:56.797" starttime="20210104 12:01:56.471"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${link_manage}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210104 12:01:56.814" starttime="20210104 12:01:56.797"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${link_manage}</arg>
+</arguments>
+<msg timestamp="20210104 12:01:56.815" level="INFO">Clicking element 'id:menu_adm_manage'.</msg>
+<status status="PASS" endtime="20210104 12:01:57.036" starttime="20210104 12:01:56.814"></status>
+</kw>
+<status status="PASS" endtime="20210104 12:01:57.037" starttime="20210104 12:01:42.945"></status>
+</kw>
+<test id="s1-t1" name="Go to Sites Page">
+<kw name="Go to Sites Page" library="res-admin-sites">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${link_sites}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210104 12:01:57.071" starttime="20210104 12:01:57.038"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${link_sites}</arg>
+</arguments>
+<msg timestamp="20210104 12:01:57.072" level="INFO">Clicking element 'id:menu_sites'.</msg>
+<status status="PASS" endtime="20210104 12:01:57.447" starttime="20210104 12:01:57.071"></status>
+</kw>
+<status status="PASS" endtime="20210104 12:01:57.448" starttime="20210104 12:01:57.038"></status>
+</kw>
+<status status="PASS" endtime="20210104 12:01:57.448" critical="yes" starttime="20210104 12:01:57.037"></status>
+</test>
+<test id="s1-t2" name="Edit Site">
+<kw name="Search Site to Edit">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${field_search_sites}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210104 12:02:01.164" starttime="20210104 12:01:57.450"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${field_search_sites}</arg>
+<arg>AutoQA</arg>
+</arguments>
+<msg timestamp="20210104 12:02:01.165" level="INFO">Typing text 'AutoQA' into text field 'xpath://input[@placeholder='Search...']'.</msg>
+<status status="PASS" endtime="20210104 12:02:01.223" starttime="20210104 12:02:01.164"></status>
+</kw>
+<status status="PASS" endtime="20210104 12:02:01.224" starttime="20210104 12:01:57.449"></status>
+</kw>
+<kw name="Click Edit Icon">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20210104 12:02:04.227" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20210104 12:02:04.227" starttime="20210104 12:02:01.225"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${icon_edit}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210104 12:03:04.456" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20210104 12:03:04.456" starttime="20210104 12:03:04.276"></status>
+</kw>
+<msg timestamp="20210104 12:03:04.461" level="FAIL">Element with locator 'id:btn_edit_sites' not found.</msg>
+<status status="FAIL" endtime="20210104 12:03:04.461" starttime="20210104 12:02:04.227"></status>
+</kw>
+<status status="FAIL" endtime="20210104 12:03:04.461" starttime="20210104 12:02:01.224"></status>
+</kw>
+<status status="FAIL" endtime="20210104 12:03:04.461" critical="yes" starttime="20210104 12:01:57.449">Element with locator 'id:btn_edit_sites' not found.</status>
+</test>
+<status status="FAIL" endtime="20210104 12:03:04.462" starttime="20210104 12:01:42.662"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="1">Critical Tests</stat>
+<stat fail="1" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="Edit SItes" pass="1">Edit SItes</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,1214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20210103 00:41:01.512" generator="Robot 3.1.2 (Python 2.7.16 on darwin)">
+<suite source="/Users/machruk/PycharmProjects/Nimbly/Dashboard/Users/dsboard-users.robot" id="s1" name="Dsboard-Users">
+<kw type="setup" name="Open Browser to Login Page" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${SERVER}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20210103 00:41:01.820" level="INFO">Opening browser 'firefox' to base url 'https://admin.hellonimbly.com/'.</msg>
+<msg timestamp="20210103 00:41:01.821" level="INFO">Firefox driver log is always forced to to: /Users/machruk/PycharmProjects/Nimbly/Dashboard/Users/geckodriver-11.log</msg>
+<status status="PASS" endtime="20210103 00:41:08.767" starttime="20210103 00:41:01.819"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20210103 00:41:09.232" starttime="20210103 00:41:08.767"></status>
+</kw>
+<kw name="Valid Login" library="login">
+<kw name="Input Email" library="login">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:input_username_login</arg>
+<arg>${EMAIL}</arg>
+</arguments>
+<msg timestamp="20210103 00:41:09.234" level="INFO">Typing text 'machruk@hellonimbly.com' into text field 'id:input_username_login'.</msg>
+<status status="PASS" endtime="20210103 00:41:09.397" starttime="20210103 00:41:09.233"></status>
+</kw>
+<status status="PASS" endtime="20210103 00:41:09.397" starttime="20210103 00:41:09.233"></status>
+</kw>
+<kw name="Input Password" library="login">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:input_pwd_login</arg>
+<arg>${PASSWORD}</arg>
+</arguments>
+<msg timestamp="20210103 00:41:09.398" level="INFO">Typing text '123456' into text field 'id:input_pwd_login'.</msg>
+<status status="PASS" endtime="20210103 00:41:09.452" starttime="20210103 00:41:09.398"></status>
+</kw>
+<status status="PASS" endtime="20210103 00:41:09.452" starttime="20210103 00:41:09.397"></status>
+</kw>
+<kw name="Click Login Button" library="login">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id:btn_login</arg>
+</arguments>
+<msg timestamp="20210103 00:41:09.454" level="INFO">Clicking element 'id:btn_login'.</msg>
+<status status="PASS" endtime="20210103 00:41:09.680" starttime="20210103 00:41:09.453"></status>
+</kw>
+<status status="PASS" endtime="20210103 00:41:09.680" starttime="20210103 00:41:09.453"></status>
+</kw>
+<status status="PASS" endtime="20210103 00:41:09.681" starttime="20210103 00:41:09.232"></status>
+</kw>
+<status status="PASS" endtime="20210103 00:41:09.681" starttime="20210103 00:41:01.818"></status>
+</kw>
+<test id="s1-t1" name="Go to the Dashboard Users">
+<kw name="Go to the Dashboard Users" library="res-dashboard-users">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${link_dashboard}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<msg timestamp="20210103 00:41:14.616" level="INFO">Suppressing StaleElementReferenceException from Selenium.</msg>
+<status status="PASS" endtime="20210103 00:41:14.895" starttime="20210103 00:41:09.683"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${link_dashboard}</arg>
+</arguments>
+<msg timestamp="20210103 00:41:14.896" level="INFO">Clicking element 'id:menu_dsbrd'.</msg>
+<status status="PASS" endtime="20210103 00:41:15.276" starttime="20210103 00:41:14.896"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${link_dsbrd_users}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210103 00:41:15.358" starttime="20210103 00:41:15.277"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${link_dsbrd_users}</arg>
+</arguments>
+<msg timestamp="20210103 00:41:15.358" level="INFO">Clicking element 'id:menu_dsbrd_users'.</msg>
+<status status="PASS" endtime="20210103 00:41:15.744" starttime="20210103 00:41:15.358"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${drpdwn_dept}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210103 00:41:22.743" starttime="20210103 00:41:15.744"></status>
+</kw>
+<status status="PASS" endtime="20210103 00:41:22.743" starttime="20210103 00:41:09.682"></status>
+</kw>
+<status status="PASS" endtime="20210103 00:41:22.743" critical="yes" starttime="20210103 00:41:09.681"></status>
+</test>
+<test id="s1-t2" name="Verify Dashboard Users Displayed Properly">
+<kw name="Verify Filter by Department is Available" library="res-dashboard-users">
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${drpdwn_dept}</arg>
+</arguments>
+<msg timestamp="20210103 00:41:22.751" level="INFO">Current page contains element 'xpath://body/div[@id='root']/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/*[1]'.</msg>
+<status status="PASS" endtime="20210103 00:41:22.751" starttime="20210103 00:41:22.745"></status>
+</kw>
+<status status="PASS" endtime="20210103 00:41:22.751" starttime="20210103 00:41:22.744"></status>
+</kw>
+<kw name="Verify Filter by User is Available" library="res-dashboard-users">
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${drpdwn_user}</arg>
+</arguments>
+<msg timestamp="20210103 00:41:22.758" level="INFO">Current page contains element 'xpath://body/div[@id='root']/div[1]/div[1]/div[3]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/*[1]'.</msg>
+<status status="PASS" endtime="20210103 00:41:22.758" starttime="20210103 00:41:22.752"></status>
+</kw>
+<status status="PASS" endtime="20210103 00:41:22.758" starttime="20210103 00:41:22.751"></status>
+</kw>
+<kw name="Delay" library="res-dashboard-users">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20210103 00:41:27.759" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20210103 00:41:27.759" starttime="20210103 00:41:22.759"></status>
+</kw>
+<status status="PASS" endtime="20210103 00:41:27.760" starttime="20210103 00:41:22.758"></status>
+</kw>
+<status status="PASS" endtime="20210103 00:41:27.760" critical="yes" starttime="20210103 00:41:22.744"></status>
+</test>
+<test id="s1-t3" name="Verify Filter by Department is successful">
+<kw name="Filter by Department" library="res-dashboard-users">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${drpdwn_dept}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210103 00:41:27.925" starttime="20210103 00:41:27.761"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${drpdwn_dept}</arg>
+</arguments>
+<msg timestamp="20210103 00:41:27.926" level="INFO">Clicking element 'xpath://body/div[@id='root']/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/*[1]'.</msg>
+<status status="PASS" endtime="20210103 00:41:28.210" starttime="20210103 00:41:27.926"></status>
+</kw>
+<kw name="Delay" library="res-dashboard-users">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20210103 00:41:33.215" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20210103 00:41:33.215" starttime="20210103 00:41:28.211"></status>
+</kw>
+<status status="PASS" endtime="20210103 00:41:33.215" starttime="20210103 00:41:28.211"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${select_all_dept}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210103 00:41:33.241" starttime="20210103 00:41:33.216"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${select_all_dept}</arg>
+</arguments>
+<msg timestamp="20210103 00:41:33.241" level="INFO">Clicking element 'xpath://div[@class='select-editor__menu css-26l3qy-menu']//div[1]//div[contains(text(),'All Departments')]'.</msg>
+<status status="PASS" endtime="20210103 00:41:33.536" starttime="20210103 00:41:33.241"></status>
+</kw>
+<status status="PASS" endtime="20210103 00:41:33.536" starttime="20210103 00:41:27.761"></status>
+</kw>
+<status status="PASS" endtime="20210103 00:41:33.536" critical="yes" starttime="20210103 00:41:27.760"></status>
+</test>
+<test id="s1-t4" name="Verify Filter by User is successful">
+<kw name="Filter by User" library="res-dashboard-users">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${drpdwn_user}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210103 00:41:33.561" starttime="20210103 00:41:33.538"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${drpdwn_user}</arg>
+</arguments>
+<msg timestamp="20210103 00:41:33.561" level="INFO">Clicking element 'xpath://body/div[@id='root']/div[1]/div[1]/div[3]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/*[1]'.</msg>
+<status status="PASS" endtime="20210103 00:41:33.835" starttime="20210103 00:41:33.561"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${select_all_user}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210103 00:41:33.858" starttime="20210103 00:41:33.836"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${select_all_user}</arg>
+</arguments>
+<msg timestamp="20210103 00:41:33.858" level="INFO">Clicking element 'xpath://div[@class='select-editor__menu css-26l3qy-menu']//div[1]//div[contains(text(),'All Users')]'.</msg>
+<status status="PASS" endtime="20210103 00:41:34.128" starttime="20210103 00:41:33.858"></status>
+</kw>
+<status status="PASS" endtime="20210103 00:41:34.129" starttime="20210103 00:41:33.538"></status>
+</kw>
+<status status="PASS" endtime="20210103 00:41:34.129" critical="yes" starttime="20210103 00:41:33.537"></status>
+</test>
+<test id="s1-t5" name="Verify Filter by &quot;Last Week&quot; is successful">
+<kw name="Filter by Last Week" library="res-dashboard-users">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${drpdwn_periods}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210103 00:41:34.151" starttime="20210103 00:41:34.131"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${drpdwn_periods}</arg>
+</arguments>
+<msg timestamp="20210103 00:41:34.152" level="INFO">Clicking element 'xpath://body/div[@id='root']/div[1]/div[1]/div[3]/div[1]/div[1]/div[3]/div[1]/div[2]/div[1]/*[1]'.</msg>
+<status status="PASS" endtime="20210103 00:41:34.383" starttime="20210103 00:41:34.152"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${select_last_week}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210103 00:41:34.402" starttime="20210103 00:41:34.384"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${select_last_week}</arg>
+</arguments>
+<msg timestamp="20210103 00:41:34.402" level="INFO">Clicking element 'xpath://div[@class='select-editor__menu css-26l3qy-menu']//div[1]//div[contains(text(),'Last Week')]'.</msg>
+<status status="PASS" endtime="20210103 00:41:34.692" starttime="20210103 00:41:34.402"></status>
+</kw>
+<status status="PASS" endtime="20210103 00:41:34.693" starttime="20210103 00:41:34.130"></status>
+</kw>
+<kw name="Verify Select &quot;Last Week&quot; is Successful" library="res-dashboard-users">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${select_lastweek_success}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210103 00:41:34.714" starttime="20210103 00:41:34.694"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${select_lastweek_success}</arg>
+</arguments>
+<msg timestamp="20210103 00:41:34.719" level="INFO">Current page contains element 'xpath://div[contains(text(),'Last Week')]'.</msg>
+<status status="PASS" endtime="20210103 00:41:34.719" starttime="20210103 00:41:34.714"></status>
+</kw>
+<status status="PASS" endtime="20210103 00:41:34.719" starttime="20210103 00:41:34.693"></status>
+</kw>
+<status status="PASS" endtime="20210103 00:41:34.720" critical="yes" starttime="20210103 00:41:34.130"></status>
+</test>
+<test id="s1-t6" name="Verify Filter by &quot;Last 7 Days&quot; is successful">
+<kw name="Filter by Last 7 Days" library="res-dashboard-users">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${drpdwn_periods}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210103 00:41:34.739" starttime="20210103 00:41:34.721"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${drpdwn_periods}</arg>
+</arguments>
+<msg timestamp="20210103 00:41:34.739" level="INFO">Clicking element 'xpath://body/div[@id='root']/div[1]/div[1]/div[3]/div[1]/div[1]/div[3]/div[1]/div[2]/div[1]/*[1]'.</msg>
+<status status="PASS" endtime="20210103 00:41:34.967" starttime="20210103 00:41:34.739"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${select_7_days}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210103 00:41:34.990" starttime="20210103 00:41:34.968"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${select_7_days}</arg>
+</arguments>
+<msg timestamp="20210103 00:41:34.991" level="INFO">Clicking element 'xpath://div[@class='select-editor__menu css-26l3qy-menu']//div[1]//div[contains(text(),'Last 7 Days')]'.</msg>
+<status status="PASS" endtime="20210103 00:41:35.265" starttime="20210103 00:41:34.990"></status>
+</kw>
+<status status="PASS" endtime="20210103 00:41:35.265" starttime="20210103 00:41:34.721"></status>
+</kw>
+<kw name="Verify Select &quot;Last 7 Days&quot; is Successful" library="res-dashboard-users">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${select_7days_success}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210103 00:41:35.286" starttime="20210103 00:41:35.266"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${select_7days_success}</arg>
+</arguments>
+<msg timestamp="20210103 00:41:35.292" level="INFO">Current page contains element 'xpath://div[contains(text(),'Last 7 Days')]'.</msg>
+<status status="PASS" endtime="20210103 00:41:35.293" starttime="20210103 00:41:35.287"></status>
+</kw>
+<status status="PASS" endtime="20210103 00:41:35.293" starttime="20210103 00:41:35.266"></status>
+</kw>
+<status status="PASS" endtime="20210103 00:41:35.293" critical="yes" starttime="20210103 00:41:34.720"></status>
+</test>
+<test id="s1-t7" name="Verify Filter by &quot;Last 28 Days&quot; is successful">
+<kw name="Filter by Last 28 Days" library="res-dashboard-users">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${drpdwn_periods}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210103 00:41:35.316" starttime="20210103 00:41:35.296"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${drpdwn_periods}</arg>
+</arguments>
+<msg timestamp="20210103 00:41:35.316" level="INFO">Clicking element 'xpath://body/div[@id='root']/div[1]/div[1]/div[3]/div[1]/div[1]/div[3]/div[1]/div[2]/div[1]/*[1]'.</msg>
+<status status="PASS" endtime="20210103 00:41:35.542" starttime="20210103 00:41:35.316"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${select_28_days}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210103 00:41:35.562" starttime="20210103 00:41:35.543"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${select_28_days}</arg>
+</arguments>
+<msg timestamp="20210103 00:41:35.563" level="INFO">Clicking element 'xpath://div[@class='select-editor__menu css-26l3qy-menu']//div[1]//div[contains(text(),'Last 28 Days')]'.</msg>
+<status status="PASS" endtime="20210103 00:41:35.823" starttime="20210103 00:41:35.562"></status>
+</kw>
+<status status="PASS" endtime="20210103 00:41:35.823" starttime="20210103 00:41:35.295"></status>
+</kw>
+<kw name="Verify Select &quot;Last 28 Days&quot; is Successful" library="res-dashboard-users">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${select_28days_success}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210103 00:41:35.844" starttime="20210103 00:41:35.824"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${select_28days_success}</arg>
+</arguments>
+<msg timestamp="20210103 00:41:35.850" level="INFO">Current page contains element 'xpath://div[contains(text(),'Last 28 Days')]'.</msg>
+<status status="PASS" endtime="20210103 00:41:35.850" starttime="20210103 00:41:35.844"></status>
+</kw>
+<status status="PASS" endtime="20210103 00:41:35.850" starttime="20210103 00:41:35.824"></status>
+</kw>
+<status status="PASS" endtime="20210103 00:41:35.850" critical="yes" starttime="20210103 00:41:35.294"></status>
+</test>
+<test id="s1-t8" name="Verify Filter by &quot;Last 30 Days&quot; is successful">
+<kw name="Filter by Last 30 Days" library="res-dashboard-users">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${drpdwn_periods}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210103 00:41:35.869" starttime="20210103 00:41:35.851"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${drpdwn_periods}</arg>
+</arguments>
+<msg timestamp="20210103 00:41:35.869" level="INFO">Clicking element 'xpath://body/div[@id='root']/div[1]/div[1]/div[3]/div[1]/div[1]/div[3]/div[1]/div[2]/div[1]/*[1]'.</msg>
+<status status="PASS" endtime="20210103 00:41:36.091" starttime="20210103 00:41:35.869"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${select_30_days}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210103 00:41:36.110" starttime="20210103 00:41:36.092"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${select_30_days}</arg>
+</arguments>
+<msg timestamp="20210103 00:41:36.110" level="INFO">Clicking element 'xpath://div[@class='select-editor__menu css-26l3qy-menu']//div[1]//div[contains(text(),'Last 30 Days')]'.</msg>
+<status status="PASS" endtime="20210103 00:41:36.374" starttime="20210103 00:41:36.110"></status>
+</kw>
+<status status="PASS" endtime="20210103 00:41:36.374" starttime="20210103 00:41:35.851"></status>
+</kw>
+<kw name="Verify Select &quot;Last 30 Days&quot; is Successful" library="res-dashboard-users">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${select_30days_success}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210103 00:41:36.394" starttime="20210103 00:41:36.375"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${select_30days_success}</arg>
+</arguments>
+<msg timestamp="20210103 00:41:36.400" level="INFO">Current page contains element 'xpath://div[contains(text(),'Last 30 Days')]'.</msg>
+<status status="PASS" endtime="20210103 00:41:36.400" starttime="20210103 00:41:36.394"></status>
+</kw>
+<status status="PASS" endtime="20210103 00:41:36.400" starttime="20210103 00:41:36.375"></status>
+</kw>
+<status status="PASS" endtime="20210103 00:41:36.400" critical="yes" starttime="20210103 00:41:35.850"></status>
+</test>
+<test id="s1-t9" name="Verify Filter by &quot;Last 90 Days&quot; is successful">
+<kw name="Filter by Last 90 Days" library="res-dashboard-users">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${drpdwn_periods}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210103 00:41:36.421" starttime="20210103 00:41:36.402"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${drpdwn_periods}</arg>
+</arguments>
+<msg timestamp="20210103 00:41:36.421" level="INFO">Clicking element 'xpath://body/div[@id='root']/div[1]/div[1]/div[3]/div[1]/div[1]/div[3]/div[1]/div[2]/div[1]/*[1]'.</msg>
+<status status="PASS" endtime="20210103 00:41:36.643" starttime="20210103 00:41:36.421"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${select_90_days}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210103 00:41:36.662" starttime="20210103 00:41:36.643"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${select_90_days}</arg>
+</arguments>
+<msg timestamp="20210103 00:41:36.662" level="INFO">Clicking element 'xpath://div[@class='select-editor__menu css-26l3qy-menu']//div[1]//div[contains(text(),'Last 90 Days')]'.</msg>
+<status status="PASS" endtime="20210103 00:41:36.925" starttime="20210103 00:41:36.662"></status>
+</kw>
+<status status="PASS" endtime="20210103 00:41:36.925" starttime="20210103 00:41:36.401"></status>
+</kw>
+<kw name="Verify Select &quot;Last 90 Days&quot; is Successful" library="res-dashboard-users">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${select_90days_success}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210103 00:41:36.946" starttime="20210103 00:41:36.926"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${select_90days_success}</arg>
+</arguments>
+<msg timestamp="20210103 00:41:36.952" level="INFO">Current page contains element 'xpath://div[contains(text(),'Last 90 Days')]'.</msg>
+<status status="PASS" endtime="20210103 00:41:36.952" starttime="20210103 00:41:36.946"></status>
+</kw>
+<status status="PASS" endtime="20210103 00:41:36.952" starttime="20210103 00:41:36.925"></status>
+</kw>
+<status status="PASS" endtime="20210103 00:41:36.952" critical="yes" starttime="20210103 00:41:36.401"></status>
+</test>
+<test id="s1-t10" name="Verify Filter by &quot;Last 6 Months&quot; is successful">
+<kw name="Filter by Last 6 Months" library="res-dashboard-users">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${drpdwn_periods}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210103 00:41:36.971" starttime="20210103 00:41:36.954"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${drpdwn_periods}</arg>
+</arguments>
+<msg timestamp="20210103 00:41:36.971" level="INFO">Clicking element 'xpath://body/div[@id='root']/div[1]/div[1]/div[3]/div[1]/div[1]/div[3]/div[1]/div[2]/div[1]/*[1]'.</msg>
+<status status="PASS" endtime="20210103 00:41:37.194" starttime="20210103 00:41:36.971"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${select_6_months}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210103 00:41:37.214" starttime="20210103 00:41:37.194"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${select_6_months}</arg>
+</arguments>
+<msg timestamp="20210103 00:41:37.214" level="INFO">Clicking element 'xpath://div[@class='select-editor__menu css-26l3qy-menu']//div[1]//div[contains(text(),'Last 6 Months')]'.</msg>
+<status status="PASS" endtime="20210103 00:41:37.472" starttime="20210103 00:41:37.214"></status>
+</kw>
+<status status="PASS" endtime="20210103 00:41:37.472" starttime="20210103 00:41:36.953"></status>
+</kw>
+<kw name="Verify Select &quot;Last 6 Months&quot; is Successful" library="res-dashboard-users">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${select_6months_success}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210103 00:41:37.493" starttime="20210103 00:41:37.473"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${select_6months_success}</arg>
+</arguments>
+<msg timestamp="20210103 00:41:37.499" level="INFO">Current page contains element 'xpath://div[contains(text(),'Last 6 Months')]'.</msg>
+<status status="PASS" endtime="20210103 00:41:37.499" starttime="20210103 00:41:37.493"></status>
+</kw>
+<status status="PASS" endtime="20210103 00:41:37.499" starttime="20210103 00:41:37.473"></status>
+</kw>
+<status status="PASS" endtime="20210103 00:41:37.499" critical="yes" starttime="20210103 00:41:36.952"></status>
+</test>
+<test id="s1-t11" name="Verify Filter by &quot;Last 12 Months&quot; is successful">
+<kw name="Filter by Last 12 Months" library="res-dashboard-users">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${drpdwn_periods}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210103 00:41:37.518" starttime="20210103 00:41:37.501"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${drpdwn_periods}</arg>
+</arguments>
+<msg timestamp="20210103 00:41:37.519" level="INFO">Clicking element 'xpath://body/div[@id='root']/div[1]/div[1]/div[3]/div[1]/div[1]/div[3]/div[1]/div[2]/div[1]/*[1]'.</msg>
+<status status="PASS" endtime="20210103 00:41:37.740" starttime="20210103 00:41:37.519"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${select_12_months}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210103 00:41:37.759" starttime="20210103 00:41:37.740"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${select_12_months}</arg>
+</arguments>
+<msg timestamp="20210103 00:41:37.760" level="INFO">Clicking element 'xpath://div[@class='select-editor__menu css-26l3qy-menu']//div[1]//div[contains(text(),'Last 12 Months')]'.</msg>
+<status status="PASS" endtime="20210103 00:41:38.015" starttime="20210103 00:41:37.759"></status>
+</kw>
+<status status="PASS" endtime="20210103 00:41:38.015" starttime="20210103 00:41:37.500"></status>
+</kw>
+<kw name="Verify Select &quot;Last 12 Months&quot; is Successful" library="res-dashboard-users">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${select_12months_success}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210103 00:41:38.034" starttime="20210103 00:41:38.016"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${select_12months_success}</arg>
+</arguments>
+<msg timestamp="20210103 00:41:38.040" level="INFO">Current page contains element 'xpath://div[contains(text(),'Last 12 Months')]'.</msg>
+<status status="PASS" endtime="20210103 00:41:38.040" starttime="20210103 00:41:38.034"></status>
+</kw>
+<status status="PASS" endtime="20210103 00:41:38.040" starttime="20210103 00:41:38.015"></status>
+</kw>
+<status status="PASS" endtime="20210103 00:41:38.040" critical="yes" starttime="20210103 00:41:37.500"></status>
+</test>
+<test id="s1-t12" name="Verify Filter by &quot;Last Year&quot; is successful">
+<kw name="Filter by Last Year" library="res-dashboard-users">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${drpdwn_periods}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210103 00:41:38.060" starttime="20210103 00:41:38.041"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${drpdwn_periods}</arg>
+</arguments>
+<msg timestamp="20210103 00:41:38.061" level="INFO">Clicking element 'xpath://body/div[@id='root']/div[1]/div[1]/div[3]/div[1]/div[1]/div[3]/div[1]/div[2]/div[1]/*[1]'.</msg>
+<status status="PASS" endtime="20210103 00:41:38.289" starttime="20210103 00:41:38.061"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${select_last_year}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210103 00:41:38.310" starttime="20210103 00:41:38.289"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${select_last_year}</arg>
+</arguments>
+<msg timestamp="20210103 00:41:38.311" level="INFO">Clicking element 'xpath://div[@class='select-editor__menu css-26l3qy-menu']//div[1]//div[contains(text(),'Last Year')]'.</msg>
+<status status="PASS" endtime="20210103 00:41:38.571" starttime="20210103 00:41:38.310"></status>
+</kw>
+<status status="PASS" endtime="20210103 00:41:38.571" starttime="20210103 00:41:38.041"></status>
+</kw>
+<kw name="Verify Select &quot;Last Year&quot; is Successful" library="res-dashboard-users">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${select_lastyear_success}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210103 00:41:38.591" starttime="20210103 00:41:38.572"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${select_lastyear_success}</arg>
+</arguments>
+<msg timestamp="20210103 00:41:38.596" level="INFO">Current page contains element 'xpath://div[contains(text(),'Last Year')]'.</msg>
+<status status="PASS" endtime="20210103 00:41:38.596" starttime="20210103 00:41:38.591"></status>
+</kw>
+<status status="PASS" endtime="20210103 00:41:38.597" starttime="20210103 00:41:38.572"></status>
+</kw>
+<status status="PASS" endtime="20210103 00:41:38.597" critical="yes" starttime="20210103 00:41:38.041"></status>
+</test>
+<test id="s1-t13" name="Verify Filter by &quot;Month to Date&quot; is successful">
+<kw name="Filter by Month to Date" library="res-dashboard-users">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${drpdwn_periods}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210103 00:41:38.615" starttime="20210103 00:41:38.598"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${drpdwn_periods}</arg>
+</arguments>
+<msg timestamp="20210103 00:41:38.615" level="INFO">Clicking element 'xpath://body/div[@id='root']/div[1]/div[1]/div[3]/div[1]/div[1]/div[3]/div[1]/div[2]/div[1]/*[1]'.</msg>
+<status status="PASS" endtime="20210103 00:41:38.840" starttime="20210103 00:41:38.615"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${select_month_to_date}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210103 00:41:38.858" starttime="20210103 00:41:38.840"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${select_month_to_date}</arg>
+</arguments>
+<msg timestamp="20210103 00:41:38.859" level="INFO">Clicking element 'xpath://div[@class='select-editor__menu css-26l3qy-menu']//div[1]//div[contains(text(),'Month-to-date')]'.</msg>
+<status status="PASS" endtime="20210103 00:41:39.113" starttime="20210103 00:41:38.858"></status>
+</kw>
+<status status="PASS" endtime="20210103 00:41:39.113" starttime="20210103 00:41:38.598"></status>
+</kw>
+<kw name="Verify Select &quot;Month to Date&quot; is Successful" library="res-dashboard-users">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${select_monthtodate_success}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210103 00:41:39.132" starttime="20210103 00:41:39.114"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${select_monthtodate_success}</arg>
+</arguments>
+<msg timestamp="20210103 00:41:39.138" level="INFO">Current page contains element 'xpath://div[contains(text(),'Month-to-date')]'.</msg>
+<status status="PASS" endtime="20210103 00:41:39.138" starttime="20210103 00:41:39.132"></status>
+</kw>
+<status status="PASS" endtime="20210103 00:41:39.138" starttime="20210103 00:41:39.114"></status>
+</kw>
+<status status="PASS" endtime="20210103 00:41:39.138" critical="yes" starttime="20210103 00:41:38.597"></status>
+</test>
+<test id="s1-t14" name="Verify Filter by &quot;Custom Periods&quot; is successful">
+<kw name="Filter by Custom Periods" library="res-dashboard-users">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${drpdwn_periods}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210103 00:41:39.156" starttime="20210103 00:41:39.140"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${drpdwn_periods}</arg>
+</arguments>
+<msg timestamp="20210103 00:41:39.157" level="INFO">Clicking element 'xpath://body/div[@id='root']/div[1]/div[1]/div[3]/div[1]/div[1]/div[3]/div[1]/div[2]/div[1]/*[1]'.</msg>
+<status status="PASS" endtime="20210103 00:41:39.378" starttime="20210103 00:41:39.156"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${select_custom}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210103 00:41:39.398" starttime="20210103 00:41:39.378"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${select_custom}</arg>
+</arguments>
+<msg timestamp="20210103 00:41:39.399" level="INFO">Clicking element 'xpath://div[@class='select-editor__menu css-26l3qy-menu']//div[1]//div[contains(text(),'Custom')]'.</msg>
+<status status="PASS" endtime="20210103 00:41:39.720" starttime="20210103 00:41:39.399"></status>
+</kw>
+<status status="PASS" endtime="20210103 00:41:39.721" starttime="20210103 00:41:39.139"></status>
+</kw>
+<kw name="Verify Select &quot;Custom&quot; is Successful" library="res-dashboard-users">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${select_custom_success}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210103 00:41:39.744" starttime="20210103 00:41:39.723"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${select_custom_success}</arg>
+</arguments>
+<msg timestamp="20210103 00:41:39.749" level="INFO">Current page contains element 'xpath://div[contains(text(),'Custom')]'.</msg>
+<status status="PASS" endtime="20210103 00:41:39.749" starttime="20210103 00:41:39.744"></status>
+</kw>
+<status status="PASS" endtime="20210103 00:41:39.749" starttime="20210103 00:41:39.721"></status>
+</kw>
+<kw name="Select Start Date" library="res-dashboard-users">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${prev_month}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210103 00:41:39.773" starttime="20210103 00:41:39.751"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${prev_month}</arg>
+</arguments>
+<msg timestamp="20210103 00:41:39.774" level="INFO">Clicking element 'xpath://body/div[@id='root']/div[1]/div[1]/div[3]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/*[1]'.</msg>
+<status status="PASS" endtime="20210103 00:41:40.006" starttime="20210103 00:41:39.773"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${prev_month}</arg>
+</arguments>
+<msg timestamp="20210103 00:41:40.007" level="INFO">Clicking element 'xpath://body/div[@id='root']/div[1]/div[1]/div[3]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/*[1]'.</msg>
+<status status="PASS" endtime="20210103 00:41:40.241" starttime="20210103 00:41:40.007"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${prev_month}</arg>
+</arguments>
+<msg timestamp="20210103 00:41:40.241" level="INFO">Clicking element 'xpath://body/div[@id='root']/div[1]/div[1]/div[3]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/*[1]'.</msg>
+<status status="PASS" endtime="20210103 00:41:40.465" starttime="20210103 00:41:40.241"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${prev_month}</arg>
+</arguments>
+<msg timestamp="20210103 00:41:40.466" level="INFO">Clicking element 'xpath://body/div[@id='root']/div[1]/div[1]/div[3]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/*[1]'.</msg>
+<status status="PASS" endtime="20210103 00:41:40.687" starttime="20210103 00:41:40.465"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${prev_month}</arg>
+</arguments>
+<msg timestamp="20210103 00:41:40.688" level="INFO">Clicking element 'xpath://body/div[@id='root']/div[1]/div[1]/div[3]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/*[1]'.</msg>
+<status status="PASS" endtime="20210103 00:41:40.928" starttime="20210103 00:41:40.687"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${prev_month}</arg>
+</arguments>
+<msg timestamp="20210103 00:41:40.929" level="INFO">Clicking element 'xpath://body/div[@id='root']/div[1]/div[1]/div[3]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/*[1]'.</msg>
+<status status="PASS" endtime="20210103 00:41:41.148" starttime="20210103 00:41:40.928"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${prev_month}</arg>
+</arguments>
+<msg timestamp="20210103 00:41:41.148" level="INFO">Clicking element 'xpath://body/div[@id='root']/div[1]/div[1]/div[3]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/*[1]'.</msg>
+<status status="PASS" endtime="20210103 00:41:41.371" starttime="20210103 00:41:41.148"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${prev_month}</arg>
+</arguments>
+<msg timestamp="20210103 00:41:41.372" level="INFO">Clicking element 'xpath://body/div[@id='root']/div[1]/div[1]/div[3]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/*[1]'.</msg>
+<status status="PASS" endtime="20210103 00:41:41.596" starttime="20210103 00:41:41.371"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${prev_month}</arg>
+</arguments>
+<msg timestamp="20210103 00:41:41.597" level="INFO">Clicking element 'xpath://body/div[@id='root']/div[1]/div[1]/div[3]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/*[1]'.</msg>
+<status status="PASS" endtime="20210103 00:41:41.827" starttime="20210103 00:41:41.596"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${prev_month}</arg>
+</arguments>
+<msg timestamp="20210103 00:41:41.827" level="INFO">Clicking element 'xpath://body/div[@id='root']/div[1]/div[1]/div[3]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/*[1]'.</msg>
+<status status="PASS" endtime="20210103 00:41:42.047" starttime="20210103 00:41:41.827"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${prev_month}</arg>
+</arguments>
+<msg timestamp="20210103 00:41:42.048" level="INFO">Clicking element 'xpath://body/div[@id='root']/div[1]/div[1]/div[3]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/*[1]'.</msg>
+<status status="PASS" endtime="20210103 00:41:42.269" starttime="20210103 00:41:42.048"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${prev_month}</arg>
+</arguments>
+<msg timestamp="20210103 00:41:42.270" level="INFO">Clicking element 'xpath://body/div[@id='root']/div[1]/div[1]/div[3]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/*[1]'.</msg>
+<status status="PASS" endtime="20210103 00:41:42.509" starttime="20210103 00:41:42.269"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${select_startdate}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210103 00:41:42.528" starttime="20210103 00:41:42.509"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${select_startdate}</arg>
+</arguments>
+<msg timestamp="20210103 00:41:42.529" level="INFO">Clicking element 'xpath://body[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]/table[1]/tbody[1]/tr[3]/td[1]'.</msg>
+<status status="PASS" endtime="20210103 00:41:42.788" starttime="20210103 00:41:42.528"></status>
+</kw>
+<status status="PASS" endtime="20210103 00:41:42.788" starttime="20210103 00:41:39.750"></status>
+</kw>
+<kw name="Select End Date" library="res-dashboard-users">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${next_month}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210103 00:41:42.809" starttime="20210103 00:41:42.789"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${next_month}</arg>
+</arguments>
+<msg timestamp="20210103 00:41:42.809" level="INFO">Clicking element 'xpath://body/div[@id='root']/div[1]/div[1]/div[3]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/*[1]'.</msg>
+<status status="PASS" endtime="20210103 00:41:43.030" starttime="20210103 00:41:42.809"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${next_month}</arg>
+</arguments>
+<msg timestamp="20210103 00:41:43.031" level="INFO">Clicking element 'xpath://body/div[@id='root']/div[1]/div[1]/div[3]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/*[1]'.</msg>
+<status status="PASS" endtime="20210103 00:41:43.255" starttime="20210103 00:41:43.030"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${next_month}</arg>
+</arguments>
+<msg timestamp="20210103 00:41:43.256" level="INFO">Clicking element 'xpath://body/div[@id='root']/div[1]/div[1]/div[3]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/*[1]'.</msg>
+<status status="PASS" endtime="20210103 00:41:43.478" starttime="20210103 00:41:43.255"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${next_month}</arg>
+</arguments>
+<msg timestamp="20210103 00:41:43.479" level="INFO">Clicking element 'xpath://body/div[@id='root']/div[1]/div[1]/div[3]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/*[1]'.</msg>
+<status status="PASS" endtime="20210103 00:41:43.712" starttime="20210103 00:41:43.479"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${next_month}</arg>
+</arguments>
+<msg timestamp="20210103 00:41:43.713" level="INFO">Clicking element 'xpath://body/div[@id='root']/div[1]/div[1]/div[3]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/*[1]'.</msg>
+<status status="PASS" endtime="20210103 00:41:43.935" starttime="20210103 00:41:43.713"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${next_month}</arg>
+</arguments>
+<msg timestamp="20210103 00:41:43.936" level="INFO">Clicking element 'xpath://body/div[@id='root']/div[1]/div[1]/div[3]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/*[1]'.</msg>
+<status status="PASS" endtime="20210103 00:41:44.158" starttime="20210103 00:41:43.935"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${next_month}</arg>
+</arguments>
+<msg timestamp="20210103 00:41:44.158" level="INFO">Clicking element 'xpath://body/div[@id='root']/div[1]/div[1]/div[3]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/*[1]'.</msg>
+<status status="PASS" endtime="20210103 00:41:44.398" starttime="20210103 00:41:44.158"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${next_month}</arg>
+</arguments>
+<msg timestamp="20210103 00:41:44.398" level="INFO">Clicking element 'xpath://body/div[@id='root']/div[1]/div[1]/div[3]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/*[1]'.</msg>
+<status status="PASS" endtime="20210103 00:41:44.618" starttime="20210103 00:41:44.398"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${select_enddate}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210103 00:41:44.638" starttime="20210103 00:41:44.619"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${select_enddate}</arg>
+</arguments>
+<msg timestamp="20210103 00:41:44.638" level="INFO">Clicking element 'xpath://body[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[3]/div[1]/table[1]/tbody[1]/tr[3]/td[7]'.</msg>
+<status status="PASS" endtime="20210103 00:41:44.882" starttime="20210103 00:41:44.638"></status>
+</kw>
+<kw name="Delay" library="res-dashboard-users">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20210103 00:41:49.883" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20210103 00:41:49.884" starttime="20210103 00:41:44.883"></status>
+</kw>
+<status status="PASS" endtime="20210103 00:41:49.884" starttime="20210103 00:41:44.882"></status>
+</kw>
+<kw name="Delay" library="res-dashboard-users">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20210103 00:41:54.886" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20210103 00:41:54.886" starttime="20210103 00:41:49.885"></status>
+</kw>
+<status status="PASS" endtime="20210103 00:41:54.887" starttime="20210103 00:41:49.884"></status>
+</kw>
+<status status="PASS" endtime="20210103 00:41:54.887" starttime="20210103 00:41:42.789"></status>
+</kw>
+<status status="PASS" endtime="20210103 00:41:54.888" critical="yes" starttime="20210103 00:41:39.139"></status>
+</test>
+<test id="s1-t15" name="Verify Report Done (Scheduled) is Displayed">
+<kw name="Verify Report Done (Scheduled) is Displayed" library="res-dashboard-users">
+<kw name="Delay" library="res-dashboard-users">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20210103 00:41:59.891" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20210103 00:41:59.891" starttime="20210103 00:41:54.890"></status>
+</kw>
+<status status="PASS" endtime="20210103 00:41:59.892" starttime="20210103 00:41:54.890"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${chart_sched_report}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210103 00:41:59.914" starttime="20210103 00:41:59.892"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${chart_sched_report}</arg>
+</arguments>
+<msg timestamp="20210103 00:41:59.921" level="INFO">Current page contains element 'xpath://body/div[@id='root']/div[1]/div[1]/div[3]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/*[1]'.</msg>
+<status status="PASS" endtime="20210103 00:41:59.921" starttime="20210103 00:41:59.915"></status>
+</kw>
+<status status="PASS" endtime="20210103 00:41:59.921" starttime="20210103 00:41:54.889"></status>
+</kw>
+<status status="PASS" endtime="20210103 00:41:59.921" critical="yes" starttime="20210103 00:41:54.888"></status>
+</test>
+<test id="s1-t16" name="Verify Time Invested (Scheduled) is Displayed">
+<kw name="Verify Time Invested (Scheduled) is Displayed" library="res-dashboard-users">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${chart_sched_time}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210103 00:41:59.941" starttime="20210103 00:41:59.923"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${chart_sched_time}</arg>
+</arguments>
+<msg timestamp="20210103 00:41:59.946" level="INFO">Current page contains element 'xpath://body/div[@id='root']/div[1]/div[1]/div[3]/div[2]/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]/*[1]'.</msg>
+<status status="PASS" endtime="20210103 00:41:59.947" starttime="20210103 00:41:59.941"></status>
+</kw>
+<status status="PASS" endtime="20210103 00:41:59.947" starttime="20210103 00:41:59.922"></status>
+</kw>
+<status status="PASS" endtime="20210103 00:41:59.947" critical="yes" starttime="20210103 00:41:59.922"></status>
+</test>
+<test id="s1-t17" name="Verify Report Done (Ad-Hoc) is Displayed">
+<kw name="Verify Report Done (Ad-Hoc) is Displayed" library="res-dashboard-users">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${tab_adhoc_report}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210103 00:41:59.965" starttime="20210103 00:41:59.948"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${tab_adhoc_report}</arg>
+</arguments>
+<msg timestamp="20210103 00:41:59.965" level="INFO">Clicking element 'xpath://body/div[@id='root']/div[1]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[2]/button[2]'.</msg>
+<status status="PASS" endtime="20210103 00:42:00.187" starttime="20210103 00:41:59.965"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${chart_adhoc_report}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210103 00:42:00.209" starttime="20210103 00:42:00.188"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${chart_adhoc_report}</arg>
+</arguments>
+<msg timestamp="20210103 00:42:00.215" level="INFO">Current page contains element 'xpath://body/div[@id='root']/div[1]/div[1]/div[3]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/*[1]'.</msg>
+<status status="PASS" endtime="20210103 00:42:00.215" starttime="20210103 00:42:00.210"></status>
+</kw>
+<status status="PASS" endtime="20210103 00:42:00.215" starttime="20210103 00:41:59.948"></status>
+</kw>
+<status status="PASS" endtime="20210103 00:42:00.215" critical="yes" starttime="20210103 00:41:59.947"></status>
+</test>
+<test id="s1-t18" name="Verify Time Invested (Ad-Hoc) is Displayed">
+<kw name="Verify Time Invested (Ad-Hoc) is Displayed" library="res-dashboard-users">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${tab_adhoc_time}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210103 00:42:00.234" starttime="20210103 00:42:00.217"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${tab_adhoc_time}</arg>
+</arguments>
+<msg timestamp="20210103 00:42:00.235" level="INFO">Clicking element 'xpath://body/div[@id='root']/div[1]/div[1]/div[3]/div[2]/div[1]/div[2]/div[1]/div[2]/button[2]'.</msg>
+<status status="PASS" endtime="20210103 00:42:00.461" starttime="20210103 00:42:00.234"></status>
+</kw>
+<kw name="Delay" library="res-dashboard-users">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20210103 00:42:05.465" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20210103 00:42:05.465" starttime="20210103 00:42:00.462"></status>
+</kw>
+<status status="PASS" endtime="20210103 00:42:05.465" starttime="20210103 00:42:00.461"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${chart_adhoc_time}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210103 00:42:05.488" starttime="20210103 00:42:05.466"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${chart_adhoc_time}</arg>
+</arguments>
+<msg timestamp="20210103 00:42:05.494" level="INFO">Current page contains element 'xpath://body/div[@id='root']/div[1]/div[1]/div[3]/div[2]/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]/*[1]'.</msg>
+<status status="PASS" endtime="20210103 00:42:05.494" starttime="20210103 00:42:05.489"></status>
+</kw>
+<status status="PASS" endtime="20210103 00:42:05.494" starttime="20210103 00:42:00.216"></status>
+</kw>
+<status status="PASS" endtime="20210103 00:42:05.494" critical="yes" starttime="20210103 00:42:00.216"></status>
+</test>
+<test id="s1-t19" name="Verify &quot;Top User by Completion&quot; is Displayed">
+<kw name="Verify &quot;Top User by Completion&quot; is Displayed" library="res-dashboard-users">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${table_top_user}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210103 00:42:05.514" starttime="20210103 00:42:05.495"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${table_top_user}</arg>
+</arguments>
+<msg timestamp="20210103 00:42:05.521" level="INFO">Current page contains element 'xpath://body/div[@id='root']/div[1]/div[1]/div[3]/div[2]/div[2]/div[1]/div[2]/div[1]/div[2]'.</msg>
+<status status="PASS" endtime="20210103 00:42:05.521" starttime="20210103 00:42:05.515"></status>
+</kw>
+<status status="PASS" endtime="20210103 00:42:05.521" starttime="20210103 00:42:05.495"></status>
+</kw>
+<status status="PASS" endtime="20210103 00:42:05.521" critical="yes" starttime="20210103 00:42:05.495"></status>
+</test>
+<status status="PASS" endtime="20210103 00:42:05.523" starttime="20210103 00:41:01.514"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="19">Critical Tests</stat>
+<stat fail="0" pass="19">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Dsboard-Users" pass="19">Dsboard-Users</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

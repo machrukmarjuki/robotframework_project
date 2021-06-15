@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20210217 17:15:37.903" generator="Robot 3.1.2 (Python 2.7.16 on darwin)">
+<suite source="/Users/machruk/PycharmProjects/Nimbly/Admin/JourneyPlan/Edit Journey/Edit Journey.robot" id="s1" name="Edit Journey">
+<kw type="setup" name="Open Browser to Manage Menu" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${SERVER}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20210217 17:15:38.135" level="INFO">Opening browser 'firefox' to base url 'https://admin.hellonimbly.com/'.</msg>
+<msg timestamp="20210217 17:15:38.136" level="INFO">Firefox driver log is always forced to to: /Users/machruk/PycharmProjects/Nimbly/Admin/JourneyPlan/Edit Journey/geckodriver-3.log</msg>
+<status status="PASS" endtime="20210217 17:15:44.255" starttime="20210217 17:15:38.134"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20210217 17:15:44.748" starttime="20210217 17:15:44.255"></status>
+</kw>
+<kw name="Valid Login" library="login">
+<kw name="Input Email" library="login">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:input_username_login</arg>
+<arg>${EMAIL}</arg>
+</arguments>
+<msg timestamp="20210217 17:15:44.749" level="INFO">Typing text 'machruk@hellonimbly.com' into text field 'id:input_username_login'.</msg>
+<status status="PASS" endtime="20210217 17:15:44.845" starttime="20210217 17:15:44.748"></status>
+</kw>
+<status status="PASS" endtime="20210217 17:15:44.845" starttime="20210217 17:15:44.748"></status>
+</kw>
+<kw name="Input Password" library="login">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:input_pwd_login</arg>
+<arg>${PASSWORD}</arg>
+</arguments>
+<msg timestamp="20210217 17:15:44.846" level="INFO">Typing text '123456' into text field 'id:input_pwd_login'.</msg>
+<status status="PASS" endtime="20210217 17:15:44.888" starttime="20210217 17:15:44.846"></status>
+</kw>
+<status status="PASS" endtime="20210217 17:15:44.888" starttime="20210217 17:15:44.845"></status>
+</kw>
+<kw name="Click Login Button" library="login">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id:btn_login</arg>
+</arguments>
+<msg timestamp="20210217 17:15:44.889" level="INFO">Clicking element 'id:btn_login'.</msg>
+<status status="PASS" endtime="20210217 17:15:45.190" starttime="20210217 17:15:44.888"></status>
+</kw>
+<status status="PASS" endtime="20210217 17:15:45.190" starttime="20210217 17:15:44.888"></status>
+</kw>
+<status status="PASS" endtime="20210217 17:15:45.191" starttime="20210217 17:15:44.748"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${link_admin}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<msg timestamp="20210217 17:15:49.742" level="INFO">Suppressing StaleElementReferenceException from Selenium.</msg>
+<status status="PASS" endtime="20210217 17:15:50.101" starttime="20210217 17:15:45.191"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${link_admin}</arg>
+</arguments>
+<msg timestamp="20210217 17:15:50.102" level="INFO">Clicking element 'id:menu_adm'.</msg>
+<status status="PASS" endtime="20210217 17:15:50.397" starttime="20210217 17:15:50.102"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${link_manage}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210217 17:15:50.417" starttime="20210217 17:15:50.397"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${link_manage}</arg>
+</arguments>
+<msg timestamp="20210217 17:15:50.417" level="INFO">Clicking element 'id:menu_adm_manage'.</msg>
+<status status="PASS" endtime="20210217 17:15:50.634" starttime="20210217 17:15:50.417"></status>
+</kw>
+<status status="PASS" endtime="20210217 17:15:50.634" starttime="20210217 17:15:38.134"></status>
+</kw>
+<test id="s1-t1" name="Go to Journey Plan Page">
+<kw name="Go to Journey Plan Page" library="res-admin-journey">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${link_journey_plan}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210217 17:15:50.646" starttime="20210217 17:15:50.635"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${link_journey_plan}</arg>
+</arguments>
+<msg timestamp="20210217 17:15:50.647" level="INFO">Clicking element 'xpath://span[contains(text(),'Journey Plan')]'.</msg>
+<status status="PASS" endtime="20210217 17:15:50.890" starttime="20210217 17:15:50.646"></status>
+</kw>
+<status status="PASS" endtime="20210217 17:15:50.891" starttime="20210217 17:15:50.635"></status>
+</kw>
+<status status="PASS" endtime="20210217 17:15:50.891" critical="yes" starttime="20210217 17:15:50.634"></status>
+</test>
+<test id="s1-t2" name="Verify Edit Journey Plan is Successfully">
+<kw name="Search Journey Plan to Edit" library="res-admin-journey">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${input_search_journey_plan}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210217 17:15:53.580" starttime="20210217 17:15:50.893"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${input_search_journey_plan}</arg>
+<arg>${journey_name}</arg>
+</arguments>
+<msg timestamp="20210217 17:15:53.580" level="INFO">Typing text 'AutoQA Journey Plan' into text field 'xpath://input[@placeholder='Search for a Journey Plan...']'.</msg>
+<status status="PASS" endtime="20210217 17:15:53.654" starttime="20210217 17:15:53.580"></status>
+</kw>
+<status status="PASS" endtime="20210217 17:15:53.654" starttime="20210217 17:15:50.893"></status>
+</kw>
+<kw name="Click Edit Button" library="res-admin-journey">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${btn_edit_journey}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210217 17:15:53.670" starttime="20210217 17:15:53.655"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_edit_journey}</arg>
+</arguments>
+<msg timestamp="20210217 17:15:53.671" level="INFO">Clicking element 'xpath://tr[1]//td[7]//img[1]'.</msg>
+<status status="PASS" endtime="20210217 17:15:53.981" starttime="20210217 17:15:53.670"></status>
+</kw>
+<status status="PASS" endtime="20210217 17:15:53.981" starttime="20210217 17:15:53.655"></status>
+</kw>
+<kw name="Verify &quot;Edit Journey&quot; Modal rendered correctly">
+<kw name="Verify &quot;Journey Name&quot; field is available" library="res-admin-journey">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${input_journey_name}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210217 17:15:59.854" starttime="20210217 17:15:53.982"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${input_journey_name}</arg>
+</arguments>
+<msg timestamp="20210217 17:15:59.877" level="INFO">Current page contains element 'id:journeyName'.</msg>
+<status status="PASS" endtime="20210217 17:15:59.877" starttime="20210217 17:15:59.854"></status>
+</kw>
+<status status="PASS" endtime="20210217 17:15:59.877" starttime="20210217 17:15:53.982"></status>
+</kw>
+<kw name="Verify &quot;Journey Department&quot; dropdown is available" library="res-admin-journey">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${dropdown_save_to_department}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210217 17:15:59.930" starttime="20210217 17:15:59.878"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${dropdown_save_to_department}</arg>
+</arguments>
+<msg timestamp="20210217 17:15:59.938" level="INFO">Current page contains element 'id:department'.</msg>
+<status status="PASS" endtime="20210217 17:15:59.938" starttime="20210217 17:15:59.930"></status>
+</kw>
+<status status="PASS" endtime="20210217 17:15:59.939" starttime="20210217 17:15:59.878"></status>
+</kw>
+<kw name="Verify &quot;Site to visit&quot; dropdown is available (edit)" library="res-admin-journey">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${dropdown_edit_sites_to_visit}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210217 17:15:59.954" starttime="20210217 17:15:59.939"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${dropdown_edit_sites_to_visit}</arg>
+</arguments>
+<msg timestamp="20210217 17:15:59.957" level="INFO">Current page contains element 'id:site-valid'.</msg>
+<status status="PASS" endtime="20210217 17:15:59.958" starttime="20210217 17:15:59.954"></status>
+</kw>
+<status status="PASS" endtime="20210217 17:15:59.958" starttime="20210217 17:15:59.939"></status>
+</kw>
+<kw name="Verify &quot;Salesman&quot; dropdown is available (edit)" library="res-admin-journey">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${dropdown_edit_salesman}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210217 17:15:59.972" starttime="20210217 17:15:59.958"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${dropdown_edit_salesman}</arg>
+</arguments>
+<msg timestamp="20210217 17:15:59.977" level="INFO">Current page contains element 'id:salesman-valid'.</msg>
+<status status="PASS" endtime="20210217 17:15:59.977" starttime="20210217 17:15:59.972"></status>
+</kw>
+<status status="PASS" endtime="20210217 17:15:59.977" starttime="20210217 17:15:59.958"></status>
+</kw>
+<kw name="Verify &quot;Daily Journey&quot; radio button is available" library="res-admin-journey">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${radiobtn_daily}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210217 17:15:59.992" starttime="20210217 17:15:59.977"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${radiobtn_daily}</arg>
+</arguments>
+<msg timestamp="20210217 17:16:00.007" level="INFO">Current page contains element 'xpath://div[contains(text(),'Daily')]'.</msg>
+<status status="PASS" endtime="20210217 17:16:00.007" starttime="20210217 17:15:59.993"></status>
+</kw>
+<status status="PASS" endtime="20210217 17:16:00.007" starttime="20210217 17:15:59.977"></status>
+</kw>
+<kw name="Verify &quot;Weekly Journey&quot; radio button is available" library="res-admin-journey">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${radiobtn_weekly}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210217 17:16:00.027" starttime="20210217 17:16:00.008"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${radiobtn_weekly}</arg>
+</arguments>
+<msg timestamp="20210217 17:16:00.030" level="INFO">Current page contains element 'xpath://div[contains(text(),'Weekly')]'.</msg>
+<status status="PASS" endtime="20210217 17:16:00.030" starttime="20210217 17:16:00.027"></status>
+</kw>
+<status status="PASS" endtime="20210217 17:16:00.030" starttime="20210217 17:16:00.007"></status>
+</kw>
+<kw name="Verify &quot;Monthly Journey&quot; radio button is available" library="res-admin-journey">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${radiobtn_monthly}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210217 17:16:00.040" starttime="20210217 17:16:00.030"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${radiobtn_monthly}</arg>
+</arguments>
+<msg timestamp="20210217 17:16:00.046" level="INFO">Current page contains element 'xpath://div[contains(text(),'Monthly')]'.</msg>
+<status status="PASS" endtime="20210217 17:16:00.046" starttime="20210217 17:16:00.041"></status>
+</kw>
+<status status="PASS" endtime="20210217 17:16:00.046" starttime="20210217 17:16:00.030"></status>
+</kw>
+<kw name="Verify &quot;Journey Questionnaire&quot; dropdown is available (edit)" library="res-admin-journey">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${dropdown_edit_quest_journey}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210217 17:16:00.059" starttime="20210217 17:16:00.047"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${dropdown_edit_quest_journey}</arg>
+</arguments>
+<msg timestamp="20210217 17:16:00.063" level="INFO">Current page contains element 'id:question-valid'.</msg>
+<status status="PASS" endtime="20210217 17:16:00.063" starttime="20210217 17:16:00.060"></status>
+</kw>
+<status status="PASS" endtime="20210217 17:16:00.063" starttime="20210217 17:16:00.047"></status>
+</kw>
+<kw name="Verify &quot;None Signature&quot; radio button is available" library="res-admin-journey">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${select_signature_none}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210217 17:16:00.074" starttime="20210217 17:16:00.063"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${select_signature_none}</arg>
+</arguments>
+<msg timestamp="20210217 17:16:00.077" level="INFO">Current page contains element 'xpath://div[contains(text(),'none')]'.</msg>
+<status status="PASS" endtime="20210217 17:16:00.078" starttime="20210217 17:16:00.074"></status>
+</kw>
+<status status="PASS" endtime="20210217 17:16:00.078" starttime="20210217 17:16:00.063"></status>
+</kw>
+<kw name="Verify &quot;Two Signature&quot; radio button is available" library="res-admin-journey">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${select_signature_two}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210217 17:16:00.090" starttime="20210217 17:16:00.078"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${select_signature_two}</arg>
+</arguments>
+<msg timestamp="20210217 17:16:00.093" level="INFO">Current page contains element 'xpath://div[contains(text(),'two')]'.</msg>
+<status status="PASS" endtime="20210217 17:16:00.093" starttime="20210217 17:16:00.090"></status>
+</kw>
+<status status="PASS" endtime="20210217 17:16:00.093" starttime="20210217 17:16:00.078"></status>
+</kw>
+<kw name="Verify &quot;Selfie Signature&quot; toggle is available" library="res-admin-journey">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${unselect_selfie_signature}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210217 17:16:00.105" starttime="20210217 17:16:00.093"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${unselect_selfie_signature}</arg>
+</arguments>
+<msg timestamp="20210217 17:16:00.109" level="INFO">Current page contains element 'xpath://label[contains(text(),'Require selfie signature?')]'.</msg>
+<status status="PASS" endtime="20210217 17:16:00.109" starttime="20210217 17:16:00.105"></status>
+</kw>
+<status status="PASS" endtime="20210217 17:16:00.109" starttime="20210217 17:16:00.093"></status>
+</kw>
+<status status="PASS" endtime="20210217 17:16:00.109" starttime="20210217 17:15:53.981"></status>
+</kw>
+<kw name="Edit Journey Name" library="res-admin-journey">
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>3</arg>
+<arg>[NUMBERS]</arg>
+</arguments>
+<assign>
+<var>${RANDOM}</var>
+</assign>
+<msg timestamp="20210217 17:16:00.110" level="INFO">${RANDOM} = 758</msg>
+<status status="PASS" endtime="20210217 17:16:00.110" starttime="20210217 17:16:00.110"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${input_journey_name}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210217 17:16:00.124" starttime="20210217 17:16:00.110"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${input_journey_name}</arg>
+<arg>${journey_name_edited} ${RANDOM}</arg>
+</arguments>
+<msg timestamp="20210217 17:16:00.124" level="INFO">Typing text 'AutoQA Journey edited 758' into text field 'id:journeyName'.</msg>
+<status status="PASS" endtime="20210217 17:16:00.365" starttime="20210217 17:16:00.124"></status>
+</kw>
+<status status="PASS" endtime="20210217 17:16:00.365" starttime="20210217 17:16:00.109"></status>
+</kw>
+<kw name="Edit Department" library="res-admin-journey">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${dropdown_save_to_department}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210217 17:16:00.379" starttime="20210217 17:16:00.366"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${dropdown_save_to_department}</arg>
+</arguments>
+<msg timestamp="20210217 17:16:00.379" level="INFO">Clicking element 'id:department'.</msg>
+<status status="PASS" endtime="20210217 17:16:00.658" starttime="20210217 17:16:00.379"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${select_department_edited}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210217 17:16:00.673" starttime="20210217 17:16:00.658"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${select_department_edited}</arg>
+</arguments>
+<msg timestamp="20210217 17:16:00.673" level="INFO">Clicking element 'xpath://div[@class=' css-26l3qy-menu']//div[1]//div[contains(text(),'QA Department')]'.</msg>
+<status status="PASS" endtime="20210217 17:16:00.895" starttime="20210217 17:16:00.673"></status>
+</kw>
+<status status="PASS" endtime="20210217 17:16:00.895" starttime="20210217 17:16:00.365"></status>
+</kw>
+<kw name="Edit Site to Visit" library="res-admin-journey">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${dropdown_edit_sites_to_visit}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210217 17:16:00.910" starttime="20210217 17:16:00.896"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${dropdown_edit_sites_to_visit}</arg>
+</arguments>
+<msg timestamp="20210217 17:16:00.910" level="INFO">Clicking element 'id:site-valid'.</msg>
+<status status="PASS" endtime="20210217 17:16:01.136" starttime="20210217 17:16:00.910"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${select_sites_edited}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210217 17:16:03.463" starttime="20210217 17:16:01.136"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${select_sites_edited}</arg>
+</arguments>
+<msg timestamp="20210217 17:16:03.463" level="INFO">Clicking element 'xpath://div[@class=' css-26l3qy-menu']//div[1]//div[contains(text(),'Pasar Pagi')]'.</msg>
+<status status="PASS" endtime="20210217 17:16:03.730" starttime="20210217 17:16:03.463"></status>
+</kw>
+<status status="PASS" endtime="20210217 17:16:03.730" starttime="20210217 17:16:00.895"></status>
+</kw>
+<kw name="Edit Quetionnaires for Sites" library="res-admin-journey">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${dropdown_edit_quest_journey}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210217 17:16:03.752" starttime="20210217 17:16:03.732"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${dropdown_edit_quest_journey}</arg>
+</arguments>
+<msg timestamp="20210217 17:16:03.752" level="INFO">Clicking element 'id:question-valid'.</msg>
+<status status="PASS" endtime="20210217 17:16:04.042" starttime="20210217 17:16:03.752"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${select_questionnaire_edited}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210217 17:16:04.058" starttime="20210217 17:16:04.043"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${select_questionnaire_edited}</arg>
+</arguments>
+<msg timestamp="20210217 17:16:04.059" level="INFO">Clicking element 'xpath://div[@class=' css-26l3qy-menu']//div[1]//div[contains(text(),'colorbox')]'.</msg>
+<status status="PASS" endtime="20210217 17:16:04.298" starttime="20210217 17:16:04.058"></status>
+</kw>
+<status status="PASS" endtime="20210217 17:16:04.298" starttime="20210217 17:16:03.731"></status>
+</kw>
+<kw name="Edit Schedule to Daily" library="res-admin-journey">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${radiobtn_daily}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210217 17:16:04.314" starttime="20210217 17:16:04.299"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${radiobtn_daily}</arg>
+</arguments>
+<msg timestamp="20210217 17:16:04.315" level="INFO">Clicking element 'xpath://div[contains(text(),'Daily')]'.</msg>
+<status status="PASS" endtime="20210217 17:16:04.533" starttime="20210217 17:16:04.315"></status>
+</kw>
+<status status="PASS" endtime="20210217 17:16:04.534" starttime="20210217 17:16:04.299"></status>
+</kw>
+<kw name="Click Save Journey Plan" library="res-admin-journey">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${button_save_journey}</arg>
+</arguments>
+<status status="PASS" endtime="20210217 17:16:04.551" starttime="20210217 17:16:04.535"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${button_save_journey}</arg>
+</arguments>
+<msg timestamp="20210217 17:16:04.551" level="INFO">Clicking element 'xpath://body/div[@id='root']/div[1]/div[1]/div[2]/div[1]/div[2]/button[2]'.</msg>
+<status status="PASS" endtime="20210217 17:16:04.792" starttime="20210217 17:16:04.551"></status>
+</kw>
+<status status="PASS" endtime="20210217 17:16:04.793" starttime="20210217 17:16:04.534"></status>
+</kw>
+<kw name="Verify Edit Journey Plan Successful" library="res-admin-journey">
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${success_update_journey}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210217 17:17:05.039" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20210217 17:17:05.039" starttime="20210217 17:17:04.886"></status>
+</kw>
+<msg timestamp="20210217 17:17:05.044" level="FAIL">Text 'Successfully update Journey plan' did not appear in 1 minute.</msg>
+<status status="FAIL" endtime="20210217 17:17:05.045" starttime="20210217 17:16:04.794"></status>
+</kw>
+<status status="FAIL" endtime="20210217 17:17:05.045" starttime="20210217 17:16:04.793"></status>
+</kw>
+<status status="FAIL" endtime="20210217 17:17:05.045" critical="yes" starttime="20210217 17:15:50.892">Text 'Successfully update Journey plan' did not appear in 1 minute.</status>
+</test>
+<doc>Verify "Edit Journey Plan" Features is working properly</doc>
+<status status="FAIL" endtime="20210217 17:17:05.046" starttime="20210217 17:15:37.905"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="1">Critical Tests</stat>
+<stat fail="1" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="Edit Journey" pass="1">Edit Journey</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

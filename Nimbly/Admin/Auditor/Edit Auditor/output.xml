@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20210217 12:24:48.536" generator="Robot 3.1.2 (Python 2.7.16 on darwin)">
+<suite source="/Users/machruk/PycharmProjects/Nimbly/Admin/Auditor/Edit Auditor/Edit Auditor.robot" id="s1" name="Edit Auditor">
+<kw type="setup" name="Open Browser to Manage Menu" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${SERVER}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20210217 12:24:48.810" level="INFO">Opening browser 'firefox' to base url 'https://admin.hellonimbly.com/'.</msg>
+<msg timestamp="20210217 12:24:48.814" level="INFO">Firefox driver log is always forced to to: /Users/machruk/PycharmProjects/Nimbly/Admin/Auditor/Edit Auditor/geckodriver-5.log</msg>
+<status status="PASS" endtime="20210217 12:24:54.497" starttime="20210217 12:24:48.810"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20210217 12:24:54.993" starttime="20210217 12:24:54.497"></status>
+</kw>
+<kw name="Valid Login" library="login">
+<kw name="Input Email" library="login">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:input_username_login</arg>
+<arg>${EMAIL}</arg>
+</arguments>
+<msg timestamp="20210217 12:24:54.995" level="INFO">Typing text 'machruk@hellonimbly.com' into text field 'id:input_username_login'.</msg>
+<status status="PASS" endtime="20210217 12:24:55.111" starttime="20210217 12:24:54.995"></status>
+</kw>
+<status status="PASS" endtime="20210217 12:24:55.111" starttime="20210217 12:24:54.994"></status>
+</kw>
+<kw name="Input Password" library="login">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:input_pwd_login</arg>
+<arg>${PASSWORD}</arg>
+</arguments>
+<msg timestamp="20210217 12:24:55.112" level="INFO">Typing text '123456' into text field 'id:input_pwd_login'.</msg>
+<status status="PASS" endtime="20210217 12:24:55.157" starttime="20210217 12:24:55.111"></status>
+</kw>
+<status status="PASS" endtime="20210217 12:24:55.157" starttime="20210217 12:24:55.111"></status>
+</kw>
+<kw name="Click Login Button" library="login">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id:btn_login</arg>
+</arguments>
+<msg timestamp="20210217 12:24:55.158" level="INFO">Clicking element 'id:btn_login'.</msg>
+<status status="PASS" endtime="20210217 12:24:55.384" starttime="20210217 12:24:55.158"></status>
+</kw>
+<status status="PASS" endtime="20210217 12:24:55.384" starttime="20210217 12:24:55.157"></status>
+</kw>
+<status status="PASS" endtime="20210217 12:24:55.384" starttime="20210217 12:24:54.994"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${link_admin}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<msg timestamp="20210217 12:24:59.880" level="INFO">Suppressing StaleElementReferenceException from Selenium.</msg>
+<status status="PASS" endtime="20210217 12:25:00.223" starttime="20210217 12:24:55.384"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${link_admin}</arg>
+</arguments>
+<msg timestamp="20210217 12:25:00.223" level="INFO">Clicking element 'id:menu_adm'.</msg>
+<status status="PASS" endtime="20210217 12:25:00.488" starttime="20210217 12:25:00.223"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${link_manage}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210217 12:25:00.508" starttime="20210217 12:25:00.489"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${link_manage}</arg>
+</arguments>
+<msg timestamp="20210217 12:25:00.508" level="INFO">Clicking element 'id:menu_adm_manage'.</msg>
+<status status="PASS" endtime="20210217 12:25:00.724" starttime="20210217 12:25:00.508"></status>
+</kw>
+<status status="PASS" endtime="20210217 12:25:00.724" starttime="20210217 12:24:48.809"></status>
+</kw>
+<test id="s1-t1" name="Go to Auditors Page">
+<kw name="Go to Auditors Page" library="res-admin-auditor">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${link_auditors}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210217 12:25:00.736" starttime="20210217 12:25:00.725"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${link_auditors}</arg>
+</arguments>
+<msg timestamp="20210217 12:25:00.736" level="INFO">Clicking element 'id:menu_auditors'.</msg>
+<status status="PASS" endtime="20210217 12:25:00.972" starttime="20210217 12:25:00.736"></status>
+</kw>
+<status status="PASS" endtime="20210217 12:25:00.972" starttime="20210217 12:25:00.725"></status>
+</kw>
+<status status="PASS" endtime="20210217 12:25:00.972" critical="yes" starttime="20210217 12:25:00.724"></status>
+</test>
+<test id="s1-t2" name="Verify Edit Auditor Successfully">
+<kw name="Search Auditor to Edited">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${field_search_auditors}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210217 12:25:02.863" starttime="20210217 12:25:00.974"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${field_search_auditors}</arg>
+<arg>${auditor_name_edited}</arg>
+</arguments>
+<msg timestamp="20210217 12:25:02.864" level="INFO">Typing text 'AutoQA Auditor Edited' into text field 'id:input_search_auditor'.</msg>
+<status status="PASS" endtime="20210217 12:25:02.965" starttime="20210217 12:25:02.864"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${search_auditor_edited}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210217 12:25:05.484" starttime="20210217 12:25:02.965"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20210217 12:25:08.485" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20210217 12:25:08.486" starttime="20210217 12:25:05.484"></status>
+</kw>
+<status status="PASS" endtime="20210217 12:25:08.486" starttime="20210217 12:25:00.974"></status>
+</kw>
+<kw name="Click Edit Icon">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${icon_auditor_edit}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210217 12:25:08.504" starttime="20210217 12:25:08.487"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${icon_auditor_edit}</arg>
+</arguments>
+<msg timestamp="20210217 12:25:08.505" level="INFO">Clicking element 'id:btn_edit_auditor'.</msg>
+<status status="PASS" endtime="20210217 12:25:08.740" starttime="20210217 12:25:08.505"></status>
+</kw>
+<status status="PASS" endtime="20210217 12:25:08.740" starttime="20210217 12:25:08.486"></status>
+</kw>
+<kw name="Verify &quot;Edit&quot; icon can be clicked">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${button_auditor_save}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210217 12:25:10.676" starttime="20210217 12:25:08.741"></status>
+</kw>
+<kw name="Element Should Be Enabled" library="Selenium2Library">
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<arguments>
+<arg>${button_auditor_save}</arg>
+</arguments>
+<status status="PASS" endtime="20210217 12:25:10.689" starttime="20210217 12:25:10.676"></status>
+</kw>
+<status status="PASS" endtime="20210217 12:25:10.689" starttime="20210217 12:25:08.741"></status>
+</kw>
+<kw name="Verify &quot;Edit User&quot; modal rendered correctly">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${field_auditor_name}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210217 12:25:10.702" starttime="20210217 12:25:10.690"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${field_auditor_name}</arg>
+</arguments>
+<msg timestamp="20210217 12:25:10.706" level="INFO">Current page contains element 'id:input_user_auditor'.</msg>
+<status status="PASS" endtime="20210217 12:25:10.706" starttime="20210217 12:25:10.702"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${dropdown_auditor_role}</arg>
+</arguments>
+<msg timestamp="20210217 12:25:10.709" level="INFO">Current page contains element 'id:drpdwn_role_auditor'.</msg>
+<status status="PASS" endtime="20210217 12:25:10.709" starttime="20210217 12:25:10.706"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${field_auditor_phone}</arg>
+</arguments>
+<msg timestamp="20210217 12:25:10.714" level="INFO">Current page contains element 'id:input_phone_auditor'.</msg>
+<status status="PASS" endtime="20210217 12:25:10.714" starttime="20210217 12:25:10.709"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${button_auditor_cancel}</arg>
+</arguments>
+<msg timestamp="20210217 12:25:10.717" level="INFO">Current page contains element 'id:btn_cancel_auditor'.</msg>
+<status status="PASS" endtime="20210217 12:25:10.717" starttime="20210217 12:25:10.714"></status>
+</kw>
+<status status="PASS" endtime="20210217 12:25:10.718" starttime="20210217 12:25:10.689"></status>
+</kw>
+<kw name="Edit Username">
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>3</arg>
+<arg>[NUMBERS]</arg>
+</arguments>
+<assign>
+<var>${RANDOM}</var>
+</assign>
+<msg timestamp="20210217 12:25:10.719" level="INFO">${RANDOM} = 549</msg>
+<status status="PASS" endtime="20210217 12:25:10.719" starttime="20210217 12:25:10.718"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${field_auditor_name}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210217 12:25:10.733" starttime="20210217 12:25:10.719"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${field_auditor_name}</arg>
+<arg>${auditor_name_edited} ${RANDOM}</arg>
+</arguments>
+<msg timestamp="20210217 12:25:10.734" level="INFO">Typing text 'AutoQA Auditor Edited 549' into text field 'id:input_user_auditor'.</msg>
+<status status="PASS" endtime="20210217 12:25:10.878" starttime="20210217 12:25:10.733"></status>
+</kw>
+<status status="PASS" endtime="20210217 12:25:10.878" starttime="20210217 12:25:10.718"></status>
+</kw>
+<kw name="Edit Email Auditor">
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>8</arg>
+</arguments>
+<assign>
+<var>${email_random}</var>
+</assign>
+<msg timestamp="20210217 12:25:10.879" level="INFO">${email_random} = c1zLFinQ</msg>
+<status status="PASS" endtime="20210217 12:25:10.879" starttime="20210217 12:25:10.879"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${field_auditor_email}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210217 12:25:10.894" starttime="20210217 12:25:10.879"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${field_auditor_email}</arg>
+<arg>edited${email_random}${auditor_email}</arg>
+</arguments>
+<msg timestamp="20210217 12:25:10.894" level="INFO">Typing text 'editedc1zLFinQ@hellonimbly.com' into text field 'id:input_email_auditor'.</msg>
+<status status="PASS" endtime="20210217 12:25:11.033" starttime="20210217 12:25:10.894"></status>
+</kw>
+<status status="PASS" endtime="20210217 12:25:11.033" starttime="20210217 12:25:10.878"></status>
+</kw>
+<kw name="Edit Phone">
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>10</arg>
+<arg>[NUMBERS]</arg>
+</arguments>
+<assign>
+<var>${phone_random}</var>
+</assign>
+<msg timestamp="20210217 12:25:11.034" level="INFO">${phone_random} = 9725056986</msg>
+<status status="PASS" endtime="20210217 12:25:11.034" starttime="20210217 12:25:11.034"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${field_auditor_phone}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210217 12:25:11.053" starttime="20210217 12:25:11.035"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${field_auditor_phone}</arg>
+<arg>62${phone_random}</arg>
+</arguments>
+<msg timestamp="20210217 12:25:11.053" level="INFO">Typing text '629725056986' into text field 'id:input_phone_auditor'.</msg>
+<status status="PASS" endtime="20210217 12:25:11.122" starttime="20210217 12:25:11.053"></status>
+</kw>
+<status status="PASS" endtime="20210217 12:25:11.122" starttime="20210217 12:25:11.033"></status>
+</kw>
+<kw name="Verify &quot;User Name&quot;, &quot;Role&quot; and &quot;Phone No&quot; can be edited">
+<kw name="Element Should Be Enabled" library="Selenium2Library">
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<arguments>
+<arg>${field_auditor_name}</arg>
+</arguments>
+<status status="PASS" endtime="20210217 12:25:11.141" starttime="20210217 12:25:11.122"></status>
+</kw>
+<kw name="Element Should Be Enabled" library="Selenium2Library">
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<arguments>
+<arg>${dropdown_auditor_role}</arg>
+</arguments>
+<status status="PASS" endtime="20210217 12:25:11.158" starttime="20210217 12:25:11.141"></status>
+</kw>
+<kw name="Element Should Be Enabled" library="Selenium2Library">
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<arguments>
+<arg>${field_auditor_phone}</arg>
+</arguments>
+<status status="PASS" endtime="20210217 12:25:11.168" starttime="20210217 12:25:11.158"></status>
+</kw>
+<kw name="Element Should Be Enabled" library="Selenium2Library">
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<arguments>
+<arg>${button_auditor_save}</arg>
+</arguments>
+<status status="PASS" endtime="20210217 12:25:11.177" starttime="20210217 12:25:11.169"></status>
+</kw>
+<status status="PASS" endtime="20210217 12:25:11.177" starttime="20210217 12:25:11.122"></status>
+</kw>
+<kw name="Click Save Changes">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${button_auditor_save}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210217 12:25:11.190" starttime="20210217 12:25:11.178"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${button_auditor_save}</arg>
+</arguments>
+<msg timestamp="20210217 12:25:11.190" level="INFO">Clicking element 'id:btn_save_auditor'.</msg>
+<status status="PASS" endtime="20210217 12:25:11.423" starttime="20210217 12:25:11.190"></status>
+</kw>
+<status status="PASS" endtime="20210217 12:25:11.423" starttime="20210217 12:25:11.178"></status>
+</kw>
+<status status="PASS" endtime="20210217 12:25:11.423" critical="yes" starttime="20210217 12:25:00.973"></status>
+</test>
+<status status="PASS" endtime="20210217 12:25:11.424" starttime="20210217 12:24:48.537"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="2">Critical Tests</stat>
+<stat fail="0" pass="2">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Edit Auditor" pass="2">Edit Auditor</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

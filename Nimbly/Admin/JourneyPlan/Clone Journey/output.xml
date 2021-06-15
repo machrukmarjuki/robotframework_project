@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20210127 21:17:06.700" generator="Robot 3.1.2 (Python 2.7.16 on darwin)">
+<suite source="/Users/machruk/PycharmProjects/Nimbly/Admin/JourneyPlan/Clone Journey/Clone Journey.robot" id="s1" name="Clone Journey">
+<kw type="setup" name="Open Browser to Manage Menu" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${SERVER}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20210127 21:17:06.944" level="INFO">Opening browser 'firefox' to base url 'https://staging.hellonimbly.com/'.</msg>
+<msg timestamp="20210127 21:17:06.946" level="INFO">Firefox driver log is always forced to to: /Users/machruk/PycharmProjects/Nimbly/Admin/JourneyPlan/Clone Journey/geckodriver-2.log</msg>
+<status status="PASS" endtime="20210127 21:17:13.890" starttime="20210127 21:17:06.944"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20210127 21:17:14.382" starttime="20210127 21:17:13.890"></status>
+</kw>
+<kw name="Valid Login" library="login">
+<kw name="Input Email" library="login">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:input_username_login</arg>
+<arg>${EMAIL}</arg>
+</arguments>
+<msg timestamp="20210127 21:17:14.384" level="INFO">Typing text 'machruk@hellonimbly.com' into text field 'id:input_username_login'.</msg>
+<status status="PASS" endtime="20210127 21:17:14.536" starttime="20210127 21:17:14.384"></status>
+</kw>
+<status status="PASS" endtime="20210127 21:17:14.536" starttime="20210127 21:17:14.383"></status>
+</kw>
+<kw name="Input Password" library="login">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:input_pwd_login</arg>
+<arg>${PASSWORD}</arg>
+</arguments>
+<msg timestamp="20210127 21:17:14.538" level="INFO">Typing text '123456' into text field 'id:input_pwd_login'.</msg>
+<status status="PASS" endtime="20210127 21:17:14.598" starttime="20210127 21:17:14.537"></status>
+</kw>
+<status status="PASS" endtime="20210127 21:17:14.598" starttime="20210127 21:17:14.537"></status>
+</kw>
+<kw name="Click Login Button" library="login">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id:btn_login</arg>
+</arguments>
+<msg timestamp="20210127 21:17:14.599" level="INFO">Clicking element 'id:btn_login'.</msg>
+<status status="PASS" endtime="20210127 21:17:14.820" starttime="20210127 21:17:14.598"></status>
+</kw>
+<status status="PASS" endtime="20210127 21:17:14.820" starttime="20210127 21:17:14.598"></status>
+</kw>
+<status status="PASS" endtime="20210127 21:17:14.820" starttime="20210127 21:17:14.383"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${link_admin}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210127 21:17:23.200" starttime="20210127 21:17:14.820"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${link_admin}</arg>
+</arguments>
+<msg timestamp="20210127 21:17:23.200" level="INFO">Clicking element 'id:menu_adm'.</msg>
+<status status="PASS" endtime="20210127 21:17:23.477" starttime="20210127 21:17:23.200"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${link_manage}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210127 21:17:23.498" starttime="20210127 21:17:23.478"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${link_manage}</arg>
+</arguments>
+<msg timestamp="20210127 21:17:23.498" level="INFO">Clicking element 'id:menu_adm_manage'.</msg>
+<status status="PASS" endtime="20210127 21:17:23.723" starttime="20210127 21:17:23.498"></status>
+</kw>
+<status status="PASS" endtime="20210127 21:17:23.723" starttime="20210127 21:17:06.944"></status>
+</kw>
+<test id="s1-t1" name="Go to Journey Plan Page">
+<kw name="Go to Journey Plan Page" library="res-admin-journey">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${link_journey_plan}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210127 21:17:23.750" starttime="20210127 21:17:23.725"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${link_journey_plan}</arg>
+</arguments>
+<msg timestamp="20210127 21:17:23.750" level="INFO">Clicking element 'xpath://span[contains(text(),'Journey Plan')]'.</msg>
+<status status="PASS" endtime="20210127 21:17:24.015" starttime="20210127 21:17:23.750"></status>
+</kw>
+<status status="PASS" endtime="20210127 21:17:24.015" starttime="20210127 21:17:23.725"></status>
+</kw>
+<status status="PASS" endtime="20210127 21:17:24.016" critical="yes" starttime="20210127 21:17:23.724"></status>
+</test>
+<test id="s1-t2" name="Verify Clone Journey Plan is Successfully">
+<kw name="Search Journey Plan to Clone" library="res-admin-journey">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${field_search_journey}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210127 21:17:29.306" starttime="20210127 21:17:24.021"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${field_search_journey}</arg>
+<arg>${journey_name}</arg>
+</arguments>
+<msg timestamp="20210127 21:17:29.307" level="INFO">Typing text 'AutoQA Journey Plan' into text field 'xpath://body/div[@id='root']/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]'.</msg>
+<status status="PASS" endtime="20210127 21:17:29.370" starttime="20210127 21:17:29.306"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${search_journey_result}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210127 21:17:29.384" starttime="20210127 21:17:29.370"></status>
+</kw>
+<status status="PASS" endtime="20210127 21:17:29.385" starttime="20210127 21:17:24.020"></status>
+</kw>
+<kw name="Click Clone Button" library="res-admin-journey">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${btn_clone_journey}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210127 21:17:29.406" starttime="20210127 21:17:29.385"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_clone_journey}</arg>
+</arguments>
+<msg timestamp="20210127 21:17:29.406" level="INFO">Clicking element 'xpath://tr[1]//td[7]//img[2]'.</msg>
+<status status="PASS" endtime="20210127 21:17:29.634" starttime="20210127 21:17:29.406"></status>
+</kw>
+<status status="PASS" endtime="20210127 21:17:29.634" starttime="20210127 21:17:29.385"></status>
+</kw>
+<kw name="Verify Clone Dialog Popup is displayed" library="res-admin-journey">
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Clone Journey Plan</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210127 21:17:29.652" starttime="20210127 21:17:29.635"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Are you sure you want to clone the Journey Plan:</arg>
+</arguments>
+<msg timestamp="20210127 21:17:29.675" level="INFO">Current page contains text 'Are you sure you want to clone the Journey Plan:'.</msg>
+<status status="PASS" endtime="20210127 21:17:29.675" starttime="20210127 21:17:29.652"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${btn_yes_clone}</arg>
+</arguments>
+<msg timestamp="20210127 21:17:29.682" level="INFO">Current page contains element 'xpath://button[contains(text(),'Yes')]'.</msg>
+<status status="PASS" endtime="20210127 21:17:29.683" starttime="20210127 21:17:29.675"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${btn_no_clone}</arg>
+</arguments>
+<msg timestamp="20210127 21:17:29.691" level="INFO">Current page contains element 'xpath://button[contains(text(),'No')]'.</msg>
+<status status="PASS" endtime="20210127 21:17:29.691" starttime="20210127 21:17:29.683"></status>
+</kw>
+<status status="PASS" endtime="20210127 21:17:29.691" starttime="20210127 21:17:29.634"></status>
+</kw>
+<kw name="Click Yes Clone" library="res-admin-journey">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${btn_yes_clone}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210127 21:17:29.716" starttime="20210127 21:17:29.691"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_yes_clone}</arg>
+</arguments>
+<msg timestamp="20210127 21:17:29.716" level="INFO">Clicking element 'xpath://button[contains(text(),'Yes')]'.</msg>
+<status status="PASS" endtime="20210127 21:17:29.950" starttime="20210127 21:17:29.716"></status>
+</kw>
+<status status="PASS" endtime="20210127 21:17:29.951" starttime="20210127 21:17:29.691"></status>
+</kw>
+<kw name="Verify Clone Journey Plan Successful" library="res-admin-journey">
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${clone_success_toast}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210127 21:17:32.880" starttime="20210127 21:17:29.952"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${clone_success_toast}</arg>
+</arguments>
+<msg timestamp="20210127 21:17:32.891" level="INFO">Current page contains text 'Success create Journey plan'.</msg>
+<status status="PASS" endtime="20210127 21:17:32.891" starttime="20210127 21:17:32.881"></status>
+</kw>
+<status status="PASS" endtime="20210127 21:17:32.892" starttime="20210127 21:17:29.951"></status>
+</kw>
+<status status="PASS" endtime="20210127 21:17:32.892" critical="yes" starttime="20210127 21:17:24.019"></status>
+</test>
+<doc>Verify "Clone Journey Plan" Features is working properly</doc>
+<status status="PASS" endtime="20210127 21:17:32.892" starttime="20210127 21:17:06.702"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="2">Critical Tests</stat>
+<stat fail="0" pass="2">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Clone Journey" pass="2">Clone Journey</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

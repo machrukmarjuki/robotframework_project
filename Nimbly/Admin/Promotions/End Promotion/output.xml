@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20210111 13:45:29.043" generator="Robot 3.1.2 (Python 2.7.16 on darwin)">
+<suite source="/Users/machruk/PycharmProjects/Nimbly/Admin/Promotions/End Promotion/End Promotion.robot" id="s1" name="End Promotion">
+<kw type="setup" name="Open Browser to Admin Menu" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${SERVER}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20210111 13:45:29.324" level="INFO">Opening browser 'firefox' to base url 'https://staging.hellonimbly.com/'.</msg>
+<msg timestamp="20210111 13:45:29.326" level="INFO">Firefox driver log is always forced to to: /Users/machruk/PycharmProjects/Nimbly/Admin/Promotions/End Promotion/geckodriver-7.log</msg>
+<status status="PASS" endtime="20210111 13:45:38.433" starttime="20210111 13:45:29.323"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20210111 13:45:38.906" starttime="20210111 13:45:38.437"></status>
+</kw>
+<kw name="Valid Login" library="login">
+<kw name="Input Email" library="login">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:input_username_login</arg>
+<arg>${EMAIL}</arg>
+</arguments>
+<msg timestamp="20210111 13:45:38.909" level="INFO">Typing text 'machruk@hellonimbly.com' into text field 'id:input_username_login'.</msg>
+<status status="PASS" endtime="20210111 13:45:39.104" starttime="20210111 13:45:38.908"></status>
+</kw>
+<status status="PASS" endtime="20210111 13:45:39.104" starttime="20210111 13:45:38.908"></status>
+</kw>
+<kw name="Input Password" library="login">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:input_pwd_login</arg>
+<arg>${PASSWORD}</arg>
+</arguments>
+<msg timestamp="20210111 13:45:39.105" level="INFO">Typing text '123456' into text field 'id:input_pwd_login'.</msg>
+<status status="PASS" endtime="20210111 13:45:39.177" starttime="20210111 13:45:39.104"></status>
+</kw>
+<status status="PASS" endtime="20210111 13:45:39.177" starttime="20210111 13:45:39.104"></status>
+</kw>
+<kw name="Click Login Button" library="login">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id:btn_login</arg>
+</arguments>
+<msg timestamp="20210111 13:45:39.178" level="INFO">Clicking element 'id:btn_login'.</msg>
+<status status="PASS" endtime="20210111 13:45:39.407" starttime="20210111 13:45:39.177"></status>
+</kw>
+<status status="PASS" endtime="20210111 13:45:39.407" starttime="20210111 13:45:39.177"></status>
+</kw>
+<status status="PASS" endtime="20210111 13:45:39.407" starttime="20210111 13:45:38.907"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${link_admin}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210111 13:45:48.373" starttime="20210111 13:45:39.408"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${link_admin}</arg>
+</arguments>
+<msg timestamp="20210111 13:45:48.373" level="INFO">Clicking element 'id:menu_adm'.</msg>
+<status status="PASS" endtime="20210111 13:45:48.662" starttime="20210111 13:45:48.373"></status>
+</kw>
+<status status="PASS" endtime="20210111 13:45:48.662" starttime="20210111 13:45:29.323"></status>
+</kw>
+<test id="s1-t1" name="Go to Promotions Page">
+<kw name="Go to Promotions Page" library="res-admin-promotions">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${link_promotions}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210111 13:45:48.709" starttime="20210111 13:45:48.664"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${link_promotions}</arg>
+</arguments>
+<msg timestamp="20210111 13:45:48.710" level="INFO">Clicking element 'id:menu_adm_promo'.</msg>
+<status status="PASS" endtime="20210111 13:45:48.983" starttime="20210111 13:45:48.710"></status>
+</kw>
+<status status="PASS" endtime="20210111 13:45:48.984" starttime="20210111 13:45:48.664"></status>
+</kw>
+<status status="PASS" endtime="20210111 13:45:48.984" critical="yes" starttime="20210111 13:45:48.663"></status>
+</test>
+<test id="s1-t2" name="End Active Promotion">
+<kw name="Delay" library="res-admin-promotions">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20210111 13:45:53.988" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20210111 13:45:53.988" starttime="20210111 13:45:48.986"></status>
+</kw>
+<status status="PASS" endtime="20210111 13:45:53.988" starttime="20210111 13:45:48.985"></status>
+</kw>
+<kw name="Click End Button" library="res-admin-promotions">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${icon_end}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210111 13:45:57.504" starttime="20210111 13:45:53.989"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${icon_end}</arg>
+</arguments>
+<msg timestamp="20210111 13:45:57.505" level="INFO">Clicking element 'xpath://tbody/tr[1]/td[8]/img[2]'.</msg>
+<status status="PASS" endtime="20210111 13:45:57.755" starttime="20210111 13:45:57.505"></status>
+</kw>
+<status status="PASS" endtime="20210111 13:45:57.756" starttime="20210111 13:45:53.989"></status>
+</kw>
+<kw name="Click Yes, End Button" library="res-admin-promotions">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${btn_yes_end_promo}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210111 13:45:57.800" starttime="20210111 13:45:57.757"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_yes_end_promo}</arg>
+</arguments>
+<msg timestamp="20210111 13:45:57.800" level="INFO">Clicking element 'id:btn_end_promo'.</msg>
+<status status="PASS" endtime="20210111 13:45:58.047" starttime="20210111 13:45:57.800"></status>
+</kw>
+<status status="PASS" endtime="20210111 13:45:58.047" starttime="20210111 13:45:57.756"></status>
+</kw>
+<kw name="Verify End Promotion Successful" library="res-admin-promotions">
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Success update Promotion</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210111 13:46:01.563" starttime="20210111 13:45:58.048"></status>
+</kw>
+<status status="PASS" endtime="20210111 13:46:01.563" starttime="20210111 13:45:58.048"></status>
+</kw>
+<kw name="Click Cancel, End Button" library="res-admin-promotions">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${btn_cancel_end_promo}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210111 13:46:01.613" starttime="20210111 13:46:01.564"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_cancel_end_promo}</arg>
+</arguments>
+<msg timestamp="20210111 13:46:01.614" level="INFO">Clicking element 'id:btn_cancel_promo'.</msg>
+<status status="PASS" endtime="20210111 13:46:01.848" starttime="20210111 13:46:01.614"></status>
+</kw>
+<status status="PASS" endtime="20210111 13:46:01.848" starttime="20210111 13:46:01.563"></status>
+</kw>
+<status status="PASS" endtime="20210111 13:46:01.850" critical="yes" starttime="20210111 13:45:48.985"></status>
+</test>
+<test id="s1-t3" name="End Scheduled Promotion">
+<kw name="Click Scheduled Tab" library="res-admin-promotions">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${tab_scheduled_promotion}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210111 13:46:01.890" starttime="20210111 13:46:01.853"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${tab_scheduled_promotion}</arg>
+</arguments>
+<msg timestamp="20210111 13:46:01.890" level="INFO">Clicking element 'id:tab_sched_promo'.</msg>
+<status status="PASS" endtime="20210111 13:46:02.127" starttime="20210111 13:46:01.890"></status>
+</kw>
+<status status="PASS" endtime="20210111 13:46:02.127" starttime="20210111 13:46:01.853"></status>
+</kw>
+<kw name="Click End Button" library="res-admin-promotions">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${icon_end}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210111 13:46:05.437" starttime="20210111 13:46:02.128"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${icon_end}</arg>
+</arguments>
+<msg timestamp="20210111 13:46:05.438" level="INFO">Clicking element 'xpath://tbody/tr[1]/td[8]/img[2]'.</msg>
+<status status="PASS" endtime="20210111 13:46:05.675" starttime="20210111 13:46:05.437"></status>
+</kw>
+<status status="PASS" endtime="20210111 13:46:05.675" starttime="20210111 13:46:02.127"></status>
+</kw>
+<kw name="Click Yes, End Button" library="res-admin-promotions">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${btn_yes_end_promo}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210111 13:46:05.717" starttime="20210111 13:46:05.676"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_yes_end_promo}</arg>
+</arguments>
+<msg timestamp="20210111 13:46:05.718" level="INFO">Clicking element 'id:btn_end_promo'.</msg>
+<status status="PASS" endtime="20210111 13:46:05.954" starttime="20210111 13:46:05.718"></status>
+</kw>
+<status status="PASS" endtime="20210111 13:46:05.954" starttime="20210111 13:46:05.675"></status>
+</kw>
+<kw name="Verify End Promotion Successful" library="res-admin-promotions">
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Success update Promotion</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210111 13:46:05.968" starttime="20210111 13:46:05.955"></status>
+</kw>
+<status status="PASS" endtime="20210111 13:46:05.968" starttime="20210111 13:46:05.954"></status>
+</kw>
+<status status="PASS" endtime="20210111 13:46:05.968" critical="yes" starttime="20210111 13:46:01.851"></status>
+</test>
+<doc>Promotion</doc>
+<status status="PASS" endtime="20210111 13:46:05.970" starttime="20210111 13:45:29.045"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="3">Critical Tests</stat>
+<stat fail="0" pass="3">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="End Promotion" pass="3">End Promotion</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,5 @@
+1611806969654	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/1j/bzw5lnls487cjkbsknvy18x40000gn/T/rust_mozprofile9VUQea"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1611806972499	Marionette	INFO	Listening on port 64971
+1611806972557	Marionette	WARN	TLS certificate errors will be ignored for this session
+1611809242395	Marionette	INFO	Stopped listening on port 64971

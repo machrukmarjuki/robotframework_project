@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20210111 12:15:39.967" generator="Robot 3.1.2 (Python 2.7.16 on darwin)">
+<suite source="/Users/machruk/PycharmProjects/Nimbly/Admin/Promotions/Promotion.robot" id="s1" name="Promotion">
+<kw type="setup" name="Open Browser to Admin Menu" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${SERVER}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20210111 12:15:40.264" level="INFO">Opening browser 'firefox' to base url 'https://staging.hellonimbly.com/'.</msg>
+<msg timestamp="20210111 12:15:40.265" level="INFO">Firefox driver log is always forced to to: /Users/machruk/PycharmProjects/Nimbly/Admin/Promotions/geckodriver-3.log</msg>
+<status status="PASS" endtime="20210111 12:15:47.501" starttime="20210111 12:15:40.263"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20210111 12:15:48.006" starttime="20210111 12:15:47.502"></status>
+</kw>
+<kw name="Valid Login" library="login">
+<kw name="Input Email" library="login">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:input_username_login</arg>
+<arg>${EMAIL}</arg>
+</arguments>
+<msg timestamp="20210111 12:15:48.007" level="INFO">Typing text 'machruk@hellonimbly.com' into text field 'id:input_username_login'.</msg>
+<status status="PASS" endtime="20210111 12:15:48.192" starttime="20210111 12:15:48.007"></status>
+</kw>
+<status status="PASS" endtime="20210111 12:15:48.192" starttime="20210111 12:15:48.006"></status>
+</kw>
+<kw name="Input Password" library="login">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:input_pwd_login</arg>
+<arg>${PASSWORD}</arg>
+</arguments>
+<msg timestamp="20210111 12:15:48.193" level="INFO">Typing text '123456' into text field 'id:input_pwd_login'.</msg>
+<status status="PASS" endtime="20210111 12:15:48.263" starttime="20210111 12:15:48.192"></status>
+</kw>
+<status status="PASS" endtime="20210111 12:15:48.263" starttime="20210111 12:15:48.192"></status>
+</kw>
+<kw name="Click Login Button" library="login">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id:btn_login</arg>
+</arguments>
+<msg timestamp="20210111 12:15:48.263" level="INFO">Clicking element 'id:btn_login'.</msg>
+<status status="PASS" endtime="20210111 12:15:48.500" starttime="20210111 12:15:48.263"></status>
+</kw>
+<status status="PASS" endtime="20210111 12:15:48.500" starttime="20210111 12:15:48.263"></status>
+</kw>
+<status status="PASS" endtime="20210111 12:15:48.500" starttime="20210111 12:15:48.006"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${link_admin}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210111 12:15:52.948" starttime="20210111 12:15:48.500"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${link_admin}</arg>
+</arguments>
+<msg timestamp="20210111 12:15:52.948" level="INFO">Clicking element 'id:menu_adm'.</msg>
+<status status="PASS" endtime="20210111 12:15:53.277" starttime="20210111 12:15:52.948"></status>
+</kw>
+<status status="PASS" endtime="20210111 12:15:53.277" starttime="20210111 12:15:40.263"></status>
+</kw>
+<test id="s1-t1" name="Go to Promotions Page">
+<kw name="Go to Promotions Page" library="res-admin-promotions">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${link_promotions}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210111 12:15:53.318" starttime="20210111 12:15:53.279"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${link_promotions}</arg>
+</arguments>
+<msg timestamp="20210111 12:15:53.319" level="INFO">Clicking element 'id:menu_adm_promo'.</msg>
+<status status="PASS" endtime="20210111 12:15:53.572" starttime="20210111 12:15:53.318"></status>
+</kw>
+<status status="PASS" endtime="20210111 12:15:53.572" starttime="20210111 12:15:53.278"></status>
+</kw>
+<status status="PASS" endtime="20210111 12:15:53.572" critical="yes" starttime="20210111 12:15:53.278"></status>
+</test>
+<test id="s1-t2" name="Verify &quot;Promotion&quot; page rendered correctly">
+<kw name="Verify &quot;Active&quot; tab is rendered correctly">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${icon_edit}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210111 12:16:00.219" starttime="20210111 12:15:53.574"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${icon_edit}</arg>
+</arguments>
+<msg timestamp="20210111 12:16:00.233" level="INFO">Current page contains element 'id:btn_edit_romo'.</msg>
+<status status="PASS" endtime="20210111 12:16:00.233" starttime="20210111 12:16:00.220"></status>
+</kw>
+<status status="PASS" endtime="20210111 12:16:00.233" starttime="20210111 12:15:53.574"></status>
+</kw>
+<kw name="Verify &quot;Scheduled&quot; tab is available">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${tab_scheduled_promotion}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210111 12:16:00.271" starttime="20210111 12:16:00.236"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${tab_scheduled_promotion}</arg>
+</arguments>
+<msg timestamp="20210111 12:16:00.281" level="INFO">Current page contains element 'id:tab_sched_promo'.</msg>
+<status status="PASS" endtime="20210111 12:16:00.281" starttime="20210111 12:16:00.272"></status>
+</kw>
+<status status="PASS" endtime="20210111 12:16:00.281" starttime="20210111 12:16:00.234"></status>
+</kw>
+<kw name="Verify &quot;Archived&quot; tab is available">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${tab_archived_promotion}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210111 12:16:00.315" starttime="20210111 12:16:00.282"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${tab_archived_promotion}</arg>
+</arguments>
+<msg timestamp="20210111 12:16:00.324" level="INFO">Current page contains element 'id:tab_archi_promo'.</msg>
+<status status="PASS" endtime="20210111 12:16:00.324" starttime="20210111 12:16:00.315"></status>
+</kw>
+<status status="PASS" endtime="20210111 12:16:00.325" starttime="20210111 12:16:00.281"></status>
+</kw>
+<kw name="Verify &quot;New Promotion&quot; button is available">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${button_new_promotion}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210111 12:16:00.359" starttime="20210111 12:16:00.325"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${button_new_promotion}</arg>
+</arguments>
+<msg timestamp="20210111 12:16:00.368" level="INFO">Current page contains element 'id:btn_new_promo'.</msg>
+<status status="PASS" endtime="20210111 12:16:00.369" starttime="20210111 12:16:00.359"></status>
+</kw>
+<status status="PASS" endtime="20210111 12:16:00.369" starttime="20210111 12:16:00.325"></status>
+</kw>
+<status status="PASS" endtime="20210111 12:16:00.369" critical="yes" starttime="20210111 12:15:53.573"></status>
+</test>
+<test id="s1-t3" name="Verify &quot;Active&quot; tab is the default page that is open">
+<kw name="Verify &quot;Active&quot; tab is rendered correctly">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${icon_edit}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210111 12:16:00.402" starttime="20210111 12:16:00.370"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${icon_edit}</arg>
+</arguments>
+<msg timestamp="20210111 12:16:00.413" level="INFO">Current page contains element 'id:btn_edit_romo'.</msg>
+<status status="PASS" endtime="20210111 12:16:00.413" starttime="20210111 12:16:00.402"></status>
+</kw>
+<status status="PASS" endtime="20210111 12:16:00.413" starttime="20210111 12:16:00.370"></status>
+</kw>
+<kw name="Verify columns labeled &quot;Promotion Title&quot;, &quot;Description&quot;, &quot;Target&quot;, &quot;Promotion Cost&quot;, &quot;Start&quot; and &quot;End&quot; are available">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${btn_asc_title_promo}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210111 12:16:00.447" starttime="20210111 12:16:00.414"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${btn_asc_title_promo}</arg>
+</arguments>
+<msg timestamp="20210111 12:16:00.456" level="INFO">Current page contains element 'id:btn_asc_title_promo'.</msg>
+<status status="PASS" endtime="20210111 12:16:00.456" starttime="20210111 12:16:00.447"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${btn_asc_descr_promo}</arg>
+</arguments>
+<msg timestamp="20210111 12:16:00.465" level="INFO">Current page contains element 'id:btn_asc_descr_promo'.</msg>
+<status status="PASS" endtime="20210111 12:16:00.466" starttime="20210111 12:16:00.456"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${btn_asc_target}</arg>
+</arguments>
+<msg timestamp="20210111 12:16:00.475" level="INFO">Current page contains element 'id:btn_asc_target'.</msg>
+<status status="PASS" endtime="20210111 12:16:00.475" starttime="20210111 12:16:00.466"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${btn_asc_cost}</arg>
+</arguments>
+<msg timestamp="20210111 12:16:00.485" level="INFO">Current page contains element 'id:btn_asc_cost'.</msg>
+<status status="PASS" endtime="20210111 12:16:00.485" starttime="20210111 12:16:00.475"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${btn_asc_sales_result}</arg>
+</arguments>
+<msg timestamp="20210111 12:16:00.494" level="INFO">Current page contains element 'id:btn_asc_sales_result'.</msg>
+<status status="PASS" endtime="20210111 12:16:00.495" starttime="20210111 12:16:00.485"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${btn_asc_start_promo}</arg>
+</arguments>
+<msg timestamp="20210111 12:16:00.508" level="INFO">Current page contains element 'id:btn_asc_start_promo'.</msg>
+<status status="PASS" endtime="20210111 12:16:00.508" starttime="20210111 12:16:00.497"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${btn_asc_end_promo}</arg>
+</arguments>
+<msg timestamp="20210111 12:16:00.517" level="INFO">Current page contains element 'id:btn_asc_end_promo'.</msg>
+<status status="PASS" endtime="20210111 12:16:00.517" starttime="20210111 12:16:00.508"></status>
+</kw>
+<status status="PASS" endtime="20210111 12:16:00.517" starttime="20210111 12:16:00.413"></status>
+</kw>
+<status status="PASS" endtime="20210111 12:16:00.518" critical="yes" starttime="20210111 12:16:00.369"></status>
+</test>
+<doc>Promotion</doc>
+<status status="PASS" endtime="20210111 12:16:00.518" starttime="20210111 12:15:39.968"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="3">Critical Tests</stat>
+<stat fail="0" pass="3">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Promotion" pass="3">Promotion</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

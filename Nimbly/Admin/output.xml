@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20210531 17:22:05.211" generator="Robot 3.1.2 (Python 2.7.16 on darwin)">
+<suite source="/Users/machruk/Nimbly/audit-admin-automation/Admin/login_spurr.robot" id="s1" name="Login Spurr">
+<test id="s1-t1" name="Parallel Test">
+<kw name="Open Browsers">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>https://app-dev-v2.gospurr.com/sign-in</arg>
+<arg>Firefox</arg>
+</arguments>
+<msg timestamp="20210531 17:22:05.399" level="INFO">Opening browser 'Firefox' to base url 'https://app-dev-v2.gospurr.com/sign-in'.</msg>
+<msg timestamp="20210531 17:22:05.400" level="INFO">Firefox driver log is always forced to to: /Users/machruk/Nimbly/audit-admin-automation/Admin/geckodriver-4.log</msg>
+<status status="PASS" endtime="20210531 17:22:09.561" starttime="20210531 17:22:05.398"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20210531 17:22:10.041" starttime="20210531 17:22:09.562"></status>
+</kw>
+<status status="PASS" endtime="20210531 17:22:10.041" starttime="20210531 17:22:05.398"></status>
+</kw>
+<kw name="Sign In with blank Username &amp; password">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${field_email}</arg>
+<arg>${wait}</arg>
+</arguments>
+<status status="PASS" endtime="20210531 17:22:10.086" starttime="20210531 17:22:10.042"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${button_login}</arg>
+</arguments>
+<msg timestamp="20210531 17:22:10.086" level="INFO">Clicking element 'id:login'.</msg>
+<status status="PASS" endtime="20210531 17:22:10.304" starttime="20210531 17:22:10.086"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Please enter your username and password</arg>
+</arguments>
+<status status="PASS" endtime="20210531 17:22:10.308" starttime="20210531 17:22:10.304"></status>
+</kw>
+<status status="PASS" endtime="20210531 17:22:10.308" starttime="20210531 17:22:10.042"></status>
+</kw>
+<kw name="Sign In with invalid Username &amp; Password">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${field_email}</arg>
+<arg>bebek.bkb@yopmail.co</arg>
+</arguments>
+<msg timestamp="20210531 17:22:10.309" level="INFO">Typing text 'bebek.bkb@yopmail.co' into text field 'id:email'.</msg>
+<status status="PASS" endtime="20210531 17:22:10.331" starttime="20210531 17:22:10.309"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${field_pass}</arg>
+<arg>Qwerty7</arg>
+</arguments>
+<msg timestamp="20210531 17:22:10.332" level="INFO">Typing text 'Qwerty7' into text field 'id:password'.</msg>
+<status status="PASS" endtime="20210531 17:22:10.364" starttime="20210531 17:22:10.332"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${button_login}</arg>
+</arguments>
+<msg timestamp="20210531 17:22:10.365" level="INFO">Clicking element 'id:login'.</msg>
+<status status="PASS" endtime="20210531 17:22:10.586" starttime="20210531 17:22:10.364"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Access denied, incorrect username or password</arg>
+<arg>${wait}</arg>
+</arguments>
+<status status="PASS" endtime="20210531 17:22:11.834" starttime="20210531 17:22:10.586"></status>
+</kw>
+<status status="PASS" endtime="20210531 17:22:11.835" starttime="20210531 17:22:10.309"></status>
+</kw>
+<kw name="Sign in with valid credential">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${field_email}</arg>
+<arg>bebek.bkb@yopmail.com</arg>
+</arguments>
+<msg timestamp="20210531 17:22:11.835" level="INFO">Typing text 'bebek.bkb@yopmail.com' into text field 'id:email'.</msg>
+<status status="PASS" endtime="20210531 17:22:11.872" starttime="20210531 17:22:11.835"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${field_pass}</arg>
+<arg>Qwerty78</arg>
+</arguments>
+<msg timestamp="20210531 17:22:11.872" level="INFO">Typing text 'Qwerty78' into text field 'id:password'.</msg>
+<status status="PASS" endtime="20210531 17:22:11.912" starttime="20210531 17:22:11.872"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${button_login}</arg>
+</arguments>
+<msg timestamp="20210531 17:22:11.912" level="INFO">Clicking element 'id:login'.</msg>
+<status status="PASS" endtime="20210531 17:22:12.124" starttime="20210531 17:22:11.912"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${menu_loyality}</arg>
+<arg>${wait}</arg>
+</arguments>
+<status status="PASS" endtime="20210531 17:22:15.063" starttime="20210531 17:22:12.124"></status>
+</kw>
+<status status="PASS" endtime="20210531 17:22:15.063" starttime="20210531 17:22:11.835"></status>
+</kw>
+<status status="PASS" endtime="20210531 17:22:15.063" critical="yes" starttime="20210531 17:22:05.398"></status>
+</test>
+<status status="PASS" endtime="20210531 17:22:15.064" starttime="20210531 17:22:05.212"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Login Spurr" pass="1">Login Spurr</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20210125 11:44:31.304" generator="Robot 3.1.2 (Python 2.7.16 on darwin)">
+<suite source="/Users/machruk/PycharmProjects/Nimbly/Admin/Questionnaires/Clone Questionnaires/Clone Questionnaires.robot" id="s1" name="Clone Questionnaires">
+<kw type="setup" name="Open Browser to Manage Menu" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${SERVER}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20210125 11:44:31.581" level="INFO">Opening browser 'firefox' to base url 'https://staging.hellonimbly.com/'.</msg>
+<msg timestamp="20210125 11:44:31.582" level="INFO">Firefox driver log is always forced to to: /Users/machruk/PycharmProjects/Nimbly/Admin/Questionnaires/Clone Questionnaires/geckodriver-9.log</msg>
+<status status="PASS" endtime="20210125 11:44:38.549" starttime="20210125 11:44:31.581"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20210125 11:44:39.045" starttime="20210125 11:44:38.551"></status>
+</kw>
+<kw name="Valid Login" library="login">
+<kw name="Input Email" library="login">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:input_username_login</arg>
+<arg>${EMAIL}</arg>
+</arguments>
+<msg timestamp="20210125 11:44:39.047" level="INFO">Typing text 'machruk@hellonimbly.com' into text field 'id:input_username_login'.</msg>
+<status status="PASS" endtime="20210125 11:44:39.173" starttime="20210125 11:44:39.046"></status>
+</kw>
+<status status="PASS" endtime="20210125 11:44:39.174" starttime="20210125 11:44:39.046"></status>
+</kw>
+<kw name="Input Password" library="login">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:input_pwd_login</arg>
+<arg>${PASSWORD}</arg>
+</arguments>
+<msg timestamp="20210125 11:44:39.175" level="INFO">Typing text '123456' into text field 'id:input_pwd_login'.</msg>
+<status status="PASS" endtime="20210125 11:44:39.232" starttime="20210125 11:44:39.175"></status>
+</kw>
+<status status="PASS" endtime="20210125 11:44:39.232" starttime="20210125 11:44:39.174"></status>
+</kw>
+<kw name="Click Login Button" library="login">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id:btn_login</arg>
+</arguments>
+<msg timestamp="20210125 11:44:39.233" level="INFO">Clicking element 'id:btn_login'.</msg>
+<status status="PASS" endtime="20210125 11:44:39.468" starttime="20210125 11:44:39.232"></status>
+</kw>
+<status status="PASS" endtime="20210125 11:44:39.469" starttime="20210125 11:44:39.232"></status>
+</kw>
+<status status="PASS" endtime="20210125 11:44:39.469" starttime="20210125 11:44:39.045"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${link_admin}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210125 11:44:48.738" starttime="20210125 11:44:39.469"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${link_admin}</arg>
+</arguments>
+<msg timestamp="20210125 11:44:48.739" level="INFO">Clicking element 'id:menu_adm'.</msg>
+<status status="PASS" endtime="20210125 11:44:49.023" starttime="20210125 11:44:48.739"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${link_manage}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210125 11:44:49.043" starttime="20210125 11:44:49.024"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${link_manage}</arg>
+</arguments>
+<msg timestamp="20210125 11:44:49.044" level="INFO">Clicking element 'id:menu_adm_manage'.</msg>
+<status status="PASS" endtime="20210125 11:44:49.265" starttime="20210125 11:44:49.043"></status>
+</kw>
+<status status="PASS" endtime="20210125 11:44:49.265" starttime="20210125 11:44:31.580"></status>
+</kw>
+<test id="s1-t1" name="Go to Questionnaire page">
+<kw name="Go to Questionnaire page" library="res-admin-questionnaires">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${link_questionnaires}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210125 11:44:49.287" starttime="20210125 11:44:49.267"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${link_questionnaires}</arg>
+</arguments>
+<msg timestamp="20210125 11:44:49.288" level="INFO">Clicking element 'id:menu_questionnaires'.</msg>
+<status status="PASS" endtime="20210125 11:44:49.556" starttime="20210125 11:44:49.287"></status>
+</kw>
+<status status="PASS" endtime="20210125 11:44:49.556" starttime="20210125 11:44:49.266"></status>
+</kw>
+<status status="PASS" endtime="20210125 11:44:49.556" critical="yes" starttime="20210125 11:44:49.265"></status>
+</test>
+<test id="s1-t2" name="Verify Clone Questionnaire is Successfully">
+<kw name="Search Questionnaires to Clone" library="res-admin-questionnaires">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${field_search_quest}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210125 11:44:57.784" starttime="20210125 11:44:49.558"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${field_search_quest}</arg>
+<arg>${quest_title}</arg>
+</arguments>
+<msg timestamp="20210125 11:44:57.784" level="INFO">Typing text 'AutoQA Questionnaire' into text field 'id:input_search_quest'.</msg>
+<status status="PASS" endtime="20210125 11:44:57.890" starttime="20210125 11:44:57.784"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${search_quest_result}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210125 11:44:57.908" starttime="20210125 11:44:57.890"></status>
+</kw>
+<status status="PASS" endtime="20210125 11:44:57.908" starttime="20210125 11:44:49.557"></status>
+</kw>
+<kw name="Click Clone Button" library="res-admin-questionnaires">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${btn_clone_quest}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210125 11:44:57.928" starttime="20210125 11:44:57.908"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_clone_quest}</arg>
+</arguments>
+<msg timestamp="20210125 11:44:57.928" level="INFO">Clicking element 'id:btn_clone_quest'.</msg>
+<status status="PASS" endtime="20210125 11:44:58.173" starttime="20210125 11:44:57.928"></status>
+</kw>
+<status status="PASS" endtime="20210125 11:44:58.173" starttime="20210125 11:44:57.908"></status>
+</kw>
+<kw name="Verify Clone Dialog Popup is displayed" library="res-admin-questionnaires">
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Duplicate Questionnaire</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210125 11:44:58.181" starttime="20210125 11:44:58.174"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Are you sure you want to clone the questionnaire:</arg>
+</arguments>
+<msg timestamp="20210125 11:44:58.193" level="INFO">Current page contains text 'Are you sure you want to clone the questionnaire:'.</msg>
+<status status="PASS" endtime="20210125 11:44:58.193" starttime="20210125 11:44:58.181"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${btn_yes_clone}</arg>
+</arguments>
+<msg timestamp="20210125 11:44:58.198" level="INFO">Current page contains element 'id:btn_clone_yes'.</msg>
+<status status="PASS" endtime="20210125 11:44:58.199" starttime="20210125 11:44:58.193"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${btn_no_clone}</arg>
+</arguments>
+<msg timestamp="20210125 11:44:58.204" level="INFO">Current page contains element 'id:btn_clone_no'.</msg>
+<status status="PASS" endtime="20210125 11:44:58.204" starttime="20210125 11:44:58.199"></status>
+</kw>
+<status status="PASS" endtime="20210125 11:44:58.204" starttime="20210125 11:44:58.173"></status>
+</kw>
+<kw name="Click Yes Clone" library="res-admin-questionnaires">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${btn_yes_clone}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210125 11:44:58.223" starttime="20210125 11:44:58.205"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_yes_clone}</arg>
+</arguments>
+<msg timestamp="20210125 11:44:58.223" level="INFO">Clicking element 'id:btn_clone_yes'.</msg>
+<status status="PASS" endtime="20210125 11:44:58.447" starttime="20210125 11:44:58.223"></status>
+</kw>
+<status status="PASS" endtime="20210125 11:44:58.447" starttime="20210125 11:44:58.204"></status>
+</kw>
+<kw name="Verify Clone Questionnaire Successfull" library="res-admin-questionnaires">
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${toast_clone_quest_success}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210125 11:45:58.837" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20210125 11:45:58.837" starttime="20210125 11:45:58.639"></status>
+</kw>
+<msg timestamp="20210125 11:45:58.843" level="FAIL">Text 'Successfull clone questionnaire' did not appear in 1 minute.</msg>
+<status status="FAIL" endtime="20210125 11:45:58.843" starttime="20210125 11:44:58.448"></status>
+</kw>
+<status status="FAIL" endtime="20210125 11:45:58.844" starttime="20210125 11:44:58.447"></status>
+</kw>
+<status status="FAIL" endtime="20210125 11:45:58.844" critical="yes" starttime="20210125 11:44:49.557">Text 'Successfull clone questionnaire' did not appear in 1 minute.</status>
+</test>
+<status status="FAIL" endtime="20210125 11:45:58.845" starttime="20210125 11:44:31.305"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="1">Critical Tests</stat>
+<stat fail="1" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="Clone Questionnaires" pass="1">Clone Questionnaires</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

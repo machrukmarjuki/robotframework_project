@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20210125 10:47:18.076" generator="Robot 3.1.2 (Python 2.7.16 on darwin)">
+<suite source="/Users/machruk/PycharmProjects/Nimbly/Admin/Questionnaires/Add Questionnaires/Add Questionnaires.robot" id="s1" name="Add Questionnaires">
+<kw type="setup" name="Open Browser to Manage Menu" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${SERVER}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20210125 10:47:18.348" level="INFO">Opening browser 'firefox' to base url 'https://staging.hellonimbly.com/'.</msg>
+<msg timestamp="20210125 10:47:18.350" level="INFO">Firefox driver log is always forced to to: /Users/machruk/PycharmProjects/Nimbly/Admin/Questionnaires/Add Questionnaires/geckodriver-1.log</msg>
+<status status="PASS" endtime="20210125 10:47:27.333" starttime="20210125 10:47:18.348"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20210125 10:47:27.807" starttime="20210125 10:47:27.335"></status>
+</kw>
+<kw name="Valid Login" library="login">
+<kw name="Input Email" library="login">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:input_username_login</arg>
+<arg>${EMAIL}</arg>
+</arguments>
+<msg timestamp="20210125 10:47:27.809" level="INFO">Typing text 'machruk@hellonimbly.com' into text field 'id:input_username_login'.</msg>
+<status status="PASS" endtime="20210125 10:47:27.930" starttime="20210125 10:47:27.809"></status>
+</kw>
+<status status="PASS" endtime="20210125 10:47:27.930" starttime="20210125 10:47:27.808"></status>
+</kw>
+<kw name="Input Password" library="login">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:input_pwd_login</arg>
+<arg>${PASSWORD}</arg>
+</arguments>
+<msg timestamp="20210125 10:47:27.931" level="INFO">Typing text '123456' into text field 'id:input_pwd_login'.</msg>
+<status status="PASS" endtime="20210125 10:47:27.983" starttime="20210125 10:47:27.931"></status>
+</kw>
+<status status="PASS" endtime="20210125 10:47:27.983" starttime="20210125 10:47:27.930"></status>
+</kw>
+<kw name="Click Login Button" library="login">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id:btn_login</arg>
+</arguments>
+<msg timestamp="20210125 10:47:27.984" level="INFO">Clicking element 'id:btn_login'.</msg>
+<status status="PASS" endtime="20210125 10:47:28.206" starttime="20210125 10:47:27.984"></status>
+</kw>
+<status status="PASS" endtime="20210125 10:47:28.206" starttime="20210125 10:47:27.983"></status>
+</kw>
+<status status="PASS" endtime="20210125 10:47:28.206" starttime="20210125 10:47:27.807"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${link_admin}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210125 10:47:37.105" starttime="20210125 10:47:28.207"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${link_admin}</arg>
+</arguments>
+<msg timestamp="20210125 10:47:37.105" level="INFO">Clicking element 'id:menu_adm'.</msg>
+<status status="PASS" endtime="20210125 10:47:37.386" starttime="20210125 10:47:37.105"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${link_manage}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210125 10:47:37.404" starttime="20210125 10:47:37.386"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${link_manage}</arg>
+</arguments>
+<msg timestamp="20210125 10:47:37.405" level="INFO">Clicking element 'id:menu_adm_manage'.</msg>
+<status status="PASS" endtime="20210125 10:47:37.634" starttime="20210125 10:47:37.404"></status>
+</kw>
+<status status="PASS" endtime="20210125 10:47:37.635" starttime="20210125 10:47:18.348"></status>
+</kw>
+<test id="s1-t1" name="Go to Questionnaire page">
+<kw name="Go to Questionnaire page" library="res-admin-questionnaires">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${link_questionnaires}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210125 10:47:37.661" starttime="20210125 10:47:37.638"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${link_questionnaires}</arg>
+</arguments>
+<msg timestamp="20210125 10:47:37.662" level="INFO">Clicking element 'id:menu_questionnaires'.</msg>
+<status status="PASS" endtime="20210125 10:47:37.917" starttime="20210125 10:47:37.661"></status>
+</kw>
+<status status="PASS" endtime="20210125 10:47:37.917" starttime="20210125 10:47:37.638"></status>
+</kw>
+<status status="PASS" endtime="20210125 10:47:37.917" critical="yes" starttime="20210125 10:47:37.635"></status>
+</test>
+<test id="s1-t2" name="Verify Add Questionnaire (1 Question) is Successful">
+<kw name="Click Create Questionnaire" library="res-admin-questionnaires">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${btn_create_quest}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210125 10:47:46.549" starttime="20210125 10:47:37.919"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_create_quest}</arg>
+</arguments>
+<msg timestamp="20210125 10:47:46.550" level="INFO">Clicking element 'id:btn_add_quest'.</msg>
+<status status="PASS" endtime="20210125 10:47:46.866" starttime="20210125 10:47:46.550"></status>
+</kw>
+<status status="PASS" endtime="20210125 10:47:46.866" starttime="20210125 10:47:37.919"></status>
+</kw>
+<kw name="Verify &quot;Create Questionnaire&quot; Modal rendered correctly">
+<kw name="Verify &quot;Title&quot; field is available">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${field_quest_title}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210125 10:47:47.107" starttime="20210125 10:47:46.867"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${field_quest_title}</arg>
+</arguments>
+<msg timestamp="20210125 10:47:47.115" level="INFO">Current page contains element 'xpath://body/div[@id='root']/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]/div[1]/input[1]'.</msg>
+<status status="PASS" endtime="20210125 10:47:47.115" starttime="20210125 10:47:47.107"></status>
+</kw>
+<status status="PASS" endtime="20210125 10:47:47.116" starttime="20210125 10:47:46.867"></status>
+</kw>
+<kw name="Verify &quot;Department&quot; dropdown is available">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${field_quest_dept}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210125 10:47:47.150" starttime="20210125 10:47:47.116"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${field_quest_dept}</arg>
+</arguments>
+<msg timestamp="20210125 10:47:47.155" level="INFO">Current page contains element 'xpath://body/div[@id='root']/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]'.</msg>
+<status status="PASS" endtime="20210125 10:47:47.156" starttime="20210125 10:47:47.151"></status>
+</kw>
+<status status="PASS" endtime="20210125 10:47:47.156" starttime="20210125 10:47:47.116"></status>
+</kw>
+<kw name="Verify &quot;Category&quot; dropdown is available">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${field_quest_categ}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210125 10:47:47.173" starttime="20210125 10:47:47.156"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${field_quest_categ}</arg>
+</arguments>
+<msg timestamp="20210125 10:47:47.179" level="INFO">Current page contains element 'xpath://body/div[@id='root']/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]/form[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]'.</msg>
+<status status="PASS" endtime="20210125 10:47:47.179" starttime="20210125 10:47:47.173"></status>
+</kw>
+<status status="PASS" endtime="20210125 10:47:47.179" starttime="20210125 10:47:47.156"></status>
+</kw>
+<kw name="Verify &quot;Question&quot; field is available">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${field_question01}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210125 10:47:47.203" starttime="20210125 10:47:47.180"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${field_question01}</arg>
+</arguments>
+<msg timestamp="20210125 10:47:47.209" level="INFO">Current page contains element 'xpath://body/div[@id='root']/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]/form[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/textarea[1]'.</msg>
+<status status="PASS" endtime="20210125 10:47:47.209" starttime="20210125 10:47:47.204"></status>
+</kw>
+<status status="PASS" endtime="20210125 10:47:47.209" starttime="20210125 10:47:47.179"></status>
+</kw>
+<kw name="Verify &quot;Add Question&quot; icon is available">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${icon_add_question}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210125 10:47:47.225" starttime="20210125 10:47:47.210"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${icon_add_question}</arg>
+</arguments>
+<msg timestamp="20210125 10:47:47.230" level="INFO">Current page contains element 'xpath://body/div[@id='root']/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]/form[1]/div[1]/div[4]/div[2]/div[1]/div[1]/span[1]/img[1]'.</msg>
+<status status="PASS" endtime="20210125 10:47:47.230" starttime="20210125 10:47:47.225"></status>
+</kw>
+<status status="PASS" endtime="20210125 10:47:47.230" starttime="20210125 10:47:47.209"></status>
+</kw>
+<kw name="Verify &quot;Add Category&quot; icon is available">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${icon_add_categ}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210125 10:47:47.245" starttime="20210125 10:47:47.230"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${icon_add_categ}</arg>
+</arguments>
+<msg timestamp="20210125 10:47:47.250" level="INFO">Current page contains element 'xpath://body/div[@id='root']/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]/form[1]/div[1]/div[4]/div[2]/div[1]/div[2]/span[1]/img[1]'.</msg>
+<status status="PASS" endtime="20210125 10:47:47.250" starttime="20210125 10:47:47.246"></status>
+</kw>
+<status status="PASS" endtime="20210125 10:47:47.250" starttime="20210125 10:47:47.230"></status>
+</kw>
+<kw name="Verify &quot;Publish&quot; button is available">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${btn_publish_quest}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210125 10:47:47.265" starttime="20210125 10:47:47.251"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${btn_publish_quest}</arg>
+</arguments>
+<msg timestamp="20210125 10:47:47.269" level="INFO">Current page contains element 'xpath://body/div[@id='root']/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/button[1]'.</msg>
+<status status="PASS" endtime="20210125 10:47:47.269" starttime="20210125 10:47:47.265"></status>
+</kw>
+<status status="PASS" endtime="20210125 10:47:47.270" starttime="20210125 10:47:47.250"></status>
+</kw>
+<status status="PASS" endtime="20210125 10:47:47.270" starttime="20210125 10:47:46.867"></status>
+</kw>
+<kw name="Input Questionnaire Title" library="res-admin-questionnaires">
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>3</arg>
+<arg>[NUMBERS]</arg>
+</arguments>
+<assign>
+<var>${RANDOM}</var>
+</assign>
+<msg timestamp="20210125 10:47:47.271" level="INFO">${RANDOM} = 101</msg>
+<status status="PASS" endtime="20210125 10:47:47.271" starttime="20210125 10:47:47.270"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${field_quest_title}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210125 10:47:47.286" starttime="20210125 10:47:47.271"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${field_quest_title}</arg>
+<arg>${quest_title} ${RANDOM}</arg>
+</arguments>
+<msg timestamp="20210125 10:47:47.286" level="INFO">Typing text 'AutoQA Questionnaire 101' into text field 'xpath://body/div[@id='root']/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]/div[1]/input[1]'.</msg>
+<status status="PASS" endtime="20210125 10:47:47.505" starttime="20210125 10:47:47.286"></status>
+</kw>
+<status status="PASS" endtime="20210125 10:47:47.505" starttime="20210125 10:47:47.270"></status>
+</kw>
+<kw name="Select Department" library="res-admin-questionnaires">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${field_quest_dept}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210125 10:47:47.523" starttime="20210125 10:47:47.506"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${field_quest_dept}</arg>
+</arguments>
+<msg timestamp="20210125 10:47:47.524" level="INFO">Clicking element 'xpath://body/div[@id='root']/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]'.</msg>
+<status status="PASS" endtime="20210125 10:47:47.761" starttime="20210125 10:47:47.523"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${quest_dept_list}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210125 10:47:54.267" starttime="20210125 10:47:47.761"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${quest_dept_list}</arg>
+</arguments>
+<msg timestamp="20210125 10:47:54.267" level="INFO">Clicking element 'xpath://div[@class='select-editor__menu css-26l3qy-menu']//div[1]//div[contains(text(),'Special AutoDepartment')]'.</msg>
+<status status="PASS" endtime="20210125 10:47:54.497" starttime="20210125 10:47:54.267"></status>
+</kw>
+<status status="PASS" endtime="20210125 10:47:54.497" starttime="20210125 10:47:47.505"></status>
+</kw>
+<kw name="Select Category" library="res-admin-questionnaires">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${field_quest_categ}</arg>
+</arguments>
+<msg timestamp="20210125 10:47:54.498" level="INFO">Clicking element 'xpath://body/div[@id='root']/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]/form[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]'.</msg>
+<status status="PASS" endtime="20210125 10:47:54.775" starttime="20210125 10:47:54.497"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${quest_categ_list}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210125 10:47:54.792" starttime="20210125 10:47:54.775"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${quest_categ_list}</arg>
+</arguments>
+<msg timestamp="20210125 10:47:54.793" level="INFO">Clicking element 'xpath://div[@class=' css-26l3qy-menu']//div[1]//div[@class=' css-107s4ia-option'][contains(text(),'Restaurant')]'.</msg>
+<status status="PASS" endtime="20210125 10:47:55.020" starttime="20210125 10:47:54.792"></status>
+</kw>
+<status status="PASS" endtime="20210125 10:47:55.020" starttime="20210125 10:47:54.497"></status>
+</kw>
+<kw name="Add Question 1" library="res-admin-questionnaires">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${field_question01}</arg>
+</arguments>
+<msg timestamp="20210125 10:47:55.021" level="INFO">Clicking element 'xpath://body/div[@id='root']/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]/form[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/textarea[1]'.</msg>
+<status status="PASS" endtime="20210125 10:47:55.303" starttime="20210125 10:47:55.021"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${field_question01}</arg>
+<arg>${question01}</arg>
+</arguments>
+<msg timestamp="20210125 10:47:55.303" level="INFO">Typing text 'Apa ayam dibersihkan pada air mengalir ?' into text field 'xpath://body/div[@id='root']/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]/form[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/textarea[1]'.</msg>
+<status status="PASS" endtime="20210125 10:47:55.340" starttime="20210125 10:47:55.303"></status>
+</kw>
+<status status="PASS" endtime="20210125 10:47:55.340" starttime="20210125 10:47:55.021"></status>
+</kw>
+<kw name="Click Publish Button" library="res-admin-questionnaires">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20210125 10:47:58.342" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20210125 10:47:58.342" starttime="20210125 10:47:55.341"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_publish_quest}</arg>
+</arguments>
+<msg timestamp="20210125 10:47:58.343" level="INFO">Clicking element 'xpath://body/div[@id='root']/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/button[1]'.</msg>
+<status status="PASS" endtime="20210125 10:47:58.594" starttime="20210125 10:47:58.342"></status>
+</kw>
+<status status="PASS" endtime="20210125 10:47:58.594" starttime="20210125 10:47:55.340"></status>
+</kw>
+<kw name="Verify Create Questionnaire is successfully">
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${toast_add_quest_success}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210125 10:48:09.454" starttime="20210125 10:47:58.595"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${toast_add_quest_success}</arg>
+</arguments>
+<msg timestamp="20210125 10:48:09.479" level="INFO">Current page contains text 'Questionnaire has been successfully saved'.</msg>
+<status status="PASS" endtime="20210125 10:48:09.479" starttime="20210125 10:48:09.456"></status>
+</kw>
+<status status="PASS" endtime="20210125 10:48:09.480" starttime="20210125 10:47:58.594"></status>
+</kw>
+<kw name="Go to Questionnaire page" library="res-admin-questionnaires">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${link_questionnaires}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210125 10:48:09.508" starttime="20210125 10:48:09.482"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${link_questionnaires}</arg>
+</arguments>
+<msg timestamp="20210125 10:48:09.509" level="INFO">Clicking element 'id:menu_questionnaires'.</msg>
+<status status="PASS" endtime="20210125 10:48:09.910" starttime="20210125 10:48:09.509"></status>
+</kw>
+<status status="PASS" endtime="20210125 10:48:09.910" starttime="20210125 10:48:09.480"></status>
+</kw>
+<kw name="Search Added Questionnaire" library="res-admin-questionnaires">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${field_search_quest}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210125 10:48:17.270" starttime="20210125 10:48:09.912"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${field_search_quest}</arg>
+<arg>${quest_title}</arg>
+</arguments>
+<msg timestamp="20210125 10:48:17.270" level="INFO">Typing text 'AutoQA Questionnaire' into text field 'id:input_search_quest'.</msg>
+<status status="PASS" endtime="20210125 10:48:17.337" starttime="20210125 10:48:17.270"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${search_quest_result}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210125 10:48:17.356" starttime="20210125 10:48:17.338"></status>
+</kw>
+<status status="PASS" endtime="20210125 10:48:17.356" starttime="20210125 10:48:09.911"></status>
+</kw>
+<kw name="Click Detail Questionnaire" library="res-admin-questionnaires">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20210125 10:48:20.357" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20210125 10:48:20.358" starttime="20210125 10:48:17.356"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${btn_edit_quest}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210125 10:48:20.584" starttime="20210125 10:48:20.358"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_edit_quest}</arg>
+</arguments>
+<msg timestamp="20210125 10:48:20.585" level="INFO">Clicking element 'id:btn_edit_quest'.</msg>
+<status status="PASS" endtime="20210125 10:48:20.871" starttime="20210125 10:48:20.584"></status>
+</kw>
+<status status="PASS" endtime="20210125 10:48:20.871" starttime="20210125 10:48:17.356"></status>
+</kw>
+<kw name="Verify Questionnaire Title" library="res-admin-questionnaires">
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${verify_quest_title}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210125 10:48:25.693" starttime="20210125 10:48:20.872"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${verify_quest_title}</arg>
+</arguments>
+<msg timestamp="20210125 10:48:25.706" level="INFO">Current page contains text 'AutoQA Questionnaire'.</msg>
+<status status="PASS" endtime="20210125 10:48:25.706" starttime="20210125 10:48:25.693"></status>
+</kw>
+<status status="PASS" endtime="20210125 10:48:25.707" starttime="20210125 10:48:20.871"></status>
+</kw>
+<status status="PASS" endtime="20210125 10:48:25.707" critical="yes" starttime="20210125 10:47:37.918"></status>
+</test>
+<status status="PASS" endtime="20210125 10:48:25.710" starttime="20210125 10:47:18.077"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="2">Critical Tests</stat>
+<stat fail="0" pass="2">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Add Questionnaires" pass="2">Add Questionnaires</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

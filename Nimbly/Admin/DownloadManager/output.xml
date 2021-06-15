@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20210104 17:31:49.236" generator="Robot 3.1.2 (Python 2.7.16 on darwin)">
+<suite source="/Users/machruk/PycharmProjects/Nimbly/Admin/DownloadManager/DownloadManager.robot" id="s1" name="DownloadManager">
+<kw type="setup" name="Open Browser to Manage Menu" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${SERVER}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20210104 17:31:49.521" level="INFO">Opening browser 'firefox' to base url 'https://admin.hellonimbly.com/'.</msg>
+<msg timestamp="20210104 17:31:49.523" level="INFO">Firefox driver log is always forced to to: /Users/machruk/PycharmProjects/Nimbly/Admin/DownloadManager/geckodriver-8.log</msg>
+<status status="PASS" endtime="20210104 17:31:55.802" starttime="20210104 17:31:49.521"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20210104 17:31:56.298" starttime="20210104 17:31:55.803"></status>
+</kw>
+<kw name="Valid Login" library="login">
+<kw name="Input Email" library="login">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:input_username_login</arg>
+<arg>${EMAIL}</arg>
+</arguments>
+<msg timestamp="20210104 17:31:56.300" level="INFO">Typing text 'machruk@hellonimbly.com' into text field 'id:input_username_login'.</msg>
+<status status="PASS" endtime="20210104 17:31:56.443" starttime="20210104 17:31:56.299"></status>
+</kw>
+<status status="PASS" endtime="20210104 17:31:56.444" starttime="20210104 17:31:56.299"></status>
+</kw>
+<kw name="Input Password" library="login">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:input_pwd_login</arg>
+<arg>${PASSWORD}</arg>
+</arguments>
+<msg timestamp="20210104 17:31:56.445" level="INFO">Typing text '123456' into text field 'id:input_pwd_login'.</msg>
+<status status="PASS" endtime="20210104 17:31:56.506" starttime="20210104 17:31:56.444"></status>
+</kw>
+<status status="PASS" endtime="20210104 17:31:56.507" starttime="20210104 17:31:56.444"></status>
+</kw>
+<kw name="Click Login Button" library="login">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id:btn_login</arg>
+</arguments>
+<msg timestamp="20210104 17:31:56.507" level="INFO">Clicking element 'id:btn_login'.</msg>
+<status status="PASS" endtime="20210104 17:31:56.730" starttime="20210104 17:31:56.507"></status>
+</kw>
+<status status="PASS" endtime="20210104 17:31:56.730" starttime="20210104 17:31:56.507"></status>
+</kw>
+<status status="PASS" endtime="20210104 17:31:56.730" starttime="20210104 17:31:56.298"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${link_admin}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<msg timestamp="20210104 17:32:01.945" level="INFO">Suppressing StaleElementReferenceException from Selenium.</msg>
+<status status="PASS" endtime="20210104 17:32:02.380" starttime="20210104 17:31:56.730"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${link_admin}</arg>
+</arguments>
+<msg timestamp="20210104 17:32:02.380" level="INFO">Clicking element 'id:menu_adm'.</msg>
+<status status="PASS" endtime="20210104 17:32:02.703" starttime="20210104 17:32:02.380"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${link_manage}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210104 17:32:02.719" starttime="20210104 17:32:02.703"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${link_manage}</arg>
+</arguments>
+<msg timestamp="20210104 17:32:02.720" level="INFO">Clicking element 'id:menu_adm_manage'.</msg>
+<status status="PASS" endtime="20210104 17:32:02.945" starttime="20210104 17:32:02.719"></status>
+</kw>
+<status status="PASS" endtime="20210104 17:32:02.945" starttime="20210104 17:31:49.520"></status>
+</kw>
+<test id="s1-t1" name="Go to Download Manager">
+<kw name="Go to Download Manager" library="res-admin-downloadmngr">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${link_download_manager}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210104 17:32:02.969" starttime="20210104 17:32:02.947"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${link_download_manager}</arg>
+</arguments>
+<msg timestamp="20210104 17:32:02.970" level="INFO">Clicking element 'id:menu_download_mng'.</msg>
+<status status="PASS" endtime="20210104 17:32:03.243" starttime="20210104 17:32:02.969"></status>
+</kw>
+<status status="PASS" endtime="20210104 17:32:03.243" starttime="20210104 17:32:02.947"></status>
+</kw>
+<status status="PASS" endtime="20210104 17:32:03.243" critical="yes" starttime="20210104 17:32:02.945"></status>
+</test>
+<test id="s1-t2" name="Verify &quot;Download Manager&quot; page is displayed correctly">
+<kw name="Verify Filter by Report is Available">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${dropdown_report_download}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210104 17:32:12.957" starttime="20210104 17:32:03.246"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${dropdown_report_download}</arg>
+</arguments>
+<msg timestamp="20210104 17:32:12.962" level="INFO">Current page contains element 'id:drpdwn_report'.</msg>
+<status status="PASS" endtime="20210104 17:32:12.962" starttime="20210104 17:32:12.957"></status>
+</kw>
+<status status="PASS" endtime="20210104 17:32:12.962" starttime="20210104 17:32:03.246"></status>
+</kw>
+<kw name="Verify Filter by Department is Available">
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${dropdown_departmen_download}</arg>
+</arguments>
+<msg timestamp="20210104 17:32:12.967" level="INFO">Current page contains element 'id:drpdwn_dept_report'.</msg>
+<status status="PASS" endtime="20210104 17:32:12.967" starttime="20210104 17:32:12.963"></status>
+</kw>
+<status status="PASS" endtime="20210104 17:32:12.967" starttime="20210104 17:32:12.962"></status>
+</kw>
+<kw name="Verify Filter by Site is Available">
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${dropdown_site_download}</arg>
+</arguments>
+<msg timestamp="20210104 17:32:12.972" level="INFO">Current page contains element 'id:drpdwn_site_report'.</msg>
+<status status="PASS" endtime="20210104 17:32:12.972" starttime="20210104 17:32:12.967"></status>
+</kw>
+<status status="PASS" endtime="20210104 17:32:12.972" starttime="20210104 17:32:12.967"></status>
+</kw>
+<kw name="Verify Filter by Auditor is Available">
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${dropdown_auditor_download}</arg>
+</arguments>
+<msg timestamp="20210104 17:32:12.977" level="INFO">Current page contains element 'id:drpdwn_auditor_report'.</msg>
+<status status="PASS" endtime="20210104 17:32:12.977" starttime="20210104 17:32:12.973"></status>
+</kw>
+<status status="PASS" endtime="20210104 17:32:12.978" starttime="20210104 17:32:12.972"></status>
+</kw>
+<kw name="Verify Date Range is Available">
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${dropdown_stardate_download}</arg>
+</arguments>
+<msg timestamp="20210104 17:32:12.983" level="INFO">Current page contains element 'id:drpdwn_start_date_report'.</msg>
+<status status="PASS" endtime="20210104 17:32:12.983" starttime="20210104 17:32:12.979"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${dropdown_enddate_download}</arg>
+</arguments>
+<msg timestamp="20210104 17:32:12.987" level="INFO">Current page contains element 'id:drpdwn_end_date_report'.</msg>
+<status status="PASS" endtime="20210104 17:32:12.987" starttime="20210104 17:32:12.983"></status>
+</kw>
+<status status="PASS" endtime="20210104 17:32:12.987" starttime="20210104 17:32:12.978"></status>
+</kw>
+<kw name="Verify &quot;Search&quot; button is available">
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${button_search_download}</arg>
+</arguments>
+<msg timestamp="20210104 17:32:12.992" level="INFO">Current page contains element 'id:btn_search_report'.</msg>
+<status status="PASS" endtime="20210104 17:32:12.992" starttime="20210104 17:32:12.988"></status>
+</kw>
+<status status="PASS" endtime="20210104 17:32:12.992" starttime="20210104 17:32:12.987"></status>
+</kw>
+<kw name="Verify &quot;Download Activity&quot; button is available">
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${button_activity_download}</arg>
+</arguments>
+<msg timestamp="20210104 17:32:12.997" level="INFO">Current page contains element 'id:btn_dwnld_act'.</msg>
+<status status="PASS" endtime="20210104 17:32:12.997" starttime="20210104 17:32:12.993"></status>
+</kw>
+<status status="PASS" endtime="20210104 17:32:12.997" starttime="20210104 17:32:12.992"></status>
+</kw>
+<status status="PASS" endtime="20210104 17:32:12.998" critical="yes" starttime="20210104 17:32:03.245"></status>
+</test>
+<status status="PASS" endtime="20210104 17:32:12.998" starttime="20210104 17:31:49.238"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="2">Critical Tests</stat>
+<stat fail="0" pass="2">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="DownloadManager" pass="2">DownloadManager</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

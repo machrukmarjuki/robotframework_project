@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20210217 23:32:15.436" generator="Robot 3.1.2 (Python 2.7.16 on darwin)">
+<suite source="/Users/machruk/PycharmProjects/Nimbly/Admin/CompetitorAnalysis/Product/Edit Product/Edit_Product.robot" id="s1" name="Edit Product">
+<kw type="setup" name="Open Browser to Manage Menu" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${SERVER}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20210217 23:32:15.730" level="INFO">Opening browser 'firefox' to base url 'https://admin.hellonimbly.com/'.</msg>
+<msg timestamp="20210217 23:32:15.732" level="INFO">Firefox driver log is always forced to to: /Users/machruk/PycharmProjects/Nimbly/Admin/CompetitorAnalysis/Product/Edit Product/geckodriver-4.log</msg>
+<status status="PASS" endtime="20210217 23:32:22.086" starttime="20210217 23:32:15.730"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20210217 23:32:22.581" starttime="20210217 23:32:22.087"></status>
+</kw>
+<kw name="Valid Login" library="login">
+<kw name="Input Email" library="login">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:input_username_login</arg>
+<arg>${EMAIL}</arg>
+</arguments>
+<msg timestamp="20210217 23:32:22.582" level="INFO">Typing text 'machruk@hellonimbly.com' into text field 'id:input_username_login'.</msg>
+<status status="PASS" endtime="20210217 23:32:22.687" starttime="20210217 23:32:22.582"></status>
+</kw>
+<status status="PASS" endtime="20210217 23:32:22.687" starttime="20210217 23:32:22.582"></status>
+</kw>
+<kw name="Input Password" library="login">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:input_pwd_login</arg>
+<arg>${PASSWORD}</arg>
+</arguments>
+<msg timestamp="20210217 23:32:22.687" level="INFO">Typing text '123456' into text field 'id:input_pwd_login'.</msg>
+<status status="PASS" endtime="20210217 23:32:22.729" starttime="20210217 23:32:22.687"></status>
+</kw>
+<status status="PASS" endtime="20210217 23:32:22.729" starttime="20210217 23:32:22.687"></status>
+</kw>
+<kw name="Click Login Button" library="login">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id:btn_login</arg>
+</arguments>
+<msg timestamp="20210217 23:32:22.730" level="INFO">Clicking element 'id:btn_login'.</msg>
+<status status="PASS" endtime="20210217 23:32:22.954" starttime="20210217 23:32:22.729"></status>
+</kw>
+<status status="PASS" endtime="20210217 23:32:22.954" starttime="20210217 23:32:22.729"></status>
+</kw>
+<status status="PASS" endtime="20210217 23:32:22.954" starttime="20210217 23:32:22.581"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${link_admin}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<msg timestamp="20210217 23:32:29.006" level="INFO">Suppressing StaleElementReferenceException from Selenium.</msg>
+<status status="PASS" endtime="20210217 23:32:29.317" starttime="20210217 23:32:22.954"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${link_admin}</arg>
+</arguments>
+<msg timestamp="20210217 23:32:29.318" level="INFO">Clicking element 'id:menu_adm'.</msg>
+<status status="PASS" endtime="20210217 23:32:29.600" starttime="20210217 23:32:29.318"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${link_manage}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210217 23:32:29.612" starttime="20210217 23:32:29.600"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${link_manage}</arg>
+</arguments>
+<msg timestamp="20210217 23:32:29.612" level="INFO">Clicking element 'id:menu_adm_manage'.</msg>
+<status status="PASS" endtime="20210217 23:32:29.833" starttime="20210217 23:32:29.612"></status>
+</kw>
+<status status="PASS" endtime="20210217 23:32:29.833" starttime="20210217 23:32:15.729"></status>
+</kw>
+<test id="s1-t1" name="Go to Competitor Page">
+<kw name="Go to Competitor Page" library="res-admin-competitor">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${link_competitor_analysis}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210217 23:32:29.854" starttime="20210217 23:32:29.835"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${link_competitor_analysis}</arg>
+</arguments>
+<msg timestamp="20210217 23:32:29.854" level="INFO">Clicking element 'xpath://span[contains(text(),'Competitor Analysis')]'.</msg>
+<status status="PASS" endtime="20210217 23:32:30.102" starttime="20210217 23:32:29.854"></status>
+</kw>
+<status status="PASS" endtime="20210217 23:32:30.102" starttime="20210217 23:32:29.834"></status>
+</kw>
+<kw name="Click Product Tab">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${tab_products}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210217 23:32:36.768" starttime="20210217 23:32:30.102"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${tab_products}</arg>
+</arguments>
+<msg timestamp="20210217 23:32:36.769" level="INFO">Clicking element 'xpath://div[contains(text(),'Products')]'.</msg>
+<status status="PASS" endtime="20210217 23:32:37.034" starttime="20210217 23:32:36.769"></status>
+</kw>
+<status status="PASS" endtime="20210217 23:32:37.034" starttime="20210217 23:32:30.102"></status>
+</kw>
+<status status="PASS" endtime="20210217 23:32:37.034" critical="yes" starttime="20210217 23:32:29.834"></status>
+</test>
+<test id="s1-t2" name="Verify Edit Product is successfully">
+<kw name="Verify Edit Product is successfully">
+<kw name="Search Product to Edit">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${input_search_product}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210217 23:32:37.667" starttime="20210217 23:32:37.036"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${input_search_product}</arg>
+<arg>QA</arg>
+</arguments>
+<msg timestamp="20210217 23:32:37.667" level="INFO">Typing text 'QA' into text field 'xpath://input[@placeholder='Search for products, category, or variant...']'.</msg>
+<status status="PASS" endtime="20210217 23:32:37.714" starttime="20210217 23:32:37.667"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>QA</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210217 23:32:37.728" starttime="20210217 23:32:37.715"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20210217 23:32:40.730" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20210217 23:32:40.731" starttime="20210217 23:32:37.728"></status>
+</kw>
+<status status="PASS" endtime="20210217 23:32:40.731" starttime="20210217 23:32:37.036"></status>
+</kw>
+<kw name="Click View Details">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${button_view_detail_product}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210217 23:32:40.750" starttime="20210217 23:32:40.732"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${button_view_detail_product}</arg>
+</arguments>
+<msg timestamp="20210217 23:32:40.751" level="INFO">Clicking element 'xpath://tr[1]//td[6]//button[1]'.</msg>
+<status status="PASS" endtime="20210217 23:32:41.064" starttime="20210217 23:32:40.751"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20210217 23:32:46.067" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20210217 23:32:46.068" starttime="20210217 23:32:41.065"></status>
+</kw>
+<status status="PASS" endtime="20210217 23:32:46.068" starttime="20210217 23:32:40.731"></status>
+</kw>
+<kw name="Verify &quot;Edit Product&quot; Modal rendered correctly">
+<kw name="Verify &quot;Product Name&quot; field is available">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${input_product_name}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210217 23:32:46.086" starttime="20210217 23:32:46.069"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${input_product_name}</arg>
+</arguments>
+<msg timestamp="20210217 23:32:46.090" level="INFO">Current page contains element 'id:productName'.</msg>
+<status status="PASS" endtime="20210217 23:32:46.090" starttime="20210217 23:32:46.086"></status>
+</kw>
+<status status="PASS" endtime="20210217 23:32:46.090" starttime="20210217 23:32:46.069"></status>
+</kw>
+<kw name="Verify &quot;Company Name&quot; Dropdown is available">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${dropdown_choose_company}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20210217 23:32:46.105" starttime="20210217 23:32:46.091"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${dropdown_choose_company}</arg>
+</arguments>
+<msg timestamp="20210217 23:32:46.109" level="INFO">Current page contains element 'xpath://body/div[@id='root']/div[1]/div[1]/div[2]/div[1]/div[2]/div[2]/div[2]/div[1]/div[1]'.</msg>
+<status status="PASS" endtime="20210217 23:32:46.109" starttime="20210217 23:32:46.105"></status>
+</kw>
+<status status="PASS" endtime="20210217 23:32:46.109" starttime="20210217 23:32:46.091"></status>
+</kw>
+<kw name="Verify &quot;This Product is variant of&quot; checkbox is available">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${checkbox_variant}</arg>
+<arg>${Delay}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210217 23:33:46.594" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20210217 23:33:46.594" starttime="20210217 23:33:46.277"></status>
+</kw>
+<msg timestamp="20210217 23:33:46.599" level="FAIL">Element with locator 'id:chkbox_check_all' not found.</msg>
+<status status="FAIL" endtime="20210217 23:33:46.599" starttime="20210217 23:32:46.110"></status>
+</kw>
+<status status="FAIL" endtime="20210217 23:33:46.600" starttime="20210217 23:32:46.109"></status>
+</kw>
+<status status="FAIL" endtime="20210217 23:33:46.600" starttime="20210217 23:32:46.068"></status>
+</kw>
+<status status="FAIL" endtime="20210217 23:33:46.600" starttime="20210217 23:32:37.035"></status>
+</kw>
+<status status="FAIL" endtime="20210217 23:33:46.600" critical="yes" starttime="20210217 23:32:37.035">Element with locator 'id:chkbox_check_all' not found.</status>
+</test>
+<doc>Verify Edit "Product" feature is working properly</doc>
+<status status="FAIL" endtime="20210217 23:33:46.601" starttime="20210217 23:32:15.440"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="1">Critical Tests</stat>
+<stat fail="1" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="Edit Product" pass="1">Edit Product</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
